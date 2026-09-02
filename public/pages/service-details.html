@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Details | TrendZ Custom Merchandise</title>
+    <meta name="description" content="Detailed printing specifications, volume pricing tiers, technical tolerances, and FAQs for TrendZ manufacturing services.">
+    <link rel="icon" href="../../assets/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['class', '[data-theme="dark"]'],
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#FFB800',
+                            hover: '#E5A600',
+                            dark: '#111215',
+                            surface: '#14161A'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="../../src/css/variables.css">
+    <link rel="stylesheet" href="../../src/css/base.css">
+    <link rel="stylesheet" href="../../src/css/components.css">
+    <link rel="stylesheet" href="../../src/css/style.css">
+</head>
+
+<body>
+
+    <!-- Ambient Glow Background Blobs -->
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-glow ambient-glow-3"></div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="../../index.html" class="brand-logo">
+                <img src="../../assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon">
+                <div class="brand-logo-text">
+                    <div class="brand-logo-main">Trend<span class="highlight">Z</span></div>
+                    <div class="brand-logo-sub">CUSTOM MERCHANDISE</div>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li><a href="home-2.html" class="nav-link">Niche Drop</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link active">Services</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="services.html" class="btn btn-outline btn-sm hidden sm:inline-flex">
+                    ← All Services
+                </a>
+
+                <!-- Profile Dropdown -->
+                <div class="profile-dropdown-wrapper">
+                    <button class="profile-trigger-btn" title="Account & Settings" aria-label="Account Menu">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </button>
+                    <div class="profile-dropdown-menu">
+                        <div class="dropdown-header">
+                            <div class="dropdown-user-name">TrendZ Portal</div>
+                            <div class="dropdown-user-role">Guest / Creator Access</div>
+                        </div>
+                        <a href="../auth/login.html" class="dropdown-item">
+                            <span class="icon">🔑</span>
+                            <span>Sign In</span>
+                        </a>
+                        <a href="../auth/signup.html" class="dropdown-item">
+                            <span class="icon">📝</span>
+                            <span>Create Account</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="../auth/admin/admin-dashboard.html" class="dropdown-item">
+                            <span class="icon">👑</span>
+                            <span>Admin Dashboard</span>
+                        </a>
+                        <a href="../auth/user/user-dashboard.html" class="dropdown-item">
+                            <span class="icon">🎨</span>
+                            <span>User Dashboard</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <button class="theme-toggle-btn" type="button">
+                            <span>🌙 Dark Mode</span>
+                        </button>
+                        <button class="rtl-toggle-btn" type="button" style="margin-top: 4px;">
+                            <span>🌐 RTL Mode</span>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- BREADCRUMBS -->
+        <div class="container pt-8 pb-2">
+            <nav class="text-xs font-semibold text-gray-400 flex items-center gap-2">
+                <a href="../../index.html" class="hover:text-yellow-500">Home</a>
+                <span>/</span>
+                <a href="services.html" class="hover:text-yellow-500">Services</a>
+                <span>/</span>
+                <span class="text-yellow-500 font-bold" id="serviceBreadcrumbCurrent">Loading Service...</span>
+            </nav>
+        </div>
+
+        <!-- SECTION 1: DYNAMIC SERVICE HERO -->
+        <section class="section pt-4 pb-12">
+            <div class="container">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="badge-pill badge-yellow text-xs" id="serviceHeroBadge">Loading...</span>
+                            <span class="text-xs font-mono font-bold text-gray-400 uppercase" id="serviceHeroCategory">Apparel Tech</span>
+                        </div>
+                        <h1 class="text-3xl sm:text-5xl font-black text-gray-900 dark:text-white mb-6 leading-tight" id="serviceHeroTitle">
+                            Loading Service Details...
+                        </h1>
+                        <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed" id="serviceHeroSubtitle">
+                            Please wait while we load technical data and pricing tiers.
+                        </p>
+
+                        <!-- Quick Service Highlights Bar -->
+                        <div class="grid grid-cols-3 gap-4 p-4 rounded-xl bg-white dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700 shadow-sm mb-8">
+                            <div>
+                                <div class="text-xs text-gray-400 font-semibold uppercase">Turnaround</div>
+                                <div class="text-sm sm:text-base font-bold text-gray-900 dark:text-white" id="serviceTurnaround">--</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-gray-400 font-semibold uppercase">Minimum Order</div>
+                                <div class="text-sm sm:text-base font-bold text-yellow-500" id="serviceMinOrder">--</div>
+                            </div>
+                            <div>
+                                <div class="text-xs text-gray-400 font-semibold uppercase">Client Rating</div>
+                                <div class="text-sm sm:text-base font-bold text-gray-900 dark:text-white" id="serviceRating">--</div>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-wrap gap-4">
+                            <a href="#pricingSection" class="btn btn-yellow btn-lg">
+                                View Pricing Tiers ➔
+                            </a>
+                            <a href="#specsSection" class="btn btn-outline btn-lg">
+                                Technical Specs
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Hero Visual -->
+                    <div class="lg:col-span-5">
+                        <div class="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-700 bg-gray-900 relative">
+                            <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80" alt="Service Hero Banner" id="serviceHeroImage" class="w-full h-80 sm:h-96 object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: PROCESS OVERVIEW & BENEFITS GRID -->
+        <section class="section bg-white dark:bg-gray-900 border-y border-gray-100 dark:border-gray-800">
+            <div class="container">
+                <div class="max-w-3xl mb-12">
+                    <span class="section-tagline text-yellow-500 font-bold">Process & Capabilities</span>
+                    <h2 class="section-title text-3xl sm:text-4xl font-black mb-4">Engineering Precision & Hand Feel</h2>
+                    <p class="text-gray-600 dark:text-gray-300 leading-relaxed" id="serviceOverview">
+                        Loading detailed process overview...
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="serviceBenefitsGrid">
+                    <!-- Loaded dynamically via service-details.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: TECHNICAL SPECIFICATIONS TABLE -->
+        <section class="section" id="specsSection">
+            <div class="container max-w-4xl">
+                <div class="section-header text-center mb-8">
+                    <span class="section-tagline text-yellow-500 font-bold">Tolerances & Machinery</span>
+                    <h2 class="section-title text-3xl sm:text-4xl font-black">Industrial Technical Specifications</h2>
+                </div>
+
+                <div class="glass-panel overflow-hidden">
+                    <table class="w-full text-left border-collapse">
+                        <tbody id="serviceSpecsTableBody" class="divide-y divide-gray-100 dark:divide-gray-800 text-sm">
+                            <!-- Loaded dynamically via service-details.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: INTERACTIVE PRICING TIERS -->
+        <section class="section bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800" id="pricingSection">
+            <div class="container">
+                <div class="section-header text-center max-w-2xl mx-auto mb-12">
+                    <span class="section-tagline text-yellow-500 font-bold">Volume Pricing</span>
+                    <h2 class="section-title text-3xl sm:text-4xl font-black">Transparent Tiered Pricing</h2>
+                    <p class="section-desc mx-auto">Zero hidden setup fees or film charges. All prices include base pre-treatment and digital proofing.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="servicePricingGrid">
+                    <!-- Loaded dynamically via service-details.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: FAQS ACCORDION -->
+        <section class="section">
+            <div class="container max-w-3xl">
+                <div class="section-header text-center mb-10">
+                    <span class="section-tagline text-yellow-500 font-bold">Frequently Asked Questions</span>
+                    <h2 class="section-title text-3xl sm:text-4xl font-black">Everything You Need To Know</h2>
+                </div>
+
+                <div id="serviceFaqsAccordion" class="space-y-4">
+                    <!-- Loaded dynamically via service-details.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: RELATED SERVICES EXPLORER -->
+        <section class="section bg-gray-50 dark:bg-gray-900/50 border-t border-gray-100 dark:border-gray-800">
+            <div class="container">
+                <div class="section-header text-center mb-10">
+                    <span class="section-tagline text-yellow-500 font-bold">Explore More Solutions</span>
+                    <h2 class="section-title text-2xl sm:text-3xl font-black">Other Manufacturing Technologies</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="relatedServicesGrid">
+                    <!-- Loaded dynamically via service-details.js -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../../index.html" class="brand-logo" style="margin-bottom: 14px;">
+                        <img src="../../assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon" style="height: 48px;">
+                        <div class="brand-logo-text">
+                            <div class="brand-logo-main">Trend<span class="highlight">Z</span></div>
+                            <div class="brand-logo-sub">CUSTOM MERCHANDISE</div>
+                        </div>
+                    </a>
+                    <p>Modern digital printing solutions, corporate merchandise packages, and premier print-on-demand platform for creators and businesses.</p>
+                    <div style="display: flex; gap: 12px;">
+                        <span class="badge-pill badge-yellow">📍 Worldwide Express Shipping</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Services & Print</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">All Services Listing</a></li>
+                        <li><a href="service-details.html?id=dtg-printing">DTG HD Printing</a></li>
+                        <li><a href="service-details.html?id=sublimation">All-Over Sublimation</a></li>
+                        <li><a href="service-details.html?id=embroidery">3D Puff Embroidery</a></li>
+                        <li><a href="service-details.html?id=creator-drops">Creator POD Drops</a></li>
+                        <li><a href="pricing.html">Pricing & Volume Tiers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Company & Hub</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About TrendZ</a></li>
+                        <li><a href="home-2.html">Gaming Niche Studio</a></li>
+                        <li><a href="blog.html">Printing Blog & Guides</a></li>
+                        <li><a href="FAQ.html">FAQ & Help Center</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                        <li><a href="coming-soon.html">Upcoming Tech Drops 🚀</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Creator Updates</h4>
+                    <p style="font-size: 0.88rem; color: #9CA3AF; margin-bottom: 12px;">
+                        Subscribe to receive new mockup drops, printing technology updates, and creator guides.
+                    </p>
+                    <form class="newsletter-form footer-newsletter-box">
+                        <input type="email" required placeholder="name@creator.com" class="footer-input">
+                        <button type="submit" class="footer-btn">➔</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>© 2026 TrendZ Studio. All Rights Reserved. Modern High-Definition Printing Platform.</div>
+                <div style="display: flex; gap: 20px;">
+                    <a href="Privacy-policy.html">Privacy Policy</a>
+                    <a href="Terms-of-service.html">Terms of Service</a>
+                    <a href="FAQ.html">Shipping & Returns</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script type="module" src="../../src/js/navbar.js"></script>
+    <script type="module" src="../../src/js/service-details.js"></script>
+    <script type="module" src="../../src/js/form-validation.js"></script>
+</body>
+
+</html>

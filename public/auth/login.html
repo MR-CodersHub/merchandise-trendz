@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In to TrendZ Portal | Creator & Admin Access</title>
+    <meta name="description" content="Sign in to your TrendZ Creator Portal or Admin Dashboard to manage print orders, view sales analytics, and request payouts.">
+    <link rel="icon" href="../../assets/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['class', '[data-theme="dark"]'],
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#FFB800',
+                            hover: '#E5A600',
+                            dark: '#111215',
+                            surface: '#14161A'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="../../src/css/variables.css">
+    <link rel="stylesheet" href="../../src/css/base.css">
+    <link rel="stylesheet" href="../../src/css/components.css">
+    <link rel="stylesheet" href="../../src/css/style.css">
+</head>
+
+<body>
+
+    <!-- Ambient Glow Background Blobs -->
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="../../index.html" class="brand-logo">
+                <img src="../../assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon">
+                <div class="brand-logo-text">
+                    <div class="brand-logo-main">Trend<span class="highlight">Z</span></div>
+                    <div class="brand-logo-sub">CREATOR PORTAL</div>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../pages/about.html" class="nav-link">About</a></li>
+                    <li><a href="../pages/services.html" class="nav-link">Services</a></li>
+                    <li><a href="../pages/pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="../pages/contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="signup.html" class="btn btn-yellow btn-sm">
+                    Create Account ➔
+                </a>
+
+                <!-- Profile Dropdown -->
+                <div class="profile-dropdown-wrapper">
+                    <button class="profile-trigger-btn" title="Account & Settings" aria-label="Account Menu">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </button>
+                    <div class="profile-dropdown-menu">
+                        <div class="dropdown-header">
+                            <div class="dropdown-user-name">Portal Access</div>
+                            <div class="dropdown-user-role">Sign In Required</div>
+                        </div>
+                        <a href="login.html" class="dropdown-item">
+                            <span class="icon">🔑</span>
+                            <span>Sign In</span>
+                        </a>
+                        <a href="signup.html" class="dropdown-item">
+                            <span class="icon">📝</span>
+                            <span>Create Account</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="admin/admin-dashboard.html" class="dropdown-item">
+                            <span class="icon">👑</span>
+                            <span>Admin Dashboard</span>
+                        </a>
+                        <a href="user/user-dashboard.html" class="dropdown-item">
+                            <span class="icon">🎨</span>
+                            <span>User Dashboard</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <button class="theme-toggle-btn" type="button">
+                            <span>🌙 Dark Mode</span>
+                        </button>
+                        <button class="rtl-toggle-btn" type="button" style="margin-top: 4px;">
+                            <span>🌐 RTL Mode</span>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section min-h-[85vh] flex items-center justify-center py-16">
+            <div class="container max-w-md mx-auto">
+                <div class="glass-panel p-8 sm:p-10 shadow-2xl">
+                    <div class="text-center mb-8">
+                        <span class="badge-pill badge-yellow text-xs mb-3">Secure Authentication</span>
+                        <h1 class="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white mb-2">Welcome Back</h1>
+                        <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Sign in to manage your mockups and drop sales.</p>
+                    </div>
+
+                    <!-- Quick Demo Fill Buttons -->
+                    <div class="p-3 mb-6 rounded-lg bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700 text-xs">
+                        <div class="text-[11px] font-mono text-gray-400 font-bold uppercase mb-2">⚡ 1-Click Demo Login:</div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <button type="button" id="fillAdminDemoBtn" class="p-2 rounded bg-yellow-500/10 hover:bg-yellow-500/20 text-yellow-600 dark:text-yellow-400 font-bold text-center border border-yellow-500/30">
+                                👑 Admin Portal
+                            </button>
+                            <button type="button" id="fillUserDemoBtn" class="p-2 rounded bg-blue-500/10 hover:bg-blue-500/20 text-blue-600 dark:text-blue-400 font-bold text-center border border-blue-500/30">
+                                🎨 Creator Portal
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Login Form -->
+                    <form id="loginForm" class="login-form space-y-5">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+                            <input type="email" name="email" id="loginEmail" required placeholder="creator@studio.com" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white">
+                        </div>
+
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <label class="text-xs font-bold uppercase text-gray-700 dark:text-gray-300">Password</label>
+                                <a href="#" class="text-xs text-yellow-600 dark:text-yellow-400 font-bold hover:underline" onclick="window.showToast('Password reset link dispatched to your email!', 'info'); return false;">Forgot?</a>
+                            </div>
+                            <input type="password" name="password" id="loginPassword" required placeholder="••••••••" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white">
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" id="rememberMe" class="rounded accent-yellow-500">
+                            <label for="rememberMe" class="text-xs text-gray-600 dark:text-gray-400 font-semibold cursor-pointer">Remember my workstation session</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-yellow btn-lg w-full">
+                            Sign In to Dashboard ➔
+                        </button>
+                    </form>
+
+                    <div class="mt-6 pt-6 border-t border-gray-100 dark:border-gray-800 text-center text-xs text-gray-500">
+                        Don’t have a creator account? <a href="signup.html" class="text-yellow-600 dark:text-yellow-400 font-bold hover:underline">Register Free</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container text-center text-xs text-gray-500 py-6 border-t border-gray-100 dark:border-gray-800">
+            © 2026 TrendZ Studio Inc. Secure 256-Bit SSL Encrypted Portal.
+        </div>
+    </footer>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script type="module" src="../../src/js/navbar.js"></script>
+    <script type="module" src="../../src/js/form-validation.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const emailInput = document.getElementById('loginEmail');
+            const passInput = document.getElementById('loginPassword');
+
+            document.getElementById('fillAdminDemoBtn')?.addEventListener('click', () => {
+                if (emailInput) emailInput.value = 'admin@trendzmerch.com';
+                if (passInput) passInput.value = 'admin123456';
+                window.showToast('Loaded Admin credentials. Click Sign In to access Admin Dashboard!', 'info');
+            });
+
+            document.getElementById('fillUserDemoBtn')?.addEventListener('click', () => {
+                if (emailInput) emailInput.value = 'creator@brandstudio.com';
+                if (passInput) passInput.value = 'creator123456';
+                window.showToast('Loaded Creator credentials. Click Sign In to access User Dashboard!', 'info');
+            });
+        });
+    </script>
+</body>
+
+</html>

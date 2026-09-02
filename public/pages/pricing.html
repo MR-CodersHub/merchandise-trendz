@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & Volume Tiers | TrendZ Custom Merchandise</title>
+    <meta name="description" content="Transparent, volume-discounted merchandise manufacturing pricing. Zero upfront costs, monthly creator subscriptions, and enterprise swag discounts.">
+    <link rel="icon" href="../../assets/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['class', '[data-theme="dark"]'],
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#FFB800',
+                            hover: '#E5A600',
+                            dark: '#111215',
+                            surface: '#14161A'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="../../src/css/variables.css">
+    <link rel="stylesheet" href="../../src/css/base.css">
+    <link rel="stylesheet" href="../../src/css/components.css">
+    <link rel="stylesheet" href="../../src/css/style.css">
+</head>
+
+<body>
+
+    <!-- Ambient Glow Background Blobs -->
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-glow ambient-glow-3"></div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="../../index.html" class="brand-logo">
+                <img src="../../assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon">
+                <div class="brand-logo-text">
+                    <div class="brand-logo-main">Trend<span class="highlight">Z</span></div>
+                    <div class="brand-logo-sub">CUSTOM MERCHANDISE</div>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li><a href="home-2.html" class="nav-link">Niche Drop</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="pricing.html" class="nav-link active">Pricing</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="services.html" class="btn btn-outline btn-sm hidden sm:inline-flex">
+                    ⚡ Services Hub
+                </a>
+
+                <!-- Profile Dropdown -->
+                <div class="profile-dropdown-wrapper">
+                    <button class="profile-trigger-btn" title="Account & Settings" aria-label="Account Menu">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </button>
+                    <div class="profile-dropdown-menu">
+                        <div class="dropdown-header">
+                            <div class="dropdown-user-name">TrendZ Portal</div>
+                            <div class="dropdown-user-role">Guest / Creator Access</div>
+                        </div>
+                        <a href="../auth/login.html" class="dropdown-item">
+                            <span class="icon">🔑</span>
+                            <span>Sign In</span>
+                        </a>
+                        <a href="../auth/signup.html" class="dropdown-item">
+                            <span class="icon">📝</span>
+                            <span>Create Account</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="../auth/admin/admin-dashboard.html" class="dropdown-item">
+                            <span class="icon">👑</span>
+                            <span>Admin Dashboard</span>
+                        </a>
+                        <a href="../auth/user/user-dashboard.html" class="dropdown-item">
+                            <span class="icon">🎨</span>
+                            <span>User Dashboard</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <button class="theme-toggle-btn" type="button">
+                            <span>🌙 Dark Mode</span>
+                        </button>
+                        <button class="rtl-toggle-btn" type="button" style="margin-top: 4px;">
+                            <span>🌐 RTL Mode</span>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECTION 1: PRICING HERO -->
+        <section class="section" style="padding-top: 60px; padding-bottom: 40px;">
+            <div class="container text-center max-w-3xl mx-auto">
+                <span class="badge-pill badge-yellow mb-4">Transparent Economics</span>
+                <h1 class="text-4xl sm:text-5xl font-black text-gray-900 dark:text-white mb-6 leading-tight">
+                    Simple Plans, <span class="highlight-yellow">Zero Hidden Fees</span>
+                </h1>
+                <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+                    Choose between pay-as-you-go print fulfillment or upgrade to Creator Pro for wholesale discounts and priority production lines.
+                </p>
+
+                <!-- Billing Cycle Toggle -->
+                <div class="inline-flex items-center gap-3 p-1.5 rounded-full bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                    <button class="px-5 py-2 rounded-full text-xs font-bold transition-all bg-yellow-500 text-black shadow-sm" id="billingMonthlyBtn">Monthly</button>
+                    <button class="px-5 py-2 rounded-full text-xs font-bold text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-all" id="billingAnnualBtn">
+                        Annual <span class="badge-pill badge-yellow text-[10px] py-0.5 px-1.5 ml-1">Save 20%</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: PRICING CARDS -->
+        <section class="section py-6">
+            <div class="container">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+                    <!-- Plan 1: Free Starter -->
+                    <div class="pricing-card">
+                        <div>
+                            <span class="text-xs font-mono font-bold uppercase text-gray-400">Pay As You Sell</span>
+                            <h3 class="text-2xl font-black text-gray-900 dark:text-white mt-1 mb-2">Starter Creator</h3>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 mb-6">Ideal for launching your first sample or testing fan demand.</p>
+                            <div class="text-4xl font-black text-gray-900 dark:text-white mb-6 font-mono">
+                                $0 <span class="text-xs text-gray-400 font-normal">/ month forever</span>
+                            </div>
+
+                            <ul class="space-y-3 mb-8 text-sm">
+                                <li class="flex items-center gap-2.5 text-gray-700 dark:text-gray-300">
+                                    <span class="text-emerald-500 font-bold">✓</span> Standard wholesale base catalog
+                                </li>
+                                <li class="flex items-center gap-2.5 text-gray-700 dark:text-gray-300">
+                                    <span class="text-emerald-500 font-bold">✓</span> 100% White-label shipping
+                                </li>
+                                <li class="flex items-center gap-2.5 text-gray-700 dark:text-gray-300">
+                                    <span class="text-emerald-500 font-bold">✓</span> 1-Click Shopify & Etsy Sync
+                                </li>
+                                <li class="flex items-center gap-2.5 text-gray-700 dark:text-gray-300">
+                                    <span class="text-emerald-500 font-bold">✓</span> 48h Production turnarounds
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="../auth/signup.html" class="btn btn-outline w-full text-center">
+                            Start Free ➔
+                        </a>
+                    </div>
+
+                    <!-- Plan 2: Creator Pro (Featured) -->
+                    <div class="pricing-card featured">
+                        <span class="badge-pill badge-yellow absolute -top-3.5 right-6 text-xs font-bold">Most Popular</span>
+                        <div>
+                            <span class="text-xs font-mono font-bold uppercase text-yellow-500">High Volume Drops</span>
+                            <h3 class="text-2xl font-black text-gray-900 dark:text-white mt-1 mb-2">Creator Pro</h3>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 mb-6">For streamers, indie brands, and creators running scheduled drops.</p>
+                            <div class="text-4xl font-black text-gray-900 dark:text-white mb-6 font-mono" id="proPriceDisplay">
+                                $29 <span class="text-xs text-gray-400 font-normal">/ month</span>
+                            </div>
+
+                            <ul class="space-y-3 mb-8 text-sm">
+                                <li class="flex items-center gap-2.5 text-gray-900 dark:text-white font-bold">
+                                    <span class="text-emerald-500">✓</span> 15% Base cost discount on all apparel
+                                </li>
+                                <li class="flex items-center gap-2.5 text-gray-700 dark:text-gray-300">
+                                    <span class="text-emerald-500 font-bold">✓</span> Custom printed inside neck labels
+                                </li>
+                                <li class="flex items-center gap-2.5 text-gray-700 dark:text-gray-300">
+                                    <span class="text-emerald-500 font-bold">✓</span> VIP Priority print queue (24h)
+                                </li>
+                                <li class="flex items-center gap-2.5 text-gray-700 dark:text-gray-300">
+                                    <span class="text-emerald-500 font-bold">✓</span> Custom polymailer bag storage
+                                </li>
+                                <li class="flex items-center gap-2.5 text-gray-700 dark:text-gray-300">
+                                    <span class="text-emerald-500 font-bold">✓</span> Dedicated Discord partner channel
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="../auth/signup.html" class="btn btn-yellow w-full text-center">
+                            Start 14-Day Free Trial ➔
+                        </a>
+                    </div>
+
+                    <!-- Plan 3: Brand Enterprise -->
+                    <div class="pricing-card">
+                        <div>
+                            <span class="text-xs font-mono font-bold uppercase text-gray-400">Scale & Agency</span>
+                            <h3 class="text-2xl font-black text-gray-900 dark:text-white mt-1 mb-2">Brand Enterprise</h3>
+                            <p class="text-xs text-gray-500 dark:text-gray-400 mb-6">For corporations, record labels, and high-volume e-commerce brands.</p>
+                            <div class="text-4xl font-black text-gray-900 dark:text-white mb-6 font-mono">
+                                Custom <span class="text-xs text-gray-400 font-normal">/ wholesale volume</span>
+                            </div>
+
+                            <ul class="space-y-3 mb-8 text-sm">
+                                <li class="flex items-center gap-2.5 text-gray-700 dark:text-gray-300">
+                                    <span class="text-emerald-500 font-bold">✓</span> Up to 35% Volume bulk discount
+                                </li>
+                                <li class="flex items-center gap-2.5 text-gray-700 dark:text-gray-300">
+                                    <span class="text-emerald-500 font-bold">✓</span> Bespoke cut & sew garment patterns
+                                </li>
+                                <li class="flex items-center gap-2.5 text-gray-700 dark:text-gray-300">
+                                    <span class="text-emerald-500 font-bold">✓</span> Global multi-address DDP shipping
+                                </li>
+                                <li class="flex items-center gap-2.5 text-gray-700 dark:text-gray-300">
+                                    <span class="text-emerald-500 font-bold">✓</span> Dedicated Senior Account Director
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="contact.html" class="btn btn-outline w-full text-center">
+                            Contact Enterprise Sales ➔
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: INTERACTIVE VOLUME SAVINGS CALCULATOR -->
+        <section class="section bg-white dark:bg-gray-900 border-y border-gray-100 dark:border-gray-800">
+            <div class="container max-w-4xl">
+                <div class="section-header text-center mb-8">
+                    <span class="section-tagline text-yellow-500 font-bold">Interactive Calculator</span>
+                    <h2 class="section-title text-3xl sm:text-4xl font-black">Estimate Your Wholesale Savings</h2>
+                </div>
+
+                <div class="glass-panel p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-700 dark:text-gray-300 mb-2">Select Garment Category</label>
+                                <select id="calcProductSelect" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-bold">
+                                    <option value="19.99" data-name="240 GSM Premium Tee">Heavyweight 240 GSM Tee ($19.99 retail)</option>
+                                    <option value="42.00" data-name="380 GSM Fleece Hoodie">380 GSM Streetwear Fleece Hoodie ($42.00 retail)</option>
+                                    <option value="14.50" data-name="Sublimated Ceramic Mug">Matte Ceramic 15oz Mug ($14.50 retail)</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between items-center mb-2">
+                                    <label class="text-xs font-bold uppercase text-gray-700 dark:text-gray-300">Order Quantity: <span id="calcQtyVal" class="text-yellow-500 font-black">100 pcs</span></label>
+                                    <span class="text-xs text-emerald-500 font-bold" id="calcDiscountBadge">25% Volume Tier</span>
+                                </div>
+                                <input type="range" id="calcQtySlider" min="1" max="500" value="100" class="w-full accent-yellow-500 cursor-pointer">
+                            </div>
+                        </div>
+
+                        <div class="p-6 rounded-xl bg-gray-900 text-white border border-gray-800 space-y-4">
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-gray-400">Unit Manufacturing Cost:</span>
+                                <span class="text-xl font-bold font-mono text-yellow-400" id="calcUnitCost">$14.99</span>
+                            </div>
+                            <div class="flex justify-between items-center text-sm">
+                                <span class="text-gray-400">Total Bulk Order Cost:</span>
+                                <span class="text-xl font-bold font-mono text-white" id="calcTotalCost">$1,499.00</span>
+                            </div>
+                            <div class="pt-4 border-t border-gray-800 flex justify-between items-center">
+                                <span class="text-xs uppercase text-emerald-400 font-bold">Estimated Creator Profit:</span>
+                                <span class="text-2xl font-black font-mono text-emerald-400" id="calcEstimatedProfit">+$2,701.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: FULL FEATURE COMPARISON TABLE -->
+        <section class="section">
+            <div class="container max-w-5xl">
+                <div class="section-header text-center mb-12">
+                    <span class="section-tagline text-yellow-500 font-bold">Full Matrix</span>
+                    <h2 class="section-title text-3xl sm:text-4xl font-black">Plan Capabilities Breakdown</h2>
+                </div>
+
+                <div class="glass-panel overflow-hidden">
+                    <table class="w-full text-left border-collapse text-sm">
+                        <thead>
+                            <tr class="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white font-bold">
+                                <th class="p-4 w-2/5">Feature</th>
+                                <th class="p-4 text-center">Starter ($0)</th>
+                                <th class="p-4 text-center text-yellow-600 dark:text-yellow-400">Creator Pro ($29)</th>
+                                <th class="p-4 text-center">Enterprise</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 dark:divide-gray-800 text-gray-700 dark:text-gray-300">
+                            <tr>
+                                <td class="p-4 font-bold">Direct-to-Garment 1200 DPI Printing</td>
+                                <td class="p-4 text-center text-emerald-500 font-bold">✓</td>
+                                <td class="p-4 text-center text-emerald-500 font-bold">✓</td>
+                                <td class="p-4 text-center text-emerald-500 font-bold">✓</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold">Base Cost Apparel Discount</td>
+                                <td class="p-4 text-center text-gray-400">0%</td>
+                                <td class="p-4 text-center text-yellow-500 font-bold">15% Off</td>
+                                <td class="p-4 text-center text-emerald-500 font-bold">Up to 35% Off</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold">Inside Neck Label Custom Printing</td>
+                                <td class="p-4 text-center text-gray-400">+$2.50/pc</td>
+                                <td class="p-4 text-center text-emerald-500 font-bold">Included FREE</td>
+                                <td class="p-4 text-center text-emerald-500 font-bold">Custom Woven Tags</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold">Production Turnaround Priority</td>
+                                <td class="p-4 text-center">48 - 72 Hours</td>
+                                <td class="p-4 text-center font-bold text-yellow-500">24 - 48 Hours Priority</td>
+                                <td class="p-4 text-center font-bold text-emerald-500">Dedicated Machine Line</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold">Branded Poly Mailer Storage</td>
+                                <td class="p-4 text-center text-gray-400">—</td>
+                                <td class="p-4 text-center text-emerald-500 font-bold">✓</td>
+                                <td class="p-4 text-center text-emerald-500 font-bold">✓</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: PRICING FAQS -->
+        <section class="section bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
+            <div class="container max-w-3xl">
+                <div class="section-header text-center mb-10">
+                    <span class="section-tagline text-yellow-500 font-bold">Pricing Questions</span>
+                    <h2 class="section-title text-2xl sm:text-3xl font-black">Frequently Asked Questions</h2>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="glass-panel p-5">
+                        <h4 class="font-bold text-base text-gray-900 dark:text-white mb-2">Can I cancel my Creator Pro subscription at any time?</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                            Yes! There are no long-term contracts. You can downgrade or cancel your Creator Pro plan anytime with 1-click in your account dashboard.
+                        </p>
+                    </div>
+
+                    <div class="glass-panel p-5">
+                        <h4 class="font-bold text-base text-gray-900 dark:text-white mb-2">Are there any hidden screen setup or film fees?</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                            Never. Unlike old-fashioned screen printers who charge $30 per color per screen, our digital DTG and sublimation prints have zero setup fees.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../../index.html" class="brand-logo" style="margin-bottom: 14px;">
+                        <img src="../../assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon" style="height: 48px;">
+                        <div class="brand-logo-text">
+                            <div class="brand-logo-main">Trend<span class="highlight">Z</span></div>
+                            <div class="brand-logo-sub">CUSTOM MERCHANDISE</div>
+                        </div>
+                    </a>
+                    <p>Modern digital printing solutions, corporate merchandise packages, and premier print-on-demand platform for creators and businesses.</p>
+                    <div style="display: flex; gap: 12px;">
+                        <span class="badge-pill badge-yellow">📍 Worldwide Express Shipping</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Services & Print</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">All Services Listing</a></li>
+                        <li><a href="service-details.html?id=dtg-printing">DTG HD Printing</a></li>
+                        <li><a href="service-details.html?id=sublimation">All-Over Sublimation</a></li>
+                        <li><a href="service-details.html?id=embroidery">3D Puff Embroidery</a></li>
+                        <li><a href="service-details.html?id=creator-drops">Creator POD Drops</a></li>
+                        <li><a href="pricing.html">Pricing & Volume Tiers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Company & Hub</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About TrendZ</a></li>
+                        <li><a href="home-2.html">Gaming Niche Studio</a></li>
+                        <li><a href="blog.html">Printing Blog & Guides</a></li>
+                        <li><a href="FAQ.html">FAQ & Help Center</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                        <li><a href="coming-soon.html">Upcoming Tech Drops 🚀</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Creator Updates</h4>
+                    <p style="font-size: 0.88rem; color: #9CA3AF; margin-bottom: 12px;">
+                        Subscribe to receive new mockup drops, printing technology updates, and creator guides.
+                    </p>
+                    <form class="newsletter-form footer-newsletter-box">
+                        <input type="email" required placeholder="name@creator.com" class="footer-input">
+                        <button type="submit" class="footer-btn">➔</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>© 2026 TrendZ Studio. All Rights Reserved. Modern High-Definition Printing Platform.</div>
+                <div style="display: flex; gap: 20px;">
+                    <a href="Privacy-policy.html">Privacy Policy</a>
+                    <a href="Terms-of-service.html">Terms of Service</a>
+                    <a href="FAQ.html">Shipping & Returns</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script type="module" src="../../src/js/navbar.js"></script>
+    <script type="module" src="../../src/js/form-validation.js"></script>
+    <script>
+        // Interactive Calculator & Billing Toggle Logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const monthlyBtn = document.getElementById('billingMonthlyBtn');
+            const annualBtn = document.getElementById('billingAnnualBtn');
+            const proPriceDisplay = document.getElementById('proPriceDisplay');
+
+            monthlyBtn?.addEventListener('click', () => {
+                monthlyBtn.classList.add('bg-yellow-500', 'text-black');
+                monthlyBtn.classList.remove('text-gray-500');
+                annualBtn.classList.remove('bg-yellow-500', 'text-black');
+                annualBtn.classList.add('text-gray-500');
+                if (proPriceDisplay) proPriceDisplay.innerHTML = '$29 <span class="text-xs text-gray-400 font-normal">/ month</span>';
+            });
+
+            annualBtn?.addEventListener('click', () => {
+                annualBtn.classList.add('bg-yellow-500', 'text-black');
+                annualBtn.classList.remove('text-gray-500');
+                monthlyBtn.classList.remove('bg-yellow-500', 'text-black');
+                monthlyBtn.classList.add('text-gray-500');
+                if (proPriceDisplay) proPriceDisplay.innerHTML = '$23 <span class="text-xs text-gray-400 font-normal">/ month (Billed $276/yr)</span>';
+            });
+
+            // Calculator
+            const slider = document.getElementById('calcQtySlider');
+            const qtyVal = document.getElementById('calcQtyVal');
+            const prodSelect = document.getElementById('calcProductSelect');
+            const discountBadge = document.getElementById('calcDiscountBadge');
+            const unitCost = document.getElementById('calcUnitCost');
+            const totalCost = document.getElementById('calcTotalCost');
+            const profitEl = document.getElementById('calcEstimatedProfit');
+
+            function updateCalc() {
+                const qty = parseInt(slider.value);
+                const basePrice = parseFloat(prodSelect.value);
+                qtyVal.textContent = `${qty} pcs`;
+
+                let discount = 0;
+                if (qty >= 250) discount = 0.35;
+                else if (qty >= 100) discount = 0.25;
+                else if (qty >= 50) discount = 0.15;
+                else if (qty >= 10) discount = 0.08;
+
+                discountBadge.textContent = `${Math.round(discount * 100)}% Volume Tier`;
+                const calculatedUnitCost = basePrice * (1 - discount);
+                const calculatedTotalCost = calculatedUnitCost * qty;
+                const estimatedRetailRevenue = (basePrice * 1.8) * qty;
+                const estimatedProfit = estimatedRetailRevenue - calculatedTotalCost;
+
+                unitCost.textContent = `$${calculatedUnitCost.toFixed(2)}`;
+                totalCost.textContent = `$${calculatedTotalCost.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+                profitEl.textContent = `+$${estimatedProfit.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            }
+
+            slider?.addEventListener('input', updateCalc);
+            prodSelect?.addEventListener('change', updateCalc);
+            updateCalc();
+        });
+    </script>
+</body>
+
+</html>

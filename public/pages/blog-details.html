@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article | TrendZ Printing Insights</title>
+    <meta name="description" content="In-depth analysis and technical guides for custom merchandise, Direct-to-Garment printing, and creator drop strategies.">
+    <link rel="icon" href="../../assets/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['class', '[data-theme="dark"]'],
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#FFB800',
+                            hover: '#E5A600',
+                            dark: '#111215',
+                            surface: '#14161A'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="../../src/css/variables.css">
+    <link rel="stylesheet" href="../../src/css/base.css">
+    <link rel="stylesheet" href="../../src/css/components.css">
+    <link rel="stylesheet" href="../../src/css/style.css">
+</head>
+
+<body>
+
+    <!-- Ambient Glow Background Blobs -->
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-glow ambient-glow-3"></div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="../../index.html" class="brand-logo">
+                <img src="../../assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon">
+                <div class="brand-logo-text">
+                    <div class="brand-logo-main">Trend<span class="highlight">Z</span></div>
+                    <div class="brand-logo-sub">PRINT & MERCH INSIGHTS</div>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li><a href="home-2.html" class="nav-link">Niche Drop</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="blog.html" class="btn btn-outline btn-sm hidden sm:inline-flex">
+                    ← All Articles
+                </a>
+
+                <!-- Profile Dropdown -->
+                <div class="profile-dropdown-wrapper">
+                    <button class="profile-trigger-btn" title="Account & Settings" aria-label="Account Menu">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </button>
+                    <div class="profile-dropdown-menu">
+                        <div class="dropdown-header">
+                            <div class="dropdown-user-name">TrendZ Portal</div>
+                            <div class="dropdown-user-role">Guest / Creator Access</div>
+                        </div>
+                        <a href="../auth/login.html" class="dropdown-item">
+                            <span class="icon">🔑</span>
+                            <span>Sign In</span>
+                        </a>
+                        <a href="../auth/signup.html" class="dropdown-item">
+                            <span class="icon">📝</span>
+                            <span>Create Account</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="../auth/admin/admin-dashboard.html" class="dropdown-item">
+                            <span class="icon">👑</span>
+                            <span>Admin Dashboard</span>
+                        </a>
+                        <a href="../auth/user/user-dashboard.html" class="dropdown-item">
+                            <span class="icon">🎨</span>
+                            <span>User Dashboard</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <button class="theme-toggle-btn" type="button">
+                            <span>🌙 Dark Mode</span>
+                        </button>
+                        <button class="rtl-toggle-btn" type="button" style="margin-top: 4px;">
+                            <span>🌐 RTL Mode</span>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- BREADCRUMBS -->
+        <div class="container pt-8 pb-4">
+            <nav class="text-xs font-semibold text-gray-400 flex items-center gap-2">
+                <a href="../../index.html" class="hover:text-yellow-500">Home</a>
+                <span>/</span>
+                <a href="blog.html" class="hover:text-yellow-500">Blog</a>
+                <span>/</span>
+                <span class="text-yellow-500 font-bold line-clamp-1" id="blogBreadcrumbCurrent">Loading Article...</span>
+            </nav>
+        </div>
+
+        <!-- ARTICLE CONTENT WRAPPER -->
+        <div class="container pb-20">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- MAIN ARTICLE COLUMN (8 cols) -->
+                <div class="lg:col-span-8">
+                    <!-- SECTION 1: HEADER & META -->
+                    <div class="mb-8">
+                        <span class="badge-pill badge-yellow text-xs mb-4" id="blogCategoryBadge">Category</span>
+                        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6 leading-tight" id="blogPostTitle">
+                            Loading Article Title...
+                        </h1>
+                        <div class="flex items-center gap-4 pb-6 border-b border-gray-100 dark:border-gray-800">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Author" id="blogAuthorAvatar" class="w-12 h-12 rounded-full object-cover border-2 border-yellow-500">
+                            <div>
+                                <div class="font-bold text-gray-900 dark:text-white text-sm" id="blogAuthorName">Author Name</div>
+                                <div class="text-xs text-gray-500" id="blogAuthorRole">Master Print Technician</div>
+                            </div>
+                            <div class="ml-auto text-xs text-gray-400 text-right font-mono">
+                                <div id="blogPostDate">August 28, 2026</div>
+                                <div id="blogPostReadTime" class="text-yellow-500 font-bold">6 min read</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- HERO BANNER -->
+                    <div class="rounded-2xl overflow-hidden shadow-xl mb-10 border border-gray-200 dark:border-gray-800">
+                        <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80" alt="Article Banner" id="blogBannerImage" class="w-full h-80 sm:h-96 object-cover">
+                    </div>
+
+                    <!-- SECTION 2: DYNAMIC HTML ARTICLE BODY -->
+                    <div class="prose dark:prose-invert max-w-none text-gray-700 dark:text-gray-300 leading-relaxed space-y-6" id="blogArticleBody">
+                        <p>Loading full article content...</p>
+                    </div>
+
+                    <!-- SECTION 3: ARTICLE TAGS & SHARE BAR -->
+                    <div class="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-wrap justify-between items-center gap-4">
+                        <div class="flex flex-wrap gap-2 items-center" id="blogPostTags">
+                            <!-- Loaded dynamically via blog-details.js -->
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <span class="text-xs font-bold uppercase text-gray-400">Share:</span>
+                            <button class="btn btn-outline btn-sm" id="shareCopyLinkBtn" title="Copy Link">
+                                🔗 Copy Link
+                            </button>
+                            <a href="https://twitter.com" target="_blank" rel="noopener" class="btn-icon" style="width:36px; height:36px;" title="Share on X">
+                                𝕏
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 4: AUTHOR BIO CARD -->
+                    <div class="glass-panel p-6 sm:p-8 mt-10 flex flex-col sm:flex-row items-center gap-6">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Author Bio" id="authorBioAvatar" class="w-20 h-20 rounded-full object-cover border-2 border-yellow-500 flex-shrink-0">
+                        <div>
+                            <div class="text-xs font-mono text-yellow-500 font-bold uppercase mb-1">About The Author</div>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-1" id="authorBioName">Marcus Vance</h3>
+                            <div class="text-xs text-gray-400 mb-3" id="authorBioRole">Master Print Technician & Colorist</div>
+                            <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                                Specialist in Direct-to-Garment neo-pigment formulations, industrial textile pretreatment, and high-volume automated e-commerce fulfillment pipelines.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 5: INTERACTIVE COMMENTS SECTION -->
+                    <div class="mt-14">
+                        <h3 class="text-2xl font-black text-gray-900 dark:text-white mb-6">Discussion & Reader Insights</h3>
+                        
+                        <!-- Post Comment Form -->
+                        <form id="blogCommentForm" class="glass-panel p-6 mb-8">
+                            <h4 class="text-sm font-bold text-gray-900 dark:text-white uppercase tracking-wider mb-4">Leave a Comment</h4>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                                <input type="text" id="commentNameInput" required placeholder="Your Name" class="px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white">
+                                <input type="email" id="commentEmailInput" required placeholder="Your Business Email" class="px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white">
+                            </div>
+                            <textarea id="commentTextInput" rows="3" required placeholder="Write your thoughts, questions, or printing experiences..." class="w-full px-4 py-2.5 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white mb-4"></textarea>
+                            <button type="submit" class="btn btn-yellow btn-sm">Post Comment ➔</button>
+                        </form>
+
+                        <!-- Comments List -->
+                        <div id="blogCommentsList" class="space-y-4">
+                            <!-- Seed Comments -->
+                            <div class="glass-panel p-5">
+                                <div class="flex justify-between items-center mb-2">
+                                    <div class="flex items-center gap-3">
+                                        <div class="w-8 h-8 rounded-full bg-yellow-500 text-black font-bold flex items-center justify-center text-xs">J</div>
+                                        <div>
+                                            <div class="font-bold text-sm text-gray-900 dark:text-white">Jordan K.</div>
+                                            <div class="text-xs text-gray-400">2 days ago</div>
+                                        </div>
+                                    </div>
+                                    <span class="badge-pill badge-yellow text-xs">Brand Founder</span>
+                                </div>
+                                <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                                    This comparison saved us thousands on our fall drop! We opted for DTG for our 6-color gradient art and the soft hand feel is night and day compared to plastisol.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SIDEBAR COLUMN (4 cols) -->
+                <div class="lg:col-span-4 space-y-8">
+                    <!-- Search Widget -->
+                    <div class="glass-panel p-6">
+                        <h4 class="text-sm font-bold uppercase text-gray-900 dark:text-white tracking-wider mb-3">Search Insights</h4>
+                        <div class="flex gap-2">
+                            <input type="text" placeholder="Search blog..." class="w-full px-3 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm">
+                            <button class="btn btn-yellow btn-sm">➔</button>
+                        </div>
+                    </div>
+
+                    <!-- Popular Articles Widget -->
+                    <div class="glass-panel p-6">
+                        <h4 class="text-sm font-bold uppercase text-gray-900 dark:text-white tracking-wider mb-4">Trending Articles</h4>
+                        <div class="space-y-4" id="sidebarPopularPosts">
+                            <!-- Loaded dynamically via blog-details.js -->
+                        </div>
+                    </div>
+
+                    <!-- Quick Quote CTA Card -->
+                    <div class="glass-panel p-6 bg-gradient-to-br from-yellow-500/10 to-transparent border-yellow-500/30">
+                        <div class="text-2xl mb-2">⚡</div>
+                        <h4 class="text-base font-bold text-gray-900 dark:text-white mb-2">Ready to Print Your Custom Merch?</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-4 leading-relaxed">
+                            Upload your artwork to our interactive 3D studio and see live photorealistic mockups with zero obligation.
+                        </p>
+                        <a href="services.html" class="btn btn-yellow btn-sm w-full text-center">
+                            Launch Customizer ➔
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SECTION 6: RELATED ARTICLES CAROUSEL -->
+        <section class="section bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
+            <div class="container">
+                <div class="section-header text-center mb-10">
+                    <span class="section-tagline text-yellow-500 font-bold">Continue Reading</span>
+                    <h2 class="section-title text-2xl sm:text-3xl font-black">Related Merchandise Guides</h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto" id="relatedPostsGrid">
+                    <!-- Loaded dynamically via blog-details.js -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../../index.html" class="brand-logo" style="margin-bottom: 14px;">
+                        <img src="../../assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon" style="height: 48px;">
+                        <div class="brand-logo-text">
+                            <div class="brand-logo-main">Trend<span class="highlight">Z</span></div>
+                            <div class="brand-logo-sub">CUSTOM MERCHANDISE</div>
+                        </div>
+                    </a>
+                    <p>Modern digital printing solutions, corporate merchandise packages, and premier print-on-demand platform for creators and businesses.</p>
+                    <div style="display: flex; gap: 12px;">
+                        <span class="badge-pill badge-yellow">📍 Worldwide Express Shipping</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Services & Print</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">All Services Listing</a></li>
+                        <li><a href="service-details.html?id=dtg-printing">DTG HD Printing</a></li>
+                        <li><a href="service-details.html?id=sublimation">All-Over Sublimation</a></li>
+                        <li><a href="service-details.html?id=embroidery">3D Puff Embroidery</a></li>
+                        <li><a href="service-details.html?id=creator-drops">Creator POD Drops</a></li>
+                        <li><a href="pricing.html">Pricing & Volume Tiers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Company & Hub</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About TrendZ</a></li>
+                        <li><a href="home-2.html">Gaming Niche Studio</a></li>
+                        <li><a href="blog.html">Printing Blog & Guides</a></li>
+                        <li><a href="FAQ.html">FAQ & Help Center</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                        <li><a href="coming-soon.html">Upcoming Tech Drops 🚀</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Creator Updates</h4>
+                    <p style="font-size: 0.88rem; color: #9CA3AF; margin-bottom: 12px;">
+                        Subscribe to receive new mockup drops, printing technology updates, and creator guides.
+                    </p>
+                    <form class="newsletter-form footer-newsletter-box">
+                        <input type="email" required placeholder="name@creator.com" class="footer-input">
+                        <button type="submit" class="footer-btn">➔</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>© 2026 TrendZ Studio. All Rights Reserved. Modern High-Definition Printing Platform.</div>
+                <div style="display: flex; gap: 20px;">
+                    <a href="Privacy-policy.html">Privacy Policy</a>
+                    <a href="Terms-of-service.html">Terms of Service</a>
+                    <a href="FAQ.html">Shipping & Returns</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script type="module" src="../../src/js/navbar.js"></script>
+    <script type="module" src="../../src/js/blog-details.js"></script>
+    <script type="module" src="../../src/js/form-validation.js"></script>
+</body>
+
+</html>

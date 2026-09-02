@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy & Data Security | TrendZ</title>
+    <meta name="description" content="Read TrendZ Privacy Policy. Learn how we protect creator intellectual property, artwork files, user data, and comply with GDPR & CCPA regulations.">
+    <link rel="icon" href="../../assets/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['class', '[data-theme="dark"]'],
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#FFB800',
+                            hover: '#E5A600',
+                            dark: '#111215',
+                            surface: '#14161A'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="../../src/css/variables.css">
+    <link rel="stylesheet" href="../../src/css/base.css">
+    <link rel="stylesheet" href="../../src/css/components.css">
+    <link rel="stylesheet" href="../../src/css/style.css">
+</head>
+
+<body>
+
+    <!-- Ambient Glow Background Blobs -->
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-glow ambient-glow-3"></div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="../../index.html" class="brand-logo">
+                <img src="../../assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon">
+                <div class="brand-logo-text">
+                    <div class="brand-logo-main">Trend<span class="highlight">Z</span></div>
+                    <div class="brand-logo-sub">PRIVACY & TRUST</div>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li><a href="home-2.html" class="nav-link">Niche Drop</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-outline btn-sm hidden sm:inline-flex">
+                    Legal Inquiries
+                </a>
+
+                <!-- Profile Dropdown -->
+                <div class="profile-dropdown-wrapper">
+                    <button class="profile-trigger-btn" title="Account & Settings" aria-label="Account Menu">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </button>
+                    <div class="profile-dropdown-menu">
+                        <div class="dropdown-header">
+                            <div class="dropdown-user-name">TrendZ Portal</div>
+                            <div class="dropdown-user-role">Guest / Creator Access</div>
+                        </div>
+                        <a href="../auth/login.html" class="dropdown-item">
+                            <span class="icon">🔑</span>
+                            <span>Sign In</span>
+                        </a>
+                        <a href="../auth/signup.html" class="dropdown-item">
+                            <span class="icon">📝</span>
+                            <span>Create Account</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="../auth/admin/admin-dashboard.html" class="dropdown-item">
+                            <span class="icon">👑</span>
+                            <span>Admin Dashboard</span>
+                        </a>
+                        <a href="../auth/user/user-dashboard.html" class="dropdown-item">
+                            <span class="icon">🎨</span>
+                            <span>User Dashboard</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <button class="theme-toggle-btn" type="button">
+                            <span>🌙 Dark Mode</span>
+                        </button>
+                        <button class="rtl-toggle-btn" type="button" style="margin-top: 4px;">
+                            <span>🌐 RTL Mode</span>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECTION 1: HERO & METADATA -->
+        <section class="section pt-12 pb-6">
+            <div class="container text-center max-w-3xl mx-auto">
+                <span class="badge-pill badge-yellow mb-4">Legal & Compliance</span>
+                <h1 class="text-4xl sm:text-5xl font-black text-gray-900 dark:text-white mb-4 leading-tight">
+                    Privacy Policy & <span class="highlight-yellow">Data Protection</span>
+                </h1>
+                <p class="text-sm font-mono text-gray-500 dark:text-gray-400">
+                    Effective Date: August 1, 2026 • Last Reviewed: August 28, 2026
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: PRIVACY SECTIONS CONTENT -->
+        <section class="section py-6">
+            <div class="container max-w-4xl space-y-8">
+                <!-- Overview Statement -->
+                <div class="glass-panel p-6 border-l-4 border-yellow-500">
+                    <p class="text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+                        At <strong>TrendZ Studio</strong> ("TrendZ", "we", "our"), protecting the confidential artwork, commercial designs, and personal information of our creators, merchants, and buyers is fundamental to our business. This policy explains how we collect, process, and safeguard your data.
+                    </p>
+                </div>
+
+                <!-- SECTION 3: INTELLECTUAL PROPERTY & ARTWORK PRIVACY -->
+                <div class="glass-panel p-8">
+                    <h2 class="text-2xl font-black text-gray-900 dark:text-white mb-4">1. Creator Artwork & Design IP Ownership</h2>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                        You retain <strong>100% full intellectual property ownership</strong> of all graphics, vector logos, artwork files, and typography uploaded to our mockup studio or print queue.
+                    </p>
+                    <ul class="list-disc ml-6 text-sm text-gray-600 dark:text-gray-300 space-y-2">
+                        <li>TrendZ will never license, sell, redistribute, or reuse your custom artwork for any purpose other than producing your physical merchandise orders.</li>
+                        <li>High-resolution print files are stored in encrypted, air-gapped AWS S3 buckets with 256-bit AES encryption.</li>
+                        <li>You may request complete permanent deletion of your artwork files from our print servers at any time.</li>
+                    </ul>
+                </div>
+
+                <!-- SECTION 4: DATA WE COLLECT & HOW WE USE IT -->
+                <div class="glass-panel p-8">
+                    <h2 class="text-2xl font-black text-gray-900 dark:text-white mb-4">2. Information We Collect</h2>
+                    <div class="space-y-4 text-sm text-gray-600 dark:text-gray-300">
+                        <p><strong>A. Account Data:</strong> When registering as a creator or brand, we collect your name, business email, store URL, and payout preference details.</p>
+                        <p><strong>B. Order & Fulfillment Data:</strong> When customer orders are placed, we process the recipient shipping address, item sizes, and contact details strictly to generate shipping labels and courier tracking notifications.</p>
+                        <p><strong>C. Payment Information:</strong> Financial transactions are processed directly by certified Tier-1 PCI-DSS compliant providers (Stripe & PayPal). TrendZ never stores your credit card numbers or raw bank credentials on our servers.</p>
+                    </div>
+                </div>
+
+                <!-- SECTION 5: GDPR & CCPA RIGHTS -->
+                <div class="glass-panel p-8">
+                    <h2 class="text-2xl font-black text-gray-900 dark:text-white mb-4">3. GDPR (Europe) & CCPA (California) Rights</h2>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                        Under global data protection laws, all registered users and customers have explicit rights regarding their personal records:
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-semibold">
+                        <div class="p-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                            <span class="text-yellow-500 font-bold block mb-1">Right to Access</span>
+                            Request a full JSON export of all personal data held about you.
+                        </div>
+                        <div class="p-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                            <span class="text-yellow-500 font-bold block mb-1">Right to Erasure ("To Be Forgotten")</span>
+                            Permanent deletion of your account and customer logs within 30 days.
+                        </div>
+                        <div class="p-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                            <span class="text-yellow-500 font-bold block mb-1">Right to Rectification</span>
+                            Update incorrect shipping records or billing profiles at any time.
+                        </div>
+                        <div class="p-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                            <span class="text-yellow-500 font-bold block mb-1">Zero Data Selling</span>
+                            We do not sell, rent, or trade your personal or business data to advertisers.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION 6: DATA PRIVACY OFFICER CONTACT -->
+                <div class="glass-panel p-8 bg-gradient-to-r from-yellow-500/10 to-transparent">
+                    <h2 class="text-xl font-black text-gray-900 dark:text-white mb-2">4. Data Protection Officer Contact</h2>
+                    <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+                        If you have questions regarding this Privacy Policy or wish to exercise your GDPR/CCPA rights, contact our Data Privacy Officer:
+                    </p>
+                    <div class="text-xs font-mono space-y-1 text-gray-700 dark:text-gray-300">
+                        <div>Email: <strong class="text-yellow-600 dark:text-yellow-400">privacy@trendzmerch.com</strong></div>
+                        <div>Attn: TrendZ Legal & Data Compliance Officer</div>
+                        <div>408 Industrial Park Blvd, Suite 100, Austin, TX 78745, USA</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../../index.html" class="brand-logo" style="margin-bottom: 14px;">
+                        <img src="../../assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon" style="height: 48px;">
+                        <div class="brand-logo-text">
+                            <div class="brand-logo-main">Trend<span class="highlight">Z</span></div>
+                            <div class="brand-logo-sub">CUSTOM MERCHANDISE</div>
+                        </div>
+                    </a>
+                    <p>Modern digital printing solutions, corporate merchandise packages, and premier print-on-demand platform for creators and businesses.</p>
+                    <div style="display: flex; gap: 12px;">
+                        <span class="badge-pill badge-yellow">📍 Worldwide Express Shipping</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Services & Print</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">All Services Listing</a></li>
+                        <li><a href="service-details.html?id=dtg-printing">DTG HD Printing</a></li>
+                        <li><a href="service-details.html?id=sublimation">All-Over Sublimation</a></li>
+                        <li><a href="service-details.html?id=embroidery">3D Puff Embroidery</a></li>
+                        <li><a href="service-details.html?id=creator-drops">Creator POD Drops</a></li>
+                        <li><a href="pricing.html">Pricing & Volume Tiers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Company & Hub</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About TrendZ</a></li>
+                        <li><a href="home-2.html">Gaming Niche Studio</a></li>
+                        <li><a href="blog.html">Printing Blog & Guides</a></li>
+                        <li><a href="FAQ.html">FAQ & Help Center</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                        <li><a href="coming-soon.html">Upcoming Tech Drops 🚀</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Creator Updates</h4>
+                    <p style="font-size: 0.88rem; color: #9CA3AF; margin-bottom: 12px;">
+                        Subscribe to receive new mockup drops, printing technology updates, and creator guides.
+                    </p>
+                    <form class="newsletter-form footer-newsletter-box">
+                        <input type="email" required placeholder="name@creator.com" class="footer-input">
+                        <button type="submit" class="footer-btn">➔</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>© 2026 TrendZ Studio. All Rights Reserved. Modern High-Definition Printing Platform.</div>
+                <div style="display: flex; gap: 20px;">
+                    <a href="Privacy-policy.html">Privacy Policy</a>
+                    <a href="Terms-of-service.html">Terms of Service</a>
+                    <a href="FAQ.html">Shipping & Returns</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script type="module" src="../../src/js/navbar.js"></script>
+    <script type="module" src="../../src/js/form-validation.js"></script>
+</body>
+
+</html>

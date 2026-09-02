@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printing & Merch Drop Insights Blog | TrendZ</title>
+    <meta name="description" content="Discover tutorials, technical printing breakdowns, apparel streetwear design trends, and creator POD drop growth guides on the TrendZ Blog.">
+    <link rel="icon" href="../../assets/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['class', '[data-theme="dark"]'],
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#FFB800',
+                            hover: '#E5A600',
+                            dark: '#111215',
+                            surface: '#14161A'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="../../src/css/variables.css">
+    <link rel="stylesheet" href="../../src/css/base.css">
+    <link rel="stylesheet" href="../../src/css/components.css">
+    <link rel="stylesheet" href="../../src/css/style.css">
+</head>
+
+<body>
+
+    <!-- Ambient Glow Background Blobs -->
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-glow ambient-glow-3"></div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="../../index.html" class="brand-logo">
+                <img src="../../assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon">
+                <div class="brand-logo-text">
+                    <div class="brand-logo-main">Trend<span class="highlight">Z</span></div>
+                    <div class="brand-logo-sub">PRINT & MERCH INSIGHTS</div>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li><a href="home-2.html" class="nav-link">Niche Drop</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="services.html" class="btn btn-outline btn-sm hidden sm:inline-flex">
+                    ⚡ Services Hub
+                </a>
+
+                <!-- Profile Dropdown -->
+                <div class="profile-dropdown-wrapper">
+                    <button class="profile-trigger-btn" title="Account & Settings" aria-label="Account Menu">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </button>
+                    <div class="profile-dropdown-menu">
+                        <div class="dropdown-header">
+                            <div class="dropdown-user-name">TrendZ Portal</div>
+                            <div class="dropdown-user-role">Guest / Creator Access</div>
+                        </div>
+                        <a href="../auth/login.html" class="dropdown-item">
+                            <span class="icon">🔑</span>
+                            <span>Sign In</span>
+                        </a>
+                        <a href="../auth/signup.html" class="dropdown-item">
+                            <span class="icon">📝</span>
+                            <span>Create Account</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="../auth/admin/admin-dashboard.html" class="dropdown-item">
+                            <span class="icon">👑</span>
+                            <span>Admin Dashboard</span>
+                        </a>
+                        <a href="../auth/user/user-dashboard.html" class="dropdown-item">
+                            <span class="icon">🎨</span>
+                            <span>User Dashboard</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <button class="theme-toggle-btn" type="button">
+                            <span>🌙 Dark Mode</span>
+                        </button>
+                        <button class="rtl-toggle-btn" type="button" style="margin-top: 4px;">
+                            <span>🌐 RTL Mode</span>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECTION 1: BLOG HERO & FEATURED ARTICLE SPOTLIGHT -->
+        <section class="section" style="padding-top: 60px; padding-bottom: 50px;">
+            <div class="container">
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <span class="badge-pill badge-yellow mb-3">Knowledge & Industry Guides</span>
+                    <h1 class="text-4xl sm:text-5xl font-black text-gray-900 dark:text-white mb-4 leading-tight">
+                        The Master Guide to <span class="highlight-yellow">Modern Merchandise</span>
+                    </h1>
+                    <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300">
+                        Expert breakdowns on Direct-to-Garment technology, creator drop economics, sustainable organic fabrics, and streetwear design.
+                    </p>
+                </div>
+
+                <!-- Featured Article Spotlight Card -->
+                <div class="glass-panel overflow-hidden border border-yellow-500/30 p-0 mb-12">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+                        <div class="lg:col-span-7 relative h-72 lg:h-96">
+                            <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80" alt="Featured Post" class="w-full h-full object-cover">
+                            <span class="badge-pill badge-yellow absolute top-4 left-4 text-xs font-black">★ Featured Guide</span>
+                        </div>
+                        <div class="lg:col-span-5 p-8 sm:p-10 flex flex-col justify-between">
+                            <div>
+                                <div class="text-xs font-mono text-yellow-500 font-bold uppercase mb-2">Printing Tech • 6 min read</div>
+                                <h2 class="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white mb-4 leading-snug">
+                                    <a href="blog-details.html?id=dtg-vs-screen-printing" class="hover:text-yellow-500 transition-colors">
+                                        Direct-to-Garment (DTG) vs. Screen Printing: Which is Right in 2026?
+                                    </a>
+                                </h2>
+                                <p class="text-sm text-gray-500 dark:text-gray-400 mb-6 line-clamp-3 leading-relaxed">
+                                    An in-depth breakdown comparing Direct-to-Garment digital printing against traditional screen printing across run quantities, color complexity, tactile hand-feel, and economics.
+                                </p>
+                            </div>
+                            <div class="flex items-center justify-between pt-6 border-t border-gray-100 dark:border-gray-800">
+                                <div class="flex items-center gap-3">
+                                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Marcus Vance" class="w-10 h-10 rounded-full object-cover">
+                                    <div>
+                                        <div class="text-sm font-bold text-gray-900 dark:text-white">Marcus Vance</div>
+                                        <div class="text-xs text-gray-400">Master Colorist</div>
+                                    </div>
+                                </div>
+                                <a href="blog-details.html?id=dtg-vs-screen-printing" class="btn btn-yellow btn-sm">Read ➔</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: SEARCH & CATEGORY FILTER BAR -->
+        <section class="section py-0">
+            <div class="container">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4 mb-8">
+                    <!-- Search Input -->
+                    <div class="w-full md:w-80">
+                        <input type="text" id="blogSearchInput" placeholder="Search by title, tag, or topic..." class="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white shadow-sm">
+                    </div>
+
+                    <!-- Category Pills -->
+                    <div class="flex flex-wrap gap-2 justify-center" id="blogCategories">
+                        <button class="btn btn-yellow btn-sm blog-category-btn active" data-category="all">All Topics</button>
+                        <button class="btn btn-outline btn-sm blog-category-btn" data-category="Printing Tech">Printing Tech</button>
+                        <button class="btn btn-outline btn-sm blog-category-btn" data-category="Creator Economy">Creator Economy</button>
+                        <button class="btn btn-outline btn-sm blog-category-btn" data-category="Eco & Materials">Eco & Materials</button>
+                        <button class="btn btn-outline btn-sm blog-category-btn" data-category="Design & Trends">Design & Trends</button>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center mb-6 text-xs text-gray-400 font-mono">
+                    <span id="blogCountIndicator">Loading articles...</span>
+                    <span>Sorted by: Most Recent</span>
+                </div>
+
+                <!-- SECTION 3: DYNAMIC ARTICLES GRID (Handled by blog.js) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="blogCardsGrid">
+                    <!-- Loaded dynamically via blog.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: CREATOR RESOURCE CHEAT SHEET -->
+        <section class="section bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 mt-20">
+            <div class="container">
+                <div class="glass-panel p-8 sm:p-12 bg-gradient-to-r from-yellow-500/10 via-amber-500/5 to-transparent flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div>
+                        <span class="badge-pill badge-yellow text-xs mb-3">Free Creator Download</span>
+                        <h3 class="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white mb-2">
+                            The 2026 Print-Ready Vector & DPI Cheat Sheet
+                        </h3>
+                        <p class="text-sm text-gray-500 dark:text-gray-300 max-w-xl">
+                            Avoid pixelation and muddy colors. Download our free Photoshop & Illustrator color profile preset pack with recommended bleed margins.
+                        </p>
+                    </div>
+                    <button class="btn btn-yellow btn-lg flex-shrink-0" onclick="window.showToast('📥 Downloading 2026 Print-Ready Preset Kit (PDF + ICC Profiles)...', 'success')">
+                        Download Free Kit ➔
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: NEWSLETTER SUBSCRIPTION -->
+        <section class="section bg-yellow-500 text-black py-16">
+            <div class="container text-center max-w-2xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-black mb-3">Get VIP Printing Tech Drops</h2>
+                <p class="text-base font-semibold text-black/80 mb-8">
+                    Join 35,000+ creators, streetwear founders, and graphic designers receiving weekly apparel drops and manufacturing insights.
+                </p>
+                <form class="newsletter-form flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                    <input type="email" required placeholder="Enter your business email" class="px-4 py-3 rounded-lg bg-white text-black font-semibold text-sm flex-grow border border-black/10">
+                    <button type="submit" class="btn btn-dark">Subscribe ➔</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../../index.html" class="brand-logo" style="margin-bottom: 14px;">
+                        <img src="../../assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon" style="height: 48px;">
+                        <div class="brand-logo-text">
+                            <div class="brand-logo-main">Trend<span class="highlight">Z</span></div>
+                            <div class="brand-logo-sub">CUSTOM MERCHANDISE</div>
+                        </div>
+                    </a>
+                    <p>Modern digital printing solutions, corporate merchandise packages, and premier print-on-demand platform for creators and businesses.</p>
+                    <div style="display: flex; gap: 12px;">
+                        <span class="badge-pill badge-yellow">📍 Worldwide Express Shipping</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Services & Print</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">All Services Listing</a></li>
+                        <li><a href="service-details.html?id=dtg-printing">DTG HD Printing</a></li>
+                        <li><a href="service-details.html?id=sublimation">All-Over Sublimation</a></li>
+                        <li><a href="service-details.html?id=embroidery">3D Puff Embroidery</a></li>
+                        <li><a href="service-details.html?id=creator-drops">Creator POD Drops</a></li>
+                        <li><a href="pricing.html">Pricing & Volume Tiers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Company & Hub</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About TrendZ</a></li>
+                        <li><a href="home-2.html">Gaming Niche Studio</a></li>
+                        <li><a href="blog.html">Printing Blog & Guides</a></li>
+                        <li><a href="FAQ.html">FAQ & Help Center</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                        <li><a href="coming-soon.html">Upcoming Tech Drops 🚀</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Creator Updates</h4>
+                    <p style="font-size: 0.88rem; color: #9CA3AF; margin-bottom: 12px;">
+                        Subscribe to receive new mockup drops, printing technology updates, and creator guides.
+                    </p>
+                    <form class="newsletter-form footer-newsletter-box">
+                        <input type="email" required placeholder="name@creator.com" class="footer-input">
+                        <button type="submit" class="footer-btn">➔</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>© 2026 TrendZ Studio. All Rights Reserved. Modern High-Definition Printing Platform.</div>
+                <div style="display: flex; gap: 20px;">
+                    <a href="Privacy-policy.html">Privacy Policy</a>
+                    <a href="Terms-of-service.html">Terms of Service</a>
+                    <a href="FAQ.html">Shipping & Returns</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script type="module" src="../../src/js/navbar.js"></script>
+    <script type="module" src="../../src/js/blog.js"></script>
+    <script type="module" src="../../src/js/form-validation.js"></script>
+</body>
+
+</html>

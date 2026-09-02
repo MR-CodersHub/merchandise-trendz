@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard & Print Queue | TrendZ Operations</title>
+    <meta name="description" content="TrendZ Central Administration Console. Real-time factory print queue management, revenue metrics, machine status, and order dispatch controls.">
+    <link rel="icon" href="../../../assets/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['class', '[data-theme="dark"]'],
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#FFB800',
+                            hover: '#E5A600',
+                            dark: '#111215',
+                            surface: '#14161A'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="../../../src/css/variables.css">
+    <link rel="stylesheet" href="../../../src/css/base.css">
+    <link rel="stylesheet" href="../../../src/css/components.css">
+    <link rel="stylesheet" href="../../../src/css/style.css">
+</head>
+
+<body class="bg-gray-50 dark:bg-[#0B0C0E]">
+
+    <div class="dashboard-layout">
+        <!-- ADMIN SIDEBAR -->
+        <aside class="dashboard-sidebar">
+            <div>
+                <!-- Brand -->
+                <a href="../../../index.html" class="brand-logo mb-8 block">
+                    <div class="brand-logo-text">
+                        <div class="brand-logo-main text-white">Trend<span class="highlight">Z</span></div>
+                        <div class="brand-logo-sub text-yellow-400">ADMIN OPERATIONS</div>
+                    </div>
+                </a>
+
+                <!-- Navigation Tabs -->
+                <nav class="space-y-1">
+                    <a href="#" class="dashboard-nav-link active" data-tab="overview">
+                        <span>📊</span> <span>Overview & Stats</span>
+                    </a>
+                    <a href="#" class="dashboard-nav-link" data-tab="queue">
+                        <span>🖨️</span> <span>Live Print Queue</span>
+                    </a>
+                    <a href="#" class="dashboard-nav-link" data-tab="orders">
+                        <span>📦</span> <span>All Orders (840)</span>
+                    </a>
+                    <a href="#" class="dashboard-nav-link" data-tab="machines">
+                        <span>⚙️</span> <span>Machine Health</span>
+                    </a>
+                    <a href="#" class="dashboard-nav-link" data-tab="inventory">
+                        <span>🎨</span> <span>Inks & Blanks Stock</span>
+                    </a>
+                </nav>
+            </div>
+
+            <!-- Sidebar Bottom Profile / Theme -->
+            <div class="pt-6 border-t border-gray-800 space-y-3">
+                <div class="flex items-center gap-3 px-3">
+                    <div class="w-9 h-9 rounded-full bg-yellow-500 text-black font-black flex items-center justify-center text-xs">
+                        OP
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-white">Lead Plant Admin</div>
+                        <div class="text-[10px] text-gray-400 font-mono">Austin Facility #01</div>
+                    </div>
+                </div>
+
+                <button class="theme-toggle-btn w-full text-xs" type="button">
+                    <span>🌙 Dark Theme</span>
+                </button>
+                <button class="rtl-toggle-btn w-full text-xs" type="button">
+                    <span>🌐 RTL Toggle</span>
+                </button>
+
+                <a href="../../../index.html" class="block text-center text-xs text-gray-400 hover:text-white py-2">
+                    ← Return to Public Store
+                </a>
+            </div>
+        </aside>
+
+        <!-- MAIN DASHBOARD CONTENT AREA -->
+        <main class="dashboard-main">
+            <!-- Top Bar -->
+            <div class="dashboard-topbar">
+                <div>
+                    <h1 class="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white">Central Operations Console</h1>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">Factory Status: <span class="text-emerald-500 font-bold">● All 6 Global Facilities Operational</span></p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button class="btn btn-outline btn-sm" onclick="window.showToast('🔄 Synchronized print queue with Frankfurt & London nodes.', 'info')">
+                        Sync Global Nodes 🔄
+                    </button>
+                    <button class="btn btn-yellow btn-sm" onclick="window.showToast('⚡ Dispatched emergency production batch #9485 to Kornit line 2!', 'success')">
+                        + Manual Production Job
+                    </button>
+                </div>
+            </div>
+
+            <!-- TAB 1: OVERVIEW TAB CONTENT -->
+            <div id="tab-overview" class="dashboard-tab-content" style="display: block;">
+                <!-- Key Stat Cards -->
+                <div class="stat-card-grid">
+                    <div class="stat-card">
+                        <div class="stat-card-title">Total 30-Day Gross Volume</div>
+                        <div class="stat-card-value">$184,920.00</div>
+                        <div class="stat-card-badge text-emerald-500">↑ 18.4% vs last month</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-title">Active Print Queue</div>
+                        <div class="stat-card-value text-yellow-500">42 Jobs</div>
+                        <div class="stat-card-badge text-yellow-600 dark:text-yellow-400">Avg cycle: 3.4 mins</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-title">Fulfillment Dispatch SLA</div>
+                        <div class="stat-card-value">99.4%</div>
+                        <div class="stat-card-badge text-emerald-500">Target > 98.5%</div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-card-title">Active Creator Brands</div>
+                        <div class="stat-card-value">1,480 Live</div>
+                        <div class="stat-card-badge text-blue-500">+124 this week</div>
+                    </div>
+                </div>
+
+                <!-- Live Orders Filter & Table -->
+                <div class="glass-panel p-6 mb-8">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 dark:text-white">Real-Time Factory Orders Stream</h3>
+                            <p class="text-xs text-gray-500">Live feed from Shopify, WooCommerce, and Direct Web customizers.</p>
+                        </div>
+                        <input type="text" id="dashboardTableSearch" placeholder="Search Order ID, product, or merchant..." class="w-full sm:w-72 px-4 py-2 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-xs font-semibold text-gray-900 dark:text-white">
+                    </div>
+
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse text-xs dashboard-data-table">
+                            <thead>
+                                <tr class="bg-gray-100 dark:bg-gray-800/80 text-gray-600 dark:text-gray-300 font-bold border-b border-gray-200 dark:border-gray-700">
+                                    <th class="p-3">Order ID</th>
+                                    <th class="p-3">Merchant / Creator</th>
+                                    <th class="p-3">Item & Technique</th>
+                                    <th class="p-3">Quantity</th>
+                                    <th class="p-3">Production Status</th>
+                                    <th class="p-3">Factory Node</th>
+                                    <th class="p-3 text-right">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-100 dark:divide-gray-800 text-gray-700 dark:text-gray-300 font-medium">
+                                <tr>
+                                    <td class="p-3 font-mono font-bold text-yellow-600 dark:text-yellow-400">#ORD-9482</td>
+                                    <td class="p-3">Viper Esports Clan</td>
+                                    <td class="p-3">Oversized Streetwear Fleece Hoodie (380 GSM DTG)</td>
+                                    <td class="p-3 font-bold">2 pcs</td>
+                                    <td class="p-3"><span class="badge-pill bg-yellow-500/10 text-yellow-600 dark:text-yellow-400 border border-yellow-500/30 text-[10px]">● Printing (Pass 2/3)</span></td>
+                                    <td class="p-3">🇺🇸 Austin Hub</td>
+                                    <td class="p-3 text-right space-x-2">
+                                        <button class="btn btn-outline btn-sm py-1 px-2 text-[10px]" data-order-action="reprint" data-order-id="#ORD-9482">Reprint</button>
+                                        <button class="btn btn-yellow btn-sm py-1 px-2 text-[10px]" data-order-action="ship" data-order-id="#ORD-9482">Ship ➔</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-mono font-bold text-yellow-600 dark:text-yellow-400">#ORD-9481</td>
+                                    <td class="p-3">Neon Cyber Studios</td>
+                                    <td class="p-3">XXL Anti-Fray Stitched Gaming Desk Pad (Sublimation)</td>
+                                    <td class="p-3 font-bold">1 pc</td>
+                                    <td class="p-3"><span class="badge-pill bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/30 text-[10px]">● Shipped (DHL 9284)</span></td>
+                                    <td class="p-3">🇩🇪 Frankfurt Hub</td>
+                                    <td class="p-3 text-right space-x-2">
+                                        <button class="btn btn-outline btn-sm py-1 px-2 text-[10px]" data-order-action="reprint" data-order-id="#ORD-9481">Reprint</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-mono font-bold text-yellow-600 dark:text-yellow-400">#ORD-9480</td>
+                                    <td class="p-3">Kira Gaming YouTube</td>
+                                    <td class="p-3">Impact Armor MagSafe Phone Case (UV Curable)</td>
+                                    <td class="p-3 font-bold">1 pc</td>
+                                    <td class="p-3"><span class="badge-pill bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 text-[10px]">✓ Delivered</span></td>
+                                    <td class="p-3">🇬🇧 London Hub</td>
+                                    <td class="p-3 text-right space-x-2">
+                                        <button class="btn btn-outline btn-sm py-1 px-2 text-[10px]" data-order-action="reprint" data-order-id="#ORD-9480">Reprint</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="p-3 font-mono font-bold text-yellow-600 dark:text-yellow-400">#ORD-9479</td>
+                                    <td class="p-3">Apex Streetwear Label</td>
+                                    <td class="p-3">3D Puff Snapback Hat (15-Needle Tajima)</td>
+                                    <td class="p-3 font-bold">12 pcs</td>
+                                    <td class="p-3"><span class="badge-pill bg-purple-500/10 text-purple-600 dark:text-purple-400 border border-purple-500/30 text-[10px]">● Stitching Queue</span></td>
+                                    <td class="p-3">🇺🇸 Austin Hub</td>
+                                    <td class="p-3 text-right space-x-2">
+                                        <button class="btn btn-outline btn-sm py-1 px-2 text-[10px]" data-order-action="reprint" data-order-id="#ORD-9479">Reprint</button>
+                                        <button class="btn btn-yellow btn-sm py-1 px-2 text-[10px]" data-order-action="ship" data-order-id="#ORD-9479">Ship ➔</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Industrial Machine Health & Ink Status -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="glass-panel p-5">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="font-bold text-sm text-gray-900 dark:text-white">Kornit Avalanche HD6 (Line 1)</span>
+                            <span class="text-xs text-emerald-500 font-bold">98% Inks OK</span>
+                        </div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full overflow-hidden mb-2">
+                            <div class="bg-yellow-500 h-full rounded-full" style="width: 82%;"></div>
+                        </div>
+                        <div class="text-[11px] text-gray-400">Nozzle check passed • Temperature 21°C • Humidity 55%</div>
+                    </div>
+
+                    <div class="glass-panel p-5">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="font-bold text-sm text-gray-900 dark:text-white">Tajima 15-Needle Embroidery</span>
+                            <span class="text-xs text-emerald-500 font-bold">Running (850 SPM)</span>
+                        </div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full overflow-hidden mb-2">
+                            <div class="bg-emerald-500 h-full rounded-full" style="width: 94%;"></div>
+                        </div>
+                        <div class="text-[11px] text-gray-400">Zero thread breaks • Thread batch: Madeira Polyneon</div>
+                    </div>
+
+                    <div class="glass-panel p-5">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="font-bold text-sm text-gray-900 dark:text-white">Monti Antonio Heat Press Calender</span>
+                            <span class="text-xs text-yellow-500 font-bold">204°C Stable</span>
+                        </div>
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 h-2 rounded-full overflow-hidden mb-2">
+                            <div class="bg-blue-500 h-full rounded-full" style="width: 76%;"></div>
+                        </div>
+                        <div class="text-[11px] text-gray-400">Sublimation hydraulic pressure: 60 PSI calibrated</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: LIVE PRINT QUEUE -->
+            <div id="tab-queue" class="dashboard-tab-content" style="display: none;">
+                <div class="glass-panel p-6">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Live Active Printing Jobs</h3>
+                    <p class="text-xs text-gray-500 mb-6">Real-time status of jobs currently streaming to printheads across facilities.</p>
+                    <div class="space-y-4">
+                        <div class="p-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex justify-between items-center">
+                            <div>
+                                <div class="font-bold text-sm text-gray-900 dark:text-white">#JOB-1029: 240 GSM Retro Wave T-Shirt</div>
+                                <div class="text-xs text-gray-400">Merchant: CyberBrand • 1200 DPI Front + Back Underbase</div>
+                            </div>
+                            <span class="badge-pill badge-yellow text-xs">Printhead 1: Active 68%</span>
+                        </div>
+                        <div class="p-4 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex justify-between items-center">
+                            <div>
+                                <div class="font-bold text-sm text-gray-900 dark:text-white">#JOB-1030: Ceramic Matte Coffee Mug 15oz</div>
+                                <div class="text-xs text-gray-400">Merchant: CoffeeClub Merch • 360° All-Over Dye Sublimation</div>
+                            </div>
+                            <span class="badge-pill bg-blue-500/20 text-blue-400 text-xs">Heat Pressing 180s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: ALL ORDERS -->
+            <div id="tab-orders" class="dashboard-tab-content" style="display: none;">
+                <div class="glass-panel p-6">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Historical Orders Database (840 Total)</h3>
+                    <p class="text-xs text-gray-500 mb-4">All orders archived across the last 90 business days.</p>
+                    <div class="p-4 rounded-lg bg-gray-100 dark:bg-gray-800 text-xs text-gray-600 dark:text-gray-300">
+                        Showing 840 lifetime orders with 99.8% customer satisfaction score.
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 4: MACHINE HEALTH -->
+            <div id="tab-machines" class="dashboard-tab-content" style="display: none;">
+                <div class="glass-panel p-6">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Robotics & Industrial Printing Telemetry</h3>
+                    <p class="text-xs text-gray-500 mb-4">Spectrophotometer calibrations, heating elements, and humidity metrics.</p>
+                    <div class="p-4 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold">
+                        ✓ All 18 industrial printing lines running at peak optical efficiency.
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 5: INVENTORY -->
+            <div id="tab-inventory" class="dashboard-tab-content" style="display: none;">
+                <div class="glass-panel p-6">
+                    <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Raw Blanks & Inks Warehouse Storage</h3>
+                    <p class="text-xs text-gray-500 mb-4">Real-time inventory levels across Austin, Frankfurt, and London fulfillment hubs.</p>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                        <div class="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-center">
+                            <div class="text-xl font-bold text-white">14,200 pcs</div>
+                            <div class="text-[10px] text-gray-400 uppercase font-bold mt-1">240 GSM Cotton Tees</div>
+                        </div>
+                        <div class="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-center">
+                            <div class="text-xl font-bold text-white">8,400 pcs</div>
+                            <div class="text-[10px] text-gray-400 uppercase font-bold mt-1">380 GSM Fleece Hoodies</div>
+                        </div>
+                        <div class="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-center">
+                            <div class="text-xl font-bold text-white">4,800 pcs</div>
+                            <div class="text-[10px] text-gray-400 uppercase font-bold mt-1">15oz Ceramic Mugs</div>
+                        </div>
+                        <div class="p-4 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-center">
+                            <div class="text-xl font-bold text-white">240 Liters</div>
+                            <div class="text-[10px] text-yellow-500 uppercase font-bold mt-1">OEKO-TEX Pigment Ink</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script type="module" src="../../../src/js/navbar.js"></script>
+    <script type="module" src="../../../src/js/dashboard.js"></script>
+</body>
+
+</html>

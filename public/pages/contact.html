@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Our Print Specialists | TrendZ Support</title>
+    <meta name="description" content="Get in touch with TrendZ for custom bulk merchandise quotes, creator POD inquiries, and sample proof approvals.">
+    <link rel="icon" href="../../assets/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['class', '[data-theme="dark"]'],
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#FFB800',
+                            hover: '#E5A600',
+                            dark: '#111215',
+                            surface: '#14161A'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="../../src/css/variables.css">
+    <link rel="stylesheet" href="../../src/css/base.css">
+    <link rel="stylesheet" href="../../src/css/components.css">
+    <link rel="stylesheet" href="../../src/css/style.css">
+</head>
+
+<body>
+
+    <!-- Ambient Glow Background Blobs -->
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-glow ambient-glow-3"></div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="../../index.html" class="brand-logo">
+                <img src="../../assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon">
+                <div class="brand-logo-text">
+                    <div class="brand-logo-main">Trend<span class="highlight">Z</span></div>
+                    <div class="brand-logo-sub">CUSTOM MERCHANDISE</div>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li><a href="home-2.html" class="nav-link">Niche Drop</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="services.html" class="btn btn-outline btn-sm hidden sm:inline-flex">
+                    ⚡ Services Hub
+                </a>
+
+                <!-- Profile Dropdown -->
+                <div class="profile-dropdown-wrapper">
+                    <button class="profile-trigger-btn" title="Account & Settings" aria-label="Account Menu">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </button>
+                    <div class="profile-dropdown-menu">
+                        <div class="dropdown-header">
+                            <div class="dropdown-user-name">TrendZ Portal</div>
+                            <div class="dropdown-user-role">Guest / Creator Access</div>
+                        </div>
+                        <a href="../auth/login.html" class="dropdown-item">
+                            <span class="icon">🔑</span>
+                            <span>Sign In</span>
+                        </a>
+                        <a href="../auth/signup.html" class="dropdown-item">
+                            <span class="icon">📝</span>
+                            <span>Create Account</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="../auth/admin/admin-dashboard.html" class="dropdown-item">
+                            <span class="icon">👑</span>
+                            <span>Admin Dashboard</span>
+                        </a>
+                        <a href="../auth/user/user-dashboard.html" class="dropdown-item">
+                            <span class="icon">🎨</span>
+                            <span>User Dashboard</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <button class="theme-toggle-btn" type="button">
+                            <span>🌙 Dark Mode</span>
+                        </button>
+                        <button class="rtl-toggle-btn" type="button" style="margin-top: 4px;">
+                            <span>🌐 RTL Mode</span>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECTION 1: CONTACT HERO -->
+        <section class="section" style="padding-top: 60px; padding-bottom: 40px;">
+            <div class="container text-center max-w-3xl mx-auto">
+                <span class="badge-pill badge-yellow mb-4">Direct Communication</span>
+                <h1 class="text-4xl sm:text-5xl font-black text-gray-900 dark:text-white mb-6 leading-tight">
+                    Let’s Bring Your <span class="highlight-yellow">Designs to Life</span>
+                </h1>
+                <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                    Have a custom bulk printing inquiry, artwork question, or want to discuss enterprise creator partnerships? Our senior print engineers respond within 2 hours.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: CONTACT INFO CARDS -->
+        <section class="section py-4">
+            <div class="container">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                    <div class="glass-panel p-6 text-center">
+                        <div class="text-3xl mb-3">📍</div>
+                        <h3 class="text-base font-bold text-gray-900 dark:text-white mb-1">Global Printing HQ</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">408 Industrial Park Blvd, Suite 100<br>Austin, TX 78745, USA</p>
+                        <span class="badge-pill badge-yellow text-xs">Visits by appointment</span>
+                    </div>
+
+                    <div class="glass-panel p-6 text-center border-t-4 border-yellow-500">
+                        <div class="text-3xl mb-3">💬</div>
+                        <h3 class="text-base font-bold text-gray-900 dark:text-white mb-1">Direct Email & Discord</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">support@trendzmerch.com<br>b2b@trendzmerch.com</p>
+                        <span class="text-xs font-mono font-bold text-emerald-500">● 2-Hour SLA Reply</span>
+                    </div>
+
+                    <div class="glass-panel p-6 text-center">
+                        <div class="text-3xl mb-3">📞</div>
+                        <h3 class="text-base font-bold text-gray-900 dark:text-white mb-1">Phone & Hotlines</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">+1 (800) 584-9281 (USA Toll Free)<br>+44 20 7946 0912 (EU/UK)</p>
+                        <span class="text-xs text-gray-400 font-semibold">Mon - Fri: 8am - 8pm EST</span>
+                    </div>
+                </div>
+
+                <!-- SECTION 3: FORM & MAP GRID -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                    <!-- Contact Form (7 cols) -->
+                    <div class="lg:col-span-7 glass-panel p-8 sm:p-10">
+                        <h2 class="text-2xl font-black text-gray-900 dark:text-white mb-2">Send a Message or Request Quote</h2>
+                        <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mb-8">
+                            Fill out the form below and attach any details regarding your required garment type or quantity.
+                        </p>
+
+                        <form id="contactForm" class="contact-form space-y-6">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-gray-700 dark:text-gray-300 mb-2">Full Name *</label>
+                                    <input type="text" name="name" required placeholder="Marcus Johnson" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-gray-700 dark:text-gray-300 mb-2">Business Email *</label>
+                                    <input type="email" name="email" required placeholder="marcus@company.com" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-gray-700 dark:text-gray-300 mb-2">Service of Interest</label>
+                                    <select name="service" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white">
+                                        <option value="dtg">Direct-to-Garment (DTG) HD</option>
+                                        <option value="sublimation">Dye Sublimation & Drinkware</option>
+                                        <option value="embroidery">3D Puff Embroidery</option>
+                                        <option value="creator">Creator Drop Management</option>
+                                        <option value="packaging">Custom Packaging & Boxes</option>
+                                        <option value="corporate">Corporate Bulk Swag</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold uppercase text-gray-700 dark:text-gray-300 mb-2">Estimated Quantity</label>
+                                    <select name="quantity" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white">
+                                        <option value="sample">1 - 9 pieces (Samples / Creator single)</option>
+                                        <option value="small">10 - 49 pieces</option>
+                                        <option value="medium">50 - 249 pieces</option>
+                                        <option value="bulk">250+ pieces (Volume Wholesale)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-gray-700 dark:text-gray-300 mb-2">Your Message & Project Details *</label>
+                                <textarea name="message" rows="5" required placeholder="Tell us about your design concepts, required delivery date, target fabrics, or any questions..." class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-yellow btn-lg w-full">
+                                Send Message ➔
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- SECTION 4: MAP & LOGISTICS HUBS (5 cols) -->
+                    <div class="lg:col-span-5 space-y-6">
+                        <div class="glass-panel overflow-hidden">
+                            <div class="p-6 pb-4">
+                                <div class="text-xs font-mono text-yellow-500 font-bold uppercase mb-1">● Interactive Production Network</div>
+                                <h3 class="text-lg font-bold text-gray-900 dark:text-white">6 Global Production Facilities</h3>
+                            </div>
+                            
+                            <!-- Visual Stylized Map Graphic -->
+                            <div class="h-64 bg-gray-900 relative p-6 flex flex-col justify-between text-white border-y border-gray-800">
+                                <div class="text-xs text-gray-400">Automated Smart Geolocation Routing:</div>
+                                <div class="grid grid-cols-2 gap-3 text-xs font-mono">
+                                    <div class="p-2 rounded bg-white/5 border border-white/10">🇺🇸 Austin (Americas HQ)</div>
+                                    <div class="p-2 rounded bg-white/5 border border-white/10">🇩🇪 Frankfurt (Central EU)</div>
+                                    <div class="p-2 rounded bg-white/5 border border-white/10">🇬🇧 London (UK & Isles)</div>
+                                    <div class="p-2 rounded bg-white/5 border border-white/10">🇦🇺 Sydney (Asia Pacific)</div>
+                                </div>
+                                <div class="flex items-center justify-between text-xs text-yellow-400 font-bold pt-2 border-t border-white/10">
+                                    <span>Average Global Dispatch: 48h</span>
+                                    <span>Zero Import Duties (DDP)</span>
+                                </div>
+                            </div>
+
+                            <div class="p-6 bg-gray-50 dark:bg-gray-800/50 text-xs text-gray-500 dark:text-gray-400">
+                                💡 Tip: Need sample swatches or ink test strips before a major merchandise launch? Mention "Free Swatch Kit" in your message!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: CONTACT SPECIFIC FAQ -->
+        <section class="section bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 mt-16">
+            <div class="container max-w-3xl">
+                <div class="section-header text-center mb-10">
+                    <span class="section-tagline text-yellow-500 font-bold">Quick Inquiries</span>
+                    <h2 class="section-title text-2xl sm:text-3xl font-black">Support & Ordering FAQs</h2>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="glass-panel p-5">
+                        <h4 class="font-bold text-base text-gray-900 dark:text-white mb-2">How fast do you reply to wholesale quotes?</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                            Our dedicated B2B sales team responds to all formal quote inquiries within 2 hours during normal business hours (8am - 8pm EST).
+                        </p>
+                    </div>
+
+                    <div class="glass-panel p-5">
+                        <h4 class="font-bold text-base text-gray-900 dark:text-white mb-2">Can I order a single printed sample before placing a bulk run?</h4>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+                            Yes, absolutely! We strongly encourage ordering a sample. You can order exactly 1 piece via our customizer studio with zero setup fees.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../../index.html" class="brand-logo" style="margin-bottom: 14px;">
+                        <img src="../../assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon" style="height: 48px;">
+                        <div class="brand-logo-text">
+                            <div class="brand-logo-main">Trend<span class="highlight">Z</span></div>
+                            <div class="brand-logo-sub">CUSTOM MERCHANDISE</div>
+                        </div>
+                    </a>
+                    <p>Modern digital printing solutions, corporate merchandise packages, and premier print-on-demand platform for creators and businesses.</p>
+                    <div style="display: flex; gap: 12px;">
+                        <span class="badge-pill badge-yellow">📍 Worldwide Express Shipping</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Services & Print</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">All Services Listing</a></li>
+                        <li><a href="service-details.html?id=dtg-printing">DTG HD Printing</a></li>
+                        <li><a href="service-details.html?id=sublimation">All-Over Sublimation</a></li>
+                        <li><a href="service-details.html?id=embroidery">3D Puff Embroidery</a></li>
+                        <li><a href="service-details.html?id=creator-drops">Creator POD Drops</a></li>
+                        <li><a href="pricing.html">Pricing & Volume Tiers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Company & Hub</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About TrendZ</a></li>
+                        <li><a href="home-2.html">Gaming Niche Studio</a></li>
+                        <li><a href="blog.html">Printing Blog & Guides</a></li>
+                        <li><a href="FAQ.html">FAQ & Help Center</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                        <li><a href="coming-soon.html">Upcoming Tech Drops 🚀</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Creator Updates</h4>
+                    <p style="font-size: 0.88rem; color: #9CA3AF; margin-bottom: 12px;">
+                        Subscribe to receive new mockup drops, printing technology updates, and creator guides.
+                    </p>
+                    <form class="newsletter-form footer-newsletter-box">
+                        <input type="email" required placeholder="name@creator.com" class="footer-input">
+                        <button type="submit" class="footer-btn">➔</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>© 2026 TrendZ Studio. All Rights Reserved. Modern High-Definition Printing Platform.</div>
+                <div style="display: flex; gap: 20px;">
+                    <a href="Privacy-policy.html">Privacy Policy</a>
+                    <a href="Terms-of-service.html">Terms of Service</a>
+                    <a href="FAQ.html">Shipping & Returns</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script type="module" src="../../src/js/navbar.js"></script>
+    <script type="module" src="../../src/js/form-validation.js"></script>
+</body>
+
+</html>

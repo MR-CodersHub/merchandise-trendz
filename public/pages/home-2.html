@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esports & Creator Merch Drop Studio | TrendZ Niche Edition</title>
+    <meta name="description" content="TrendZ Gaming & Esports Edition. Ultra-premium tournament apparel, stitched RGB desk mats, custom team jerseys, and automated drop management for gaming creators.">
+    <link rel="icon" href="../../assets/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['class', '[data-theme="dark"]'],
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#FFB800',
+                            hover: '#E5A600',
+                            dark: '#111215',
+                            surface: '#14161A'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="../../src/css/variables.css">
+    <link rel="stylesheet" href="../../src/css/base.css">
+    <link rel="stylesheet" href="../../src/css/components.css">
+    <link rel="stylesheet" href="../../src/css/style.css">
+</head>
+
+<body>
+
+    <!-- Ambient Glow Background Blobs -->
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-glow ambient-glow-3"></div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="../../index.html" class="brand-logo">
+                <img src="../../assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon">
+                <div class="brand-logo-text">
+                    <div class="brand-logo-main">Trend<span class="highlight">Z</span></div>
+                    <div class="brand-logo-sub">GAMING & ESPORTS MERCH</div>
+                </div>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../../index.html" class="nav-link">Home</a></li>
+                    <li><a href="home-2.html" class="nav-link active">Niche Drop</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="service-details.html?id=creator-drops" class="btn btn-yellow btn-sm">
+                    🚀 Launch Drop
+                </a>
+
+                <!-- Profile Dropdown -->
+                <div class="profile-dropdown-wrapper">
+                    <button class="profile-trigger-btn" title="Account & Settings" aria-label="Account Menu">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </button>
+                    <div class="profile-dropdown-menu">
+                        <div class="dropdown-header">
+                            <div class="dropdown-user-name">TrendZ Portal</div>
+                            <div class="dropdown-user-role">Guest / Creator Access</div>
+                        </div>
+                        <a href="../auth/login.html" class="dropdown-item">
+                            <span class="icon">🔑</span>
+                            <span>Sign In</span>
+                        </a>
+                        <a href="../auth/signup.html" class="dropdown-item">
+                            <span class="icon">📝</span>
+                            <span>Create Account</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="../auth/admin/admin-dashboard.html" class="dropdown-item">
+                            <span class="icon">👑</span>
+                            <span>Admin Dashboard</span>
+                        </a>
+                        <a href="../auth/user/user-dashboard.html" class="dropdown-item">
+                            <span class="icon">🎨</span>
+                            <span>User Dashboard</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <button class="theme-toggle-btn" type="button">
+                            <span>🌙 Dark Mode</span>
+                        </button>
+                        <button class="rtl-toggle-btn" type="button" style="margin-top: 4px;">
+                            <span>🌐 RTL Mode</span>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECTION 1: NICHE HERO SECTION -->
+        <section class="section" style="padding-top: 50px; padding-bottom: 70px;">
+            <div class="container">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-600 font-bold text-xs uppercase tracking-wider mb-6">
+                            🎮 Esports Pro & Gaming Creator Edition
+                        </div>
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-6 text-gray-900 dark:text-white">
+                            Gear Engineered For <br>
+                            <span class="highlight-yellow">Tournaments & Streamers</span>
+                        </h1>
+                        <p class="text-lg text-gray-600 dark:text-gray-300 mb-8 leading-relaxed max-w-xl">
+                            Deploy high-performance pro jerseys, anti-fray XXL desk pads, heavyweight oversized fleece, and limited-edition fan capsules with zero inventory risk.
+                        </p>
+                        <div class="flex flex-wrap gap-4 items-center">
+                            <a href="service-details.html?id=creator-drops" class="btn btn-yellow btn-lg">
+                                Start Streamer Drop <span class="btn-arrow">➔</span>
+                            </a>
+                            <a href="#nicheCatalog" class="btn btn-outline btn-lg">
+                                Explore Gaming Gear
+                            </a>
+                        </div>
+
+                        <!-- Live Stats Bar -->
+                        <div class="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+                            <div>
+                                <div class="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white">4.2M+</div>
+                                <div class="text-xs font-bold text-gray-500 uppercase">Gamer Merch Shipped</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl sm:text-3xl font-black text-yellow-500">48 Hrs</div>
+                                <div class="text-xs font-bold text-gray-500 uppercase">Avg Production Speed</div>
+                            </div>
+                            <div>
+                                <div class="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white">99.8%</div>
+                                <div class="text-xs font-bold text-gray-500 uppercase">Gamer Satisfaction</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Visual Stage -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative rounded-2xl overflow-hidden border-2 border-yellow-500/30 shadow-2xl bg-gray-900 p-2">
+                            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" alt="Esports Gaming Merch" class="w-full h-96 object-cover rounded-xl">
+                            <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-gray-950/80 backdrop-blur-md border border-white/10 text-white">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-xs font-mono text-yellow-400 font-bold uppercase">● Live Pre-Order Campaign</span>
+                                    <span class="text-xs bg-yellow-500 text-black px-2 py-0.5 rounded font-black">94% Claimed</span>
+                                </div>
+                                <div class="font-bold text-sm">Championship Pro Jersey (Cyber Stealth V2)</div>
+                                <div class="w-full bg-gray-700 h-2 rounded-full mt-2 overflow-hidden">
+                                    <div class="bg-yellow-500 h-full rounded-full" style="width: 94%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: NICHE SPECIFIC GEAR CATEGORIES -->
+        <section class="section bg-white dark:bg-gray-900 border-y border-gray-100 dark:border-gray-800" id="nicheCatalog">
+            <div class="container">
+                <div class="section-header text-center max-w-2xl mx-auto">
+                    <span class="section-tagline text-yellow-500 font-bold">Battle-Tested Gear</span>
+                    <h2 class="section-title text-3xl sm:text-4xl font-black">Merchandise Crafted For The Gaming Elite</h2>
+                    <p class="section-desc mx-auto">Every item is engineered with competition-grade materials built to withstand intense marathon gaming sessions.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Gear Card 1 -->
+                    <div class="glass-panel p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="relative rounded-xl overflow-hidden mb-5 h-48 bg-gray-100 dark:bg-gray-800">
+                                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=600&q=80" alt="XXL Stitched Desk Mat" class="w-full h-full object-cover">
+                                <span class="badge-pill badge-yellow absolute top-3 left-3 text-xs">Anti-Fray Edge</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">XXL Precision Gaming Desk Pads (900x400mm)</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 leading-relaxed">
+                                Micro-textured polyester weave for pixel-perfect optical mouse tracking with 4mm non-slip natural rubber base and all-over dye sublimation.
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-800">
+                            <span class="text-lg font-black text-gray-900 dark:text-white">From $14.50 <span class="text-xs text-gray-400 font-normal">/ base</span></span>
+                            <a href="service-details.html?id=sublimation" class="btn btn-outline btn-sm">Customize ➔</a>
+                        </div>
+                    </div>
+
+                    <!-- Gear Card 2 -->
+                    <div class="glass-panel p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="relative rounded-xl overflow-hidden mb-5 h-48 bg-gray-100 dark:bg-gray-800">
+                                <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" alt="Oversized Hoodie" class="w-full h-full object-cover">
+                                <span class="badge-pill badge-yellow absolute top-3 left-3 text-xs">380 GSM Heavy</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Pro Tournament Oversized Fleece Hoodies</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 leading-relaxed">
+                                Heavyweight French Terry with headphone-compatible dual hood, thumbhole cuffs, and high-density 3D puff chest embroidery.
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-800">
+                            <span class="text-lg font-black text-gray-900 dark:text-white">From $28.00 <span class="text-xs text-gray-400 font-normal">/ base</span></span>
+                            <a href="service-details.html?id=embroidery" class="btn btn-outline btn-sm">Customize ➔</a>
+                        </div>
+                    </div>
+
+                    <!-- Gear Card 3 -->
+                    <div class="glass-panel p-6 flex flex-col justify-between">
+                        <div>
+                            <div class="relative rounded-xl overflow-hidden mb-5 h-48 bg-gray-100 dark:bg-gray-800">
+                                <img src="https://images.unsplash.com/photo-1586953208448-b95a79798f07?auto=format&fit=crop&w=600&q=80" alt="MagSafe Phone Case" class="w-full h-full object-cover">
+                                <span class="badge-pill badge-yellow absolute top-3 left-3 text-xs">Armor MagSafe</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-900 dark:text-white">Streamer Impact MagSafe Cases</h3>
+                            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 leading-relaxed">
+                                Dual-layer TPU bumper with military-grade 10ft drop protection, high-gloss scratch-proof UV backplate, and N52 neodymium magnetic ring.
+                            </p>
+                        </div>
+                        <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-800">
+                            <span class="text-lg font-black text-gray-900 dark:text-white">From $11.00 <span class="text-xs text-gray-400 font-normal">/ base</span></span>
+                            <a href="service-details.html?id=dtg-printing" class="btn btn-outline btn-sm">Customize ➔</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: THE STREAMER DROP ARCHITECTURE (What Makes It Unique) -->
+        <section class="section">
+            <div class="container">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="section-tagline text-yellow-500 font-bold">Hassle-Free Creator Architecture</span>
+                        <h2 class="section-title text-3xl sm:text-4xl font-black mb-6">
+                            You Build The Hype.<br>
+                            We Automate The Entire Machine.
+                        </h2>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center font-black text-yellow-500 flex-shrink-0 text-xl">1</div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-1">Instant Shopify & Streamlabs Sync</h4>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Connect your YouTube, Twitch, Kick, or Shopify store with 1-click. When a fan buys, the order prints and dispatches automatically.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center font-black text-yellow-500 flex-shrink-0 text-xl">2</div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-1">Custom Stream Alerts Integration</h4>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Trigger on-screen Twitch overlays whenever a fan purchases your drop live during your stream to drive viral FOMO.</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <div class="w-12 h-12 rounded-xl bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center font-black text-yellow-500 flex-shrink-0 text-xl">3</div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-900 dark:text-white mb-1">Zero Minimums & Zero Upfront Costs</h4>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Keep 100% of your retail margin above base cost. We handle production, packaging, customs, and shipping tracking.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Flow Graphic Card -->
+                    <div class="glass-panel p-8 relative overflow-hidden bg-gradient-to-br from-yellow-500/5 to-transparent">
+                        <div class="text-sm font-mono font-bold text-yellow-500 uppercase mb-4">● Live Streamer Economics Breakdown</div>
+                        <div class="bg-gray-900 text-white rounded-xl p-6 border border-gray-800 space-y-4">
+                            <div class="flex justify-between items-center pb-3 border-b border-gray-800">
+                                <span class="text-sm text-gray-400">Streamer Hoodie Drop Price</span>
+                                <span class="text-lg font-bold text-white">$75.00</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-3 border-b border-gray-800">
+                                <span class="text-sm text-gray-400">TrendZ Base POD Cost</span>
+                                <span class="text-lg font-bold text-gray-300">-$32.00</span>
+                            </div>
+                            <div class="flex justify-between items-center pb-3 border-b border-gray-800">
+                                <span class="text-sm text-yellow-400 font-bold">Net Profit Per Hoodie</span>
+                                <span class="text-2xl font-black text-yellow-400">+$43.00</span>
+                            </div>
+                            <div class="p-4 rounded-lg bg-yellow-500/10 border border-yellow-500/20 text-center">
+                                <div class="text-xs text-yellow-500 font-bold uppercase">500 Hoodies Sold During 1 Stream =</div>
+                                <div class="text-3xl font-black text-white mt-1">$21,500.00 Net Payout</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: STREAMER CASE STUDIES & TESTIMONIALS -->
+        <section class="section bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
+            <div class="container">
+                <div class="section-header text-center max-w-2xl mx-auto">
+                    <span class="section-tagline text-yellow-500 font-bold">Creator Proof</span>
+                    <h2 class="section-title text-3xl sm:text-4xl font-black">Trusted By Top Creators & Pro Teams</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="glass-panel p-6">
+                        <div class="flex items-center gap-1 text-yellow-500 mb-4">★★★★★</div>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 italic mb-6 leading-relaxed">
+                            "TrendZ handled our 7-day capsule drop for 2,400 hoodies. Not a single customer complained about quality, and our profit payout hit our bank in 48 hours."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80" alt="Valkyrie Clan" class="w-10 h-10 rounded-full object-cover">
+                            <div>
+                                <div class="text-sm font-bold text-gray-900 dark:text-white">Alex 'Viper' Chen</div>
+                                <div class="text-xs text-gray-500">Esports Team Captain • 850K Followers</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel p-6">
+                        <div class="flex items-center gap-1 text-yellow-500 mb-4">★★★★★</div>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 italic mb-6 leading-relaxed">
+                            "The stitched gaming desk pads are unreal. The print sharpness matches our high-res pixel art flawlessly. We sold out our first 500 units in under 20 minutes."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Streamer Dex" class="w-10 h-10 rounded-full object-cover">
+                            <div>
+                                <div class="text-sm font-bold text-gray-900 dark:text-white">Dexter Morgan</div>
+                                <div class="text-xs text-gray-500">Twitch Partner Streamer</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel p-6">
+                        <div class="flex items-center gap-1 text-yellow-500 mb-4">★★★★★</div>
+                        <p class="text-sm text-gray-600 dark:text-gray-300 italic mb-6 leading-relaxed">
+                            "The automated Discord order notifications and instant mockups made launching our merchandise line effortless. Truly the gold standard for gaming creators."
+                        </p>
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Kira Gaming" class="w-10 h-10 rounded-full object-cover">
+                            <div>
+                                <div class="text-sm font-bold text-gray-900 dark:text-white">Kira Westwood</div>
+                                <div class="text-xs text-gray-500">YouTube Gaming Creator • 1.2M Subs</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: CTA VIP ONBOARDING -->
+        <section class="section bg-gradient-to-r from-yellow-500 to-amber-500 text-gray-950 py-16">
+            <div class="container text-center max-w-3xl mx-auto">
+                <span class="inline-block px-3 py-1 bg-black text-yellow-400 font-mono text-xs font-bold rounded-full mb-4">
+                    ⚡ ZERO RISK • ZERO MINIMUMS
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-black leading-tight mb-4 text-gray-950">
+                    Ready to Launch Your Custom Gaming Merch Drop?
+                </h2>
+                <p class="text-lg font-medium text-gray-900/90 mb-8">
+                    Get free sample mockups, automated store connection, and a dedicated partner manager within 24 hours.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center">
+                    <a href="../auth/signup.html" class="btn btn-dark btn-lg">
+                        Create Creator Account ➔
+                    </a>
+                    <a href="contact.html" class="btn bg-white/20 hover:bg-white/30 text-black border border-black/20 btn-lg font-bold">
+                        Talk with an Account Manager
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../../index.html" class="brand-logo" style="margin-bottom: 14px;">
+                        <img src="../../assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon" style="height: 48px;">
+                        <div class="brand-logo-text">
+                            <div class="brand-logo-main">Trend<span class="highlight">Z</span></div>
+                            <div class="brand-logo-sub">CUSTOM MERCHANDISE</div>
+                        </div>
+                    </a>
+                    <p>Modern digital printing solutions, corporate merchandise packages, and premier print-on-demand platform for creators and businesses.</p>
+                    <div style="display: flex; gap: 12px;">
+                        <span class="badge-pill badge-yellow">📍 Worldwide Express Shipping</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Services & Print</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">All Services Listing</a></li>
+                        <li><a href="service-details.html?id=dtg-printing">DTG HD Printing</a></li>
+                        <li><a href="service-details.html?id=sublimation">All-Over Sublimation</a></li>
+                        <li><a href="service-details.html?id=embroidery">3D Puff Embroidery</a></li>
+                        <li><a href="service-details.html?id=creator-drops">Creator POD Drops</a></li>
+                        <li><a href="pricing.html">Pricing & Volume Tiers</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Company & Hub</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About TrendZ</a></li>
+                        <li><a href="home-2.html">Gaming Niche Studio</a></li>
+                        <li><a href="blog.html">Printing Blog & Guides</a></li>
+                        <li><a href="FAQ.html">FAQ & Help Center</a></li>
+                        <li><a href="contact.html">Contact Support</a></li>
+                        <li><a href="coming-soon.html">Upcoming Tech Drops 🚀</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Creator Updates</h4>
+                    <p style="font-size: 0.88rem; color: #9CA3AF; margin-bottom: 12px;">
+                        Subscribe to receive new mockup drops, printing technology updates, and creator guides.
+                    </p>
+                    <form class="newsletter-form footer-newsletter-box">
+                        <input type="email" required placeholder="name@creator.com" class="footer-input">
+                        <button type="submit" class="footer-btn">➔</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>© 2026 TrendZ Studio. All Rights Reserved. Modern High-Definition Printing Platform.</div>
+                <div style="display: flex; gap: 20px;">
+                    <a href="Privacy-policy.html">Privacy Policy</a>
+                    <a href="Terms-of-service.html">Terms of Service</a>
+                    <a href="FAQ.html">Shipping & Returns</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script type="module" src="../../src/js/navbar.js"></script>
+    <script type="module" src="../../src/js/form-validation.js"></script>
+</body>
+
+</html>

@@ -6,6 +6,8 @@ import { products } from './products.js';
 import { CartManager } from './cart.js';
 import { MockupCustomizer } from './customizer.js';
 import { CreatorHub } from './creator.js';
+import { initNavbar } from './navbar.js';
+import { initFormValidation } from './form-validation.js';
 
 // Toast Notification Dispatcher
 window.showToast = function(message, type = 'info') {

@@ -16,6 +16,26 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=JetBrains+Mono:wght@500;700&display=swap"
         rel="stylesheet">
 
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['class', '[data-theme="dark"]'],
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#FFB800',
+                            hover: '#E5A600',
+                            dark: '#111215',
+                            surface: '#14161A'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
     <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="src/css/variables.css">
     <link rel="stylesheet" href="src/css/base.css">
@@ -30,8 +50,6 @@
     <div class="ambient-glow ambient-glow-2"></div>
     <div class="ambient-glow ambient-glow-3"></div>
     <div class="ambient-glow ambient-glow-4"></div>
-
-   
 
     <!-- Header / Navigation -->
     <header class="header">
@@ -50,20 +68,22 @@
             <!-- Navigation Links -->
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#heroSection" class="nav-link active">Home</a></li>
-                    <li><a href="#processSection" class="nav-link">How It Works</a></li>
-                    <li><a href="#customizerSection" class="nav-link">Mockup Studio</a></li>
-                    <li><a href="#catalogSection" class="nav-link">Products</a></li>
-                    <li><a href="#creatorSection" class="nav-link">Creator Hub</a></li>
-                    <li><a href="#faqSection" class="nav-link">FAQ</a></li>
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="public/pages/home-2.html" class="nav-link">Niche Drop</a></li>
+                    <li><a href="public/pages/about.html" class="nav-link">About</a></li>
+                    <li><a href="public/pages/services.html" class="nav-link">Services</a></li>
+                    <li><a href="public/pages/pricing.html" class="nav-link">Pricing</a></li>
+                    <li><a href="public/pages/blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="public/pages/contact.html" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
 
             <!-- Nav Actions -->
             <div class="nav-actions">
-                <button class="btn btn-outline btn-sm" id="openCreatorDashboardBtn" title="Open Creator Portal">
-                    ⚡ Creator Portal
-                </button>
+                <a href="public/pages/services.html" class="btn btn-outline btn-sm hidden sm:inline-flex" title="All Services">
+                    ⚡ Services Hub
+                </a>
+
                 <button class="btn-icon" data-action="open-cart" title="Shopping Cart" id="cartOpenBtn">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <circle cx="9" cy="21" r="1"></circle>
@@ -72,6 +92,47 @@
                     </svg>
                     <span class="cart-badge-count">1</span>
                 </button>
+
+                <!-- Profile Dropdown -->
+                <div class="profile-dropdown-wrapper">
+                    <button class="profile-trigger-btn" title="Account & Settings" aria-label="Account Menu">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </button>
+                    <div class="profile-dropdown-menu">
+                        <div class="dropdown-header">
+                            <div class="dropdown-user-name">TrendZ Portal</div>
+                            <div class="dropdown-user-role">Guest / Creator Access</div>
+                        </div>
+                        <a href="public/auth/login.html" class="dropdown-item">
+                            <span class="icon">🔑</span>
+                            <span>Sign In</span>
+                        </a>
+                        <a href="public/auth/signup.html" class="dropdown-item">
+                            <span class="icon">📝</span>
+                            <span>Create Account</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="public/auth/admin/admin-dashboard.html" class="dropdown-item">
+                            <span class="icon">👑</span>
+                            <span>Admin Dashboard</span>
+                        </a>
+                        <a href="public/auth/user/user-dashboard.html" class="dropdown-item">
+                            <span class="icon">🎨</span>
+                            <span>User Dashboard</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <button class="theme-toggle-btn" type="button">
+                            <span>🌙 Dark Mode</span>
+                        </button>
+                        <button class="rtl-toggle-btn" type="button" style="margin-top: 4px;">
+                            <span>🌐 RTL Mode</span>
+                        </button>
+                    </div>
+                </div>
+
                 <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
                     ☰
                 </button>
@@ -505,25 +566,26 @@
                 </div>
 
                 <div>
-                    <h4 class="footer-title">Products</h4>
+                    <h4 class="footer-title">Services & Print</h4>
                     <ul class="footer-links">
-                        <li><a href="#catalogSection">Custom T-Shirts</a></li>
-                        <li><a href="#catalogSection">Fleece Hoodies</a></li>
-                        <li><a href="#catalogSection">Ceramic Mugs</a></li>
-                        <li><a href="#catalogSection">Canvas Tote Bags</a></li>
-                        <li><a href="#catalogSection">MagSafe Phone Cases</a></li>
-                        <li><a href="#catalogSection">Bucket Hats & Caps</a></li>
+                        <li><a href="public/pages/services.html">All Services Listing</a></li>
+                        <li><a href="public/pages/service-details.html?id=dtg-printing">DTG HD Printing</a></li>
+                        <li><a href="public/pages/service-details.html?id=sublimation">All-Over Sublimation</a></li>
+                        <li><a href="public/pages/service-details.html?id=embroidery">3D Puff Embroidery</a></li>
+                        <li><a href="public/pages/service-details.html?id=creator-drops">Creator POD Drops</a></li>
+                        <li><a href="public/pages/pricing.html">Pricing & Volume Tiers</a></li>
                     </ul>
                 </div>
 
                 <div>
                     <h4 class="footer-title">Company & Hub</h4>
                     <ul class="footer-links">
-                        <li><a href="#processSection">How It Works</a></li>
-                        <li><a href="#customizerSection">Mockup Studio</a></li>
-                        <li><a href="#catalogSection">Corporate & Event Merch</a></li>
-                        <li><a href="#faqSection">Quality Guarantee</a></li>
-                        <li><a href="#contactSection">Contact Support</a></li>
+                        <li><a href="public/pages/about.html">About TrendZ</a></li>
+                        <li><a href="public/pages/home-2.html">Gaming Niche Studio</a></li>
+                        <li><a href="public/pages/blog.html">Printing Blog & Guides</a></li>
+                        <li><a href="public/pages/FAQ.html">FAQ & Help Center</a></li>
+                        <li><a href="public/pages/contact.html">Contact Support</a></li>
+                        <li><a href="public/pages/coming-soon.html">Upcoming Tech Drops 🚀</a></li>
                     </ul>
                 </div>
 
@@ -540,11 +602,11 @@
             </div>
 
             <div class="footer-bottom">
-                <div>© 2026 TrendZ Studio. All Rights Reserved. Designed with Signature Modern Yellow Theme.</div>
+                <div>© 2026 TrendZ Studio. All Rights Reserved. Modern High-Definition Printing Platform.</div>
                 <div style="display: flex; gap: 20px;">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Shipping Policy</a>
+                    <a href="public/pages/Privacy-policy.html">Privacy Policy</a>
+                    <a href="public/pages/Terms-of-service.html">Terms of Service</a>
+                    <a href="public/pages/FAQ.html">Shipping & Returns</a>
                 </div>
             </div>
         </div>
