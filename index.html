@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendZ | Digital Printing & Custom Merchandise Store</title>
+    <meta name="description"
+        content="TrendZ - Premium Print-on-Demand & Custom Merchandise Store. Order custom-printed t-shirts, hoodies, mugs, tote bags, phone cases, and creator merchandise with zero minimum orders.">
+    <link rel="icon" href="./assets/logo.png">
+
+    <!-- Google Fonts Preconnect & Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=JetBrains+Mono:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="src/css/variables.css">
+    <link rel="stylesheet" href="src/css/base.css">
+    <link rel="stylesheet" href="src/css/components.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+
+    <!-- Ambient Glow Background Blobs -->
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-glow ambient-glow-3"></div>
+    <div class="ambient-glow ambient-glow-4"></div>
+
+   
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-logo" id="mainBrandLogo">
+                <img src="assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon">
+                <div class="brand-logo-text">
+                    <div class="brand-logo-main">
+                        Trend<span class="highlight">Z</span>
+                    </div>
+                    <div class="brand-logo-sub">CUSTOM MERCHANDISE</div>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#heroSection" class="nav-link active">Home</a></li>
+                    <li><a href="#processSection" class="nav-link">How It Works</a></li>
+                    <li><a href="#customizerSection" class="nav-link">Mockup Studio</a></li>
+                    <li><a href="#catalogSection" class="nav-link">Products</a></li>
+                    <li><a href="#creatorSection" class="nav-link">Creator Hub</a></li>
+                    <li><a href="#faqSection" class="nav-link">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <!-- Nav Actions -->
+            <div class="nav-actions">
+                <button class="btn btn-outline btn-sm" id="openCreatorDashboardBtn" title="Open Creator Portal">
+                    ⚡ Creator Portal
+                </button>
+                <button class="btn-icon" data-action="open-cart" title="Shopping Cart" id="cartOpenBtn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-badge-count">1</span>
+                </button>
+                <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
+                    ☰
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION (Signature Reference Design) -->
+        <section class="hero-section" id="heroSection">
+            <div class="container">
+                <div class="hero-grid">
+                    <!-- Left Content -->
+                    <div class="hero-content">
+                        <div class="hero-brand-tag">
+                            Find Your Trend<span>Z</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Digital Printing<br>
+                            & Custom<br>
+                            <span class="highlight-yellow">Merchandise</span>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Premium Custom Merchandise & High-Definition Digital Printing. Turn your ideas and brand
+                            artwork into high-definition physical apparel and merchandise.
+                        </p>
+                        <div class="hero-cta-group">
+                            <a href="#customizerSection" class="btn btn-yellow btn-lg" id="heroOrderBtn">
+                                Order Custom Now <span class="btn-arrow">↗</span>
+                            </a>
+                            <a href="#catalogSection" class="btn btn-outline btn-lg">
+                                View Catalog
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Showcase Hero Vector Image -->
+                    <div class="hero-visual-stage">
+                        <img src="assets/hero-vector.png" alt="TrendZ Custom Merchandise Showcase"
+                            class="hero-vector-img">
+                    </div>
+                </div>
+
+                <!-- Hero Bottom Welcome Strip -->
+                <div class="hero-welcome-strip">
+                    <div class="hero-welcome-grid">
+                        <div class="welcome-logo-box">
+                            <span class="welcome-tag">Welcome to</span>
+                            <div class="welcome-brand-name">Trend<span>Z</span></div>
+                        </div>
+                        <div class="welcome-desc">
+                            Delivering modern digital printing and on-demand fulfillment for brands, corporate events,
+                            creators, and individuals with ultra-sharp print resolution and premium fabric quality.
+                        </div>
+                        <a href="#contactSection" class="welcome-cta-link">
+                            Contact Us ➔
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4-STEP WORKFLOW SECTION (How It Works) -->
+        <section class="section" id="processSection" style="background: #FFFFFF;">
+            <div class="container">
+                <!-- Header with Yellow Highlight Card -->
+                <div class="create-process-header">
+                    <div>
+                        <h2 style="font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 700; line-height: 1.15;">
+                            Let’s <span class="highlight-yellow">Create</span><br>
+                            Your Custom <span class="highlight-yellow">Product</span>
+                        </h2>
+                        <p style="margin-top: 14px; font-size: 0.98rem; color: #6B7280;">
+                            Elevate your brand presence and custom merchandise with TrendZ Studio.
+                        </p>
+                    </div>
+                    <div class="yellow-feature-card">
+                        <h3>How It Works</h3>
+                        <p>Simple 4-Step Process For Premium Results</p>
+                    </div>
+                </div>
+
+                <!-- 4-Step Grid with Left Media -->
+                <div class="process-grid">
+                    <div class="process-image-box">
+                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80"
+                            alt="Printing Studio & Custom Mugs">
+                    </div>
+                    <div class="process-steps-list">
+                        <!-- Step 1 -->
+                        <div class="process-step-item">
+                            <div class="process-step-number">1</div>
+                            <h4 class="process-step-title">Consultation</h4>
+                            <p class="process-step-desc">Select your blank canvas and discuss your custom product
+                                concept with our team.</p>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="process-step-item">
+                            <div class="process-step-number">2</div>
+                            <h4 class="process-step-title">Design & Approval</h4>
+                            <p class="process-step-desc">Generate instant high-resolution 3D digital proofs tailored to
+                                your brand identity.</p>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="process-step-item">
+                            <div class="process-step-number">3</div>
+                            <h4 class="process-step-title">Production & Print</h4>
+                            <p class="process-step-desc">State-of-the-art DTG, DTF, and UV printing using eco-friendly,
+                                ultra-durable inks.</p>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="process-step-item">
+                            <div class="process-step-number">4</div>
+                            <h4 class="process-step-title">Quality & Delivery</h4>
+                            <p class="process-step-desc">Rigorous quality inspection followed by fast nationwide and
+                                worldwide express delivery.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trust Metrics Row -->
+                <div class="trust-metrics-bar">
+                    <div class="metric-item">
+                        <div class="metric-num">50<span>k+</span></div>
+                        <div class="metric-label">Custom Items Printed</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-num">99.<span>4%</span></div>
+                        <div class="metric-label">Client Satisfaction Rate</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-num">48<span>h</span></div>
+                        <div class="metric-label">Express Production SLA</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-num">0<span>min</span></div>
+                        <div class="metric-label">No Minimum Order Quantity</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LIVE MOCKUP STUDIO (Customizer) -->
+        <section class="section" id="customizerSection">
+            <div class="container">
+                <div class="section-header" style="text-align: center;">
+                    <span class="section-tagline">Interactive Studio</span>
+                    <h2 class="section-title">Design & Preview <span class="highlight-yellow">In Real-Time</span></h2>
+                    <p class="section-desc" style="margin: 0 auto;">Select your blank canvas, choose custom colors,
+                        select sample artwork or input your brand text to generate an instant 3D proof.</p>
+                </div>
+
+                <div class="customizer-box">
+                    <!-- Live Preview Canvas Stage -->
+                    <div class="customizer-preview-stage">
+                        <div class="customizer-mockup-wrapper">
+                            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80"
+                                alt="Mockup Preview" id="customizerBaseImage" class="customizer-base-img">
+
+                            <!-- Dynamic Print Area Overlay -->
+                            <div class="customizer-print-area" id="customizerPrintArea">
+                                <div class="customizer-print-art" id="customizerPrintArt"></div>
+                                <div class="customizer-print-text" id="customizerPrintText" style="display: none;">
+                                    TrendZ 26</div>
+                            </div>
+                        </div>
+                        <span style="font-size: 0.78rem; font-weight: 700; color: #9CA3AF; margin-top: 14px;">
+                            🔍 Live 300 DPI High-Definition Print Placement Preview
+                        </span>
+                    </div>
+
+                    <!-- Customizer Controls -->
+                    <div class="customizer-controls">
+                        <!-- 1. Pick Base Item -->
+                        <div>
+                            <div class="customizer-group-title">1. Select Base Product</div>
+                            <div class="customizer-product-picker">
+                                <button class="customizer-product-btn" data-product-key="tshirt">T-Shirt ($24)</button>
+                                <button class="customizer-product-btn active" data-product-key="hoodie">Hoodie
+                                    ($45)</button>
+                                <button class="customizer-product-btn" data-product-key="mug">Mug ($15)</button>
+                                <button class="customizer-product-btn" data-product-key="tote">Tote Bag ($18)</button>
+                                <button class="customizer-product-btn" data-product-key="phonecase">Phone Case
+                                    ($26)</button>
+                            </div>
+                        </div>
+
+                        <!-- 2. Pick Color -->
+                        <div>
+                            <div class="customizer-group-title">2. Base Garment / Item Color</div>
+                            <div class="color-swatches" id="customizerColorSwatches"></div>
+                        </div>
+
+                        <!-- 3. Artwork Preset / Slogan -->
+                        <div>
+                            <div class="customizer-group-title">3. Choose Artwork Preset</div>
+                            <div class="artwork-picker" id="customizerArtPicker"></div>
+                        </div>
+
+                        <!-- 4. Custom Text Slogan -->
+                        <div>
+                            <div class="customizer-group-title">Or Type Custom Text Slogan</div>
+                            <input type="text" class="customizer-text-input" id="customizerTextInput"
+                                placeholder="e.g. TrendZ CREATIVE CLUB" maxlength="28">
+                        </div>
+
+                        <!-- 5. Size Selection & Add to Cart -->
+                        <div
+                            style="display: flex; gap: 14px; align-items: center; justify-content: space-between; padding-top: 10px; border-top: 1px solid var(--border-light);">
+                            <div>
+                                <span style="font-size: 0.75rem; color: #9CA3AF; text-transform: uppercase;">Total Unit
+                                    Price</span>
+                                <div style="font-size: 1.8rem; font-weight: 800; font-family: var(--font-heading); color: var(--color-dark);"
+                                    id="customizerPriceTag">$45.00</div>
+                            </div>
+                            <div style="display: flex; gap: 10px;">
+                                <select id="customizerSizeSelect"
+                                    style="padding: 12px; border: 1.5px solid var(--border-light); border-radius: var(--radius-xs); font-weight: 700; background: #FFF;">
+                                    <option value="S">Size: S</option>
+                                    <option value="M">Size: M</option>
+                                    <option value="L" selected>Size: L</option>
+                                    <option value="XL">Size: XL</option>
+                                    <option value="2XL">Size: 2XL</option>
+                                </select>
+                                <button class="btn btn-yellow" id="customizerAddToCartBtn">
+                                    Add Custom Item ↗
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCT CATALOG SECTION -->
+        <section class="section" id="catalogSection" style="background: #FFFFFF;">
+            <div class="container">
+                <div class="section-header"
+                    style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+                    <div>
+                        <span class="section-tagline">Curated Catalog</span>
+                        <h2 class="section-title">Trending <span class="highlight-yellow">Custom Drops</span></h2>
+                        <p class="section-desc">Browse our top-selling blanks ready for custom screen print, DTG,
+                            sublimation, and high-density embroidery.</p>
+                    </div>
+                    <!-- Filter Tabs -->
+                    <div class="filter-tabs" style="margin-bottom: 0;">
+                        <button class="filter-tab-btn active" data-category="all">All Products</button>
+                        <button class="filter-tab-btn" data-category="apparel">Apparel</button>
+                        <button class="filter-tab-btn" data-category="drinkware">Drinkware</button>
+                        <button class="filter-tab-btn" data-category="accessories">Accessories</button>
+                        <button class="filter-tab-btn" data-category="tech">Tech Gear</button>
+                    </div>
+                </div>
+
+                <!-- Product Cards Grid -->
+                <div class="product-grid" id="productGrid"></div>
+            </div>
+        </section>
+
+        <!-- CREATOR & MERCHANT HUB SECTION -->
+
+        <!-- TESTIMONIALS SECTION -->
+        <section class="section" style="background: #FFFFFF;">
+            <div class="container">
+                <div class="section-header" style="text-align: center;">
+                    <span class="section-tagline">Client Stories</span>
+                    <h2 class="section-title">Trusted by <span class="highlight-yellow">1,200+ Brands & Creators</span>
+                    </h2>
+                    <p class="section-desc" style="margin: 0 auto;">See why companies, esports teams, and content
+                        creators rely on TrendZ for their official merchandise.</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-size: 0.95rem; line-height: 1.6; color: #374151;">
+                            "The print sharpness on our 500 hoodie company drop was unmatched. Colors were exact to our
+                            Pantone brand guidelines, and fulfillment arrived 2 days ahead of schedule."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
+                                alt="Sarah Lin" class="author-avatar">
+                            <div>
+                                <div class="author-name">Sarah Lin</div>
+                                <div class="author-role">Brand Director, Studio Apex</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-size: 0.95rem; line-height: 1.6; color: #374151;">
+                            "As a creator with 200k followers, having zero inventory risk while earning $15+ per item is
+                            game changing. TrendZ handles all my dropshipping seamlessly."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80"
+                                alt="Marcus Vance" class="author-avatar">
+                            <div>
+                                <div class="author-name">Marcus Vance</div>
+                                <div class="author-role">Content Creator & Artist</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-size: 0.95rem; line-height: 1.6; color: #374151;">
+                            "Unbeatable value and true top-tier quality. The heavyweight t-shirt fabric feels luxurious,
+                            and the DTF prints stay vibrant even after dozens of washes. Highly recommended partner!"
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80"
+                                alt="Alex Foster" class="author-avatar">
+                            <div>
+                                <div class="author-name">Alex Foster</div>
+                                <div class="author-role">Founder, Creative Syndicate</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ SECTION -->
+        <section class="section" id="faqSection">
+            <div class="container">
+                <div class="section-header" style="text-align: center;">
+                    <span class="section-tagline">Got Questions?</span>
+                    <h2 class="section-title">Frequently Asked <span class="highlight-yellow">Questions</span></h2>
+                </div>
+
+                <div class="faq-grid">
+                    <div class="faq-card open">
+                        <div class="faq-question">
+                            <span>What is the minimum order quantity (MOQ)?</span>
+                            <span class="faq-toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            There is strictly <strong>0 Minimum Order Quantity</strong> for custom print-on-demand
+                            items. You can order just 1 single customized t-shirt, mug, or phone case, or scale up to
+                            10,000+ pieces with bulk wholesale discounts.
+                        </div>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-question">
+                            <span>What printing methods do you support?</span>
+                            <span class="faq-toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            We offer Direct-to-Garment (DTG), Direct-to-Film (DTF), Dye-Sublimation (for 360° all-over
+                            mugs and tumblers), High-Density Screen Printing, Laser Engraving, and 3D Embroidery.
+                        </div>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-question">
+                            <span>How long does production and shipping take?</span>
+                            <span class="faq-toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Standard custom orders are printed and dispatched within 24 to 48 business hours. Domestic
+                            courier transit takes 1-3 days, and express worldwide shipping takes 3-6 days.
+                        </div>
+                    </div>
+
+                    <div class="faq-card">
+                        <div class="faq-question">
+                            <span>How do creators receive their monthly earnings?</span>
+                            <span class="faq-toggle-icon">+</span>
+                        </div>
+                        <div class="faq-answer">
+                            Creators can request instant payouts directly to bank accounts, PayPal, or Stripe Express.
+                            Payouts are processed on a flexible rolling 7-day schedule with full real-time sales
+                            visibility.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VIP NEWSLETTER SECTION -->
+        <section class="section" id="contactSection" style="padding: 60px 0; background: var(--primary-yellow);">
+            <div class="container"
+                style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
+                <div>
+                    <h2 style="font-size: 2.2rem; font-weight: 900; color: var(--color-dark); margin-bottom: 6px;">
+                        Claim Your 20% Discount Voucher
+                    </h2>
+                    <p style="color: rgba(17, 17, 17, 0.85); font-weight: 600; font-size: 1.05rem;">
+                        Join 35,000+ creators and brands receiving exclusive product drops & design assets.
+                    </p>
+                </div>
+                <form class="newsletter-form" style="display: flex; gap: 8px; flex-grow: 1; max-width: 460px;">
+                    <input type="email" required placeholder="Enter your business email"
+                        style="background: #FFFFFF; padding: 14px 20px; border-radius: var(--radius-xs); border: 1px solid rgba(0,0,0,0.1); flex-grow: 1; font-weight: 600; color: #111;">
+                    <button type="submit" class="btn btn-dark" style="padding: 14px 24px;">
+                        Get Code ➔
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="brand-logo" style="margin-bottom: 14px;">
+                        <img src="assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon" style="height: 48px;">
+                        <div class="brand-logo-text">
+                            <div class="brand-logo-main">
+                                Trend<span class="highlight">Z</span>
+                            </div>
+                            <div class="brand-logo-sub">CUSTOM MERCHANDISE</div>
+                        </div>
+                    </a>
+                    <p>
+                        Modern digital printing solutions, corporate merchandise packages, and premier print-on-demand
+                        platform for creators and businesses.
+                    </p>
+                    <div style="display: flex; gap: 12px;">
+                        <span class="badge-pill badge-yellow">📍 Worldwide Express Shipping</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Products</h4>
+                    <ul class="footer-links">
+                        <li><a href="#catalogSection">Custom T-Shirts</a></li>
+                        <li><a href="#catalogSection">Fleece Hoodies</a></li>
+                        <li><a href="#catalogSection">Ceramic Mugs</a></li>
+                        <li><a href="#catalogSection">Canvas Tote Bags</a></li>
+                        <li><a href="#catalogSection">MagSafe Phone Cases</a></li>
+                        <li><a href="#catalogSection">Bucket Hats & Caps</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Company & Hub</h4>
+                    <ul class="footer-links">
+                        <li><a href="#processSection">How It Works</a></li>
+                        <li><a href="#customizerSection">Mockup Studio</a></li>
+                        <li><a href="#catalogSection">Corporate & Event Merch</a></li>
+                        <li><a href="#faqSection">Quality Guarantee</a></li>
+                        <li><a href="#contactSection">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-title">Creator Updates</h4>
+                    <p style="font-size: 0.88rem; color: #9CA3AF; margin-bottom: 12px;">
+                        Subscribe to receive new mockup drops, printing technology updates, and creator guides.
+                    </p>
+                    <form class="newsletter-form footer-newsletter-box">
+                        <input type="email" required placeholder="name@creator.com" class="footer-input">
+                        <button type="submit" class="footer-btn">➔</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>© 2026 TrendZ Studio. All Rights Reserved. Designed with Signature Modern Yellow Theme.</div>
+                <div style="display: flex; gap: 20px;">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Shipping Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SLIDE-OUT CART DRAWER -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>
+                <span>🛒 Your Order</span>
+                <span class="badge-pill badge-yellow cart-badge-count"
+                    style="width: auto; height: auto; border-radius: 12px; font-size: 0.75rem;">1</span>
+            </h3>
+            <button class="btn-icon" data-action="close-cart" title="Close Cart">✕</button>
+        </div>
+
+        <!-- Items List -->
+        <div class="cart-items-list" id="cartItemsList"></div>
+
+        <!-- Footer / Checkout -->
+        <div class="cart-footer">
+            <div style="display: flex; gap: 8px; margin-bottom: 14px;">
+                <input type="text" id="cartCouponInput" placeholder="Coupon Code (e.g. YELLOW20)"
+                    style="background: #FFFFFF; border: 1.5px solid var(--border-light); padding: 8px 12px; border-radius: var(--radius-xs); flex-grow: 1; font-weight: 700; text-transform: uppercase; font-size: 0.85rem;">
+                <button class="btn btn-dark btn-sm" id="cartCouponBtn">Apply</button>
+            </div>
+
+            <div class="cart-summary-row">
+                <span style="color: #6B7280;">Subtotal</span>
+                <span style="font-weight: 700;" id="cartSubtotal">$42.00</span>
+            </div>
+            <div class="cart-summary-row" id="cartDiscountRow" style="display: none; color: #059669; font-weight: 700;">
+                <span>Promo Discount</span>
+                <span id="cartDiscountVal">-$0.00</span>
+            </div>
+            <div class="cart-summary-row">
+                <span style="color: #6B7280;">Estimated Fulfillment</span>
+                <span style="color: #059669; font-weight: 700;">FREE Express</span>
+            </div>
+            <div class="cart-total-row">
+                <span>Total Due</span>
+                <span id="cartTotal" style="color: var(--color-dark); font-family: var(--font-heading);">$42.00</span>
+            </div>
+            <button class="btn btn-yellow" id="cartCheckoutBtn" style="width: 100%; padding: 16px;">
+                Proceed to Secure Checkout 🔒
+            </button>
+        </div>
+    </div>
+
+    <!-- QUICK VIEW MODAL -->
+    <div class="modal-overlay" id="quickViewModal">
+        <div class="modal-content" style="max-width: 820px;">
+            <button class="modal-close-btn" id="closeQuickViewBtn">✕</button>
+            <div id="quickViewBody"></div>
+        </div>
+    </div>
+
+    <!-- CREATOR DASHBOARD MODAL -->
+    <div class="modal-overlay" id="creatorDashboardModal">
+        <div class="modal-content" style="max-width: 960px; background: #121316; color: #FFF; padding: 0;">
+            <button class="modal-close-btn" id="closeCreatorModalBtn" style="background: #222; color: #FFF;">✕</button>
+
+            <!-- Creator Dashboard Top Header -->
+            <div
+                style="padding: 24px 32px; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; background: #181A20;">
+                <div>
+                    <div style="font-size: 0.8rem; color: #9CA3AF; text-transform: uppercase; font-weight: 700;">Creator
+                        & Merchant Portal</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 900; color: #FFF;">TrendZ <span
+                            class="highlight-yellow">Creator Suite</span></h3>
+                </div>
+                <div style="display: flex; gap: 12px; align-items: center;">
+                    <span style="font-size: 0.85rem; color: #9CA3AF;">Logged in as <strong>Studio Brand
+                            #408</strong></span>
+                    <button class="btn btn-yellow btn-sm" id="requestPayoutBtn">Request Payout ($3,420)</button>
+                </div>
+            </div>
+
+            <!-- Dashboard Stats -->
+            <div style="padding: 32px; display: flex; flex-direction: column; gap: 24px;">
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
+                    <div
+                        style="background: rgba(255,255,255,0.04); padding: 18px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                        <div style="font-size: 0.75rem; color: #9CA3AF; text-transform: uppercase;">Total Gross Sales
+                        </div>
+                        <div style="font-size: 1.6rem; font-weight: 800; color: #FFF; margin-top: 4px;">$28,490.00</div>
+                    </div>
+                    <div
+                        style="background: rgba(255,255,255,0.04); padding: 18px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                        <div style="font-size: 0.75rem; color: #9CA3AF; text-transform: uppercase;">Net Creator Earnings
+                        </div>
+                        <div
+                            style="font-size: 1.6rem; font-weight: 800; color: var(--primary-yellow); margin-top: 4px;">
+                            $11,240.50</div>
+                    </div>
+                    <div
+                        style="background: rgba(255,255,255,0.04); padding: 18px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                        <div style="font-size: 0.75rem; color: #9CA3AF; text-transform: uppercase;">Items Shipped</div>
+                        <div style="font-size: 1.6rem; font-weight: 800; color: #FFF; margin-top: 4px;">684 pcs</div>
+                    </div>
+                    <div
+                        style="background: rgba(255,255,255,0.04); padding: 18px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                        <div style="font-size: 0.75rem; color: #9CA3AF; text-transform: uppercase;">Active Designs</div>
+                        <div style="font-size: 1.6rem; font-weight: 800; color: #FFF; margin-top: 4px;">14 Live</div>
+                    </div>
+                </div>
+
+                <!-- Live Orders Table -->
+                <div
+                    style="background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.08); padding: 20px;">
+                    <h4 style="color: #FFF; font-size: 1.05rem; margin-bottom: 14px;">Recent Print-on-Demand Orders &
+                        Payout Stream</h4>
+                    <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem; text-align: left;">
+                        <thead>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1); color: #9CA3AF;">
+                                <th style="padding: 10px 8px;">Order ID</th>
+                                <th style="padding: 10px 8px;">Product & Design</th>
+                                <th style="padding: 10px 8px;">Quantity</th>
+                                <th style="padding: 10px 8px;">Status</th>
+                                <th style="padding: 10px 8px; text-align: right;">Net Profit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                                <td
+                                    style="padding: 12px 8px; font-family: var(--font-mono); color: var(--primary-yellow);">
+                                    #ORD-9482</td>
+                                <td style="padding: 12px 8px;">Oversized Streetwear Fleece Hoodie (Retro Wave)</td>
+                                <td style="padding: 12px 8px;">2 pcs</td>
+                                <td style="padding: 12px 8px;"><span style="color: #10B981; font-weight: 700;">●
+                                        Printing</span></td>
+                                <td style="padding: 12px 8px; text-align: right; font-weight: 800; color: #10B981;">
+                                    +$34.00</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                                <td
+                                    style="padding: 12px 8px; font-family: var(--font-mono); color: var(--primary-yellow);">
+                                    #ORD-9481</td>
+                                <td style="padding: 12px 8px;">Heavy Duty Canvas Tote Bag (Monogram 3A)</td>
+                                <td style="padding: 12px 8px;">1 pc</td>
+                                <td style="padding: 12px 8px;"><span style="color: #3B82F6; font-weight: 700;">●
+                                        Shipped</span></td>
+                                <td style="padding: 12px 8px; text-align: right; font-weight: 800; color: #10B981;">
+                                    +$9.50</td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
+                                <td
+                                    style="padding: 12px 8px; font-family: var(--font-mono); color: var(--primary-yellow);">
+                                    #ORD-9480</td>
+                                <td style="padding: 12px 8px;">Impact Armor MagSafe Phone Case</td>
+                                <td style="padding: 12px 8px;">1 pc</td>
+                                <td style="padding: 12px 8px;"><span style="color: #10B981; font-weight: 700;">●
+                                        Delivered</span></td>
+                                <td style="padding: 12px 8px; text-align: right; font-weight: 800; color: #10B981;">
+                                    +$13.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TOAST NOTIFICATION CONTAINER -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- JavaScript Modules -->
+    <script type="module" src="src/js/main.js"></script>
+</body>
+
+</html>
