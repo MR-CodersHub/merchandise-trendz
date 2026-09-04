@@ -3,8 +3,8 @@
  */
 
 export function initDashboard() {
-  // Tab Switching
-  const navTabs = document.querySelectorAll('.dashboard-nav-link[data-tab]');
+  // Tab Switching 
+const navTabs = document.querySelectorAll('.dashboard-nav-link[data-tab]');
   const tabContents = document.querySelectorAll('.dashboard-tab-content');
 
   navTabs.forEach(tab => {
@@ -25,8 +25,8 @@ export function initDashboard() {
     });
   });
 
-  // Table Search Filter
-  const tableSearchInput = document.getElementById('dashboardTableSearch');
+  // Table Search Filter 
+const tableSearchInput = document.getElementById('dashboardTableSearch');
   if (tableSearchInput) {
     tableSearchInput.addEventListener('input', (e) => {
       const q = e.target.value.toLowerCase().trim();
@@ -38,8 +38,8 @@ export function initDashboard() {
     });
   }
 
-  // Payout Request Modal
-  const requestPayoutBtn = document.getElementById('requestPayoutBtn');
+  // Payout Request Modal 
+const requestPayoutBtn = document.getElementById('requestPayoutBtn');
   const payoutModal = document.getElementById('payoutModal');
   const closePayoutBtn = document.getElementById('closePayoutModalBtn');
   const confirmPayoutBtn = document.getElementById('confirmPayoutSubmitBtn');
@@ -59,21 +59,21 @@ export function initDashboard() {
   if (confirmPayoutBtn && payoutModal) {
     confirmPayoutBtn.addEventListener('click', () => {
       payoutModal.classList.remove('active');
-      window.showToast('💰 Payout transfer initiated! Funds will arrive via Stripe in 1-2 business days.', 'success');
+      window.showToast('Payout transfer initiated! Funds will arrive via Stripe in 1-2 business days.', 'success');
     });
   }
 
-  // Order Status Toggle / Action buttons
-  document.querySelectorAll('[data-order-action]').forEach(btn => {
+  // Order Status Toggle / Action buttons 
+document.querySelectorAll('[data-order-action]').forEach(btn => {
     btn.addEventListener('click', (e) => {
       const action = btn.getAttribute('data-order-action');
       const orderId = btn.getAttribute('data-order-id') || 'Order';
       if (action === 'reprint') {
-        window.showToast(`🖨️ Queued ${orderId} for DTG emergency reprint.`, 'info');
+        window.showToast(`Queued ${orderId} for DTG emergency reprint.`, 'info');
       } else if (action === 'ship') {
-        window.showToast(`📦 Marked ${orderId} as Shipped with tracking code generated.`, 'success');
+        window.showToast(` Marked ${orderId} as Shipped with tracking code generated.`, 'success');
       } else if (action === 'cancel') {
-        window.showToast(`❌ ${orderId} has been cancelled and refunded.`, 'warning');
+        window.showToast(` ${orderId} has been cancelled and refunded.`, 'warning');
       }
     });
   });

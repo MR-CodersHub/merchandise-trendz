@@ -14,8 +14,8 @@ export function initBlogListing() {
 
   renderBlogGrid();
 
-  // Search Input Handler
-  const searchInput = document.getElementById('blogSearchInput');
+  // Search Input Handler 
+const searchInput = document.getElementById('blogSearchInput');
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       searchQuery = e.target.value.toLowerCase().trim();
@@ -23,8 +23,8 @@ export function initBlogListing() {
     });
   }
 
-  // Category Filter Tabs
-  const categoryBtns = document.querySelectorAll('.blog-category-btn');
+  // Category Filter Tabs 
+const categoryBtns = document.querySelectorAll('.blog-category-btn');
   categoryBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       categoryBtns.forEach(b => b.classList.remove('active'));
@@ -35,8 +35,8 @@ export function initBlogListing() {
     });
   });
 
-  // Tag Badges / Quick Filters
-  const tagBtns = document.querySelectorAll('.blog-tag-badge');
+  // Tag Badges / Quick Filters 
+const tagBtns = document.querySelectorAll('.blog-tag-badge');
   tagBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       selectedTag = btn.getAttribute('data-tag');
@@ -68,7 +68,7 @@ function renderBlogGrid() {
   if (filtered.length === 0) {
     grid.innerHTML = `
       <div style="grid-column: 1 / -1; text-align: center; padding: 60px 20px; background: var(--bg-surface); border-radius: var(--radius-md); border: 1px dashed var(--border-light);">
-        <div style="font-size: 3rem; margin-bottom: 14px;">🔍</div>
+        <div style="font-size: 3rem; margin-bottom: 14px;"></div>
         <h3 style="margin-bottom: 8px;">No matching articles found</h3>
         <p style="margin-bottom: 20px;">Try adjusting your search query or clear your category filter.</p>
         <button class="btn btn-yellow btn-sm" id="resetBlogFilterBtn">Reset All Filters</button>
@@ -100,9 +100,9 @@ function renderBlogGrid() {
       <div style="padding: 24px; display: flex; flex-direction: column; flex: 1; justify-content: space-between;">
         <div>
           <div style="display: flex; gap: 12px; font-size: 0.82rem; color: var(--color-text-muted); margin-bottom: 12px;">
-            <span>📅 ${post.date}</span>
+            <span> ${post.date}</span>
             <span>•</span>
-            <span>⏱️ ${post.readTime}</span>
+            <span>⏱ ${post.readTime}</span>
           </div>
           <h3 style="font-size: 1.25rem; font-weight: 800; line-height: 1.35; margin-bottom: 12px; color: var(--color-dark);">
             <a href="blog-details.html?id=${post.id}" style="color: inherit;" class="hover-underline">

@@ -40,16 +40,16 @@ export class CartManager {
   }
 
   bindEvents() {
-    // Open cart drawer triggers
-    document.querySelectorAll('[data-action="open-cart"]').forEach(btn => {
+    // Open cart drawer triggers 
+document.querySelectorAll('[data-action="open-cart"]').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.preventDefault();
         this.openDrawer();
       });
     });
 
-    // Close cart triggers
-    document.querySelectorAll('[data-action="close-cart"]').forEach(btn => {
+    // Close cart triggers 
+document.querySelectorAll('[data-action="close-cart"]').forEach(btn => {
       btn.addEventListener('click', () => this.closeDrawer());
     });
 
@@ -66,7 +66,7 @@ export class CartManager {
           this.discountPercent = 0.20;
           this.discountCode = code;
           this.render();
-          window.showToast?.('🎉 20% Discount Code Applied!', 'success');
+          window.showToast?.(' 20% Discount Code Applied!', 'success');
         } else if (code === '') {
           window.showToast?.('Please enter a coupon code.', 'info');
         } else {
@@ -75,15 +75,15 @@ export class CartManager {
       });
     }
 
-    // Checkout CTA
-    const checkoutBtn = document.getElementById('cartCheckoutBtn');
+    // Checkout CTA 
+const checkoutBtn = document.getElementById('cartCheckoutBtn');
     if (checkoutBtn) {
       checkoutBtn.addEventListener('click', () => {
         if (this.items.length === 0) {
           window.showToast?.('Your cart is empty! Add products to proceed.', 'warning');
           return;
         }
-        window.showToast?.('🚀 Proceeding to Secure Encrypted Checkout...', 'success');
+        window.showToast?.(' Proceeding to Secure Encrypted Checkout...', 'success');
         setTimeout(() => {
           alert('Order placed successfully in Demo Mode! Thank you for ordering from TrendZ Studio.');
           this.items = [];
@@ -108,8 +108,8 @@ export class CartManager {
   }
 
   addItem(item) {
-    // Check if duplicate item exists
-    const existingIndex = this.items.findIndex(
+    // Check if duplicate item exists 
+const existingIndex = this.items.findIndex(
       i => i.productId === item.productId && i.color === item.color && i.size === item.size && i.artworkName === item.artworkName
     );
 
@@ -126,7 +126,7 @@ export class CartManager {
     this.save();
     this.render();
     this.openDrawer();
-    window.showToast?.(`✅ Added "${item.title}" to cart!`, 'success');
+    window.showToast?.(` Added "${item.title}" to cart!`, 'success');
   }
 
   updateQuantity(id, delta) {
@@ -174,7 +174,7 @@ export class CartManager {
     if (this.items.length === 0) {
       this.drawerList.innerHTML = `
         <div style="text-align: center; padding: 48px 20px;">
-          <div style="font-size: 3rem; margin-bottom: 12px;">🛍️</div>
+          <div style="font-size: 3rem; margin-bottom: 12px;"></div>
           <h4 style="margin-bottom: 8px; font-weight: 800;">Your Cart is Empty</h4>
           <p style="font-size: 0.9rem; color: #6B7280; margin-bottom: 20px;">Pick a custom product or launch our Mockup Studio to start creating!</p>
           <button class="btn btn-yellow btn-sm" data-action="close-cart" onclick="document.querySelector('#customizerSection').scrollIntoView({behavior: 'smooth'})">

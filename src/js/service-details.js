@@ -15,15 +15,15 @@ export function initServiceDetails() {
 }
 
 function renderServiceDetails(service) {
-  // Update Document Title
-  document.title = `${service.title} | TrendZ Custom Merchandise`;
+  // Update Document Title 
+document.title = `${service.title} | TrendZ Custom Merchandise`;
 
-  // Breadcrumb
-  const breadcrumbCurrent = document.getElementById('serviceBreadcrumbCurrent');
+  // Breadcrumb 
+const breadcrumbCurrent = document.getElementById('serviceBreadcrumbCurrent');
   if (breadcrumbCurrent) breadcrumbCurrent.textContent = service.title;
 
-  // Hero Section Elements
-  const heroBadge = document.getElementById('serviceHeroBadge');
+  // Hero Section Elements 
+const heroBadge = document.getElementById('serviceHeroBadge');
   if (heroBadge) heroBadge.textContent = service.badge;
 
   const heroCategory = document.getElementById('serviceHeroCategory');
@@ -50,12 +50,12 @@ function renderServiceDetails(service) {
     heroImage.alt = service.title;
   }
 
-  // Overview Text
-  const overviewEl = document.getElementById('serviceOverview');
+  // Overview Text 
+const overviewEl = document.getElementById('serviceOverview');
   if (overviewEl) overviewEl.textContent = service.overview;
 
-  // Benefits Grid
-  const benefitsGrid = document.getElementById('serviceBenefitsGrid');
+  // Benefits Grid 
+const benefitsGrid = document.getElementById('serviceBenefitsGrid');
   if (benefitsGrid) {
     benefitsGrid.innerHTML = service.benefits.map((b, idx) => `
       <div class="glass-panel" style="padding: 24px; position: relative; overflow: hidden;">
@@ -66,8 +66,8 @@ function renderServiceDetails(service) {
     `).join('');
   }
 
-  // Technical Specs Table
-  const specsTableBody = document.getElementById('serviceSpecsTableBody');
+  // Technical Specs Table 
+const specsTableBody = document.getElementById('serviceSpecsTableBody');
   if (specsTableBody) {
     specsTableBody.innerHTML = service.technicalSpecs.map(spec => `
       <tr style="border-bottom: 1px solid var(--border-light);">
@@ -77,8 +77,8 @@ function renderServiceDetails(service) {
     `).join('');
   }
 
-  // Pricing Tiers Cards
-  const pricingContainer = document.getElementById('servicePricingGrid');
+  // Pricing Tiers Cards 
+const pricingContainer = document.getElementById('servicePricingGrid');
   if (pricingContainer) {
     pricingContainer.innerHTML = service.pricingTiers.map(tier => `
       <div class="pricing-card ${tier.isPopular ? 'featured' : ''}">
@@ -104,8 +104,8 @@ function renderServiceDetails(service) {
     `).join('');
   }
 
-  // FAQs Accordion
-  const faqsContainer = document.getElementById('serviceFaqsAccordion');
+  // FAQs Accordion 
+const faqsContainer = document.getElementById('serviceFaqsAccordion');
   if (faqsContainer) {
     faqsContainer.innerHTML = service.faqs.map((faq, idx) => `
       <div class="faq-item ${idx === 0 ? 'active' : ''}" style="margin-bottom: 12px;">
@@ -119,8 +119,8 @@ function renderServiceDetails(service) {
       </div>
     `).join('');
 
-    // Attach FAQ toggle handlers
-    faqsContainer.querySelectorAll('.faq-question').forEach(btn => {
+    // Attach FAQ toggle handlers 
+faqsContainer.querySelectorAll('.faq-question').forEach(btn => {
       btn.addEventListener('click', () => {
         const item = btn.parentElement;
         const ans = item.querySelector('.faq-answer');
@@ -144,8 +144,8 @@ function renderServiceDetails(service) {
     });
   }
 
-  // Related Services Section
-  const relatedGrid = document.getElementById('relatedServicesGrid');
+  // Related Services Section 
+const relatedGrid = document.getElementById('relatedServicesGrid');
   if (relatedGrid) {
     const others = servicesData.filter(s => s.id !== service.id).slice(0, 3);
     relatedGrid.innerHTML = others.map(other => `

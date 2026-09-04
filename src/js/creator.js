@@ -34,11 +34,11 @@ export class CreatorHub {
       if (e.target === this.modalOverlay) this.closeModal();
     });
 
-    // Payout simulator
-    const payoutBtn = document.getElementById('requestPayoutBtn');
+    // Payout simulator 
+const payoutBtn = document.getElementById('requestPayoutBtn');
     if (payoutBtn) {
       payoutBtn.addEventListener('click', () => {
-        window.showToast?.('💳 Payout request of $3,420.00 submitted via Stripe Express!', 'success');
+        window.showToast?.(' Payout request of $3,420.00 submitted via Stripe Express!', 'success');
       });
     }
   }
@@ -46,8 +46,7 @@ export class CreatorHub {
   calculateEarnings() {
     if (!this.slider) return;
     const sales = parseInt(this.slider.value, 10);
-    const avgProfitPerSale = 15.50; // Average creator net profit after POD fulfillment cost
-    const monthlyProfit = sales * avgProfitPerSale;
+    const avgProfitPerSale = 15.50; // Average creator net profit after POD fulfillment cost const monthlyProfit = sales * avgProfitPerSale;
     const annualProfit = monthlyProfit * 12;
 
     if (this.salesCountEl) this.salesCountEl.textContent = `${sales.toLocaleString()} Sales / mo`;

@@ -3,33 +3,33 @@
  */
 
 export function initFormValidation() {
-  // Contact Forms
-  const contactForms = document.querySelectorAll('form.contact-form, #contactForm');
+  // Contact Forms 
+const contactForms = document.querySelectorAll('form.contact-form, #contactForm');
   contactForms.forEach(form => {
     form.addEventListener('submit', handleContactSubmit);
   });
 
-  // Newsletter Forms
-  const newsletterForms = document.querySelectorAll('form.newsletter-form, .footer-newsletter-box');
+  // Newsletter Forms 
+const newsletterForms = document.querySelectorAll('form.newsletter-form, .footer-newsletter-box');
   newsletterForms.forEach(form => {
     form.addEventListener('submit', handleNewsletterSubmit);
   });
 
-  // Auth Login Forms
-  const loginForms = document.querySelectorAll('form.login-form, #loginForm');
+  // Auth Login Forms 
+const loginForms = document.querySelectorAll('form.login-form, #loginForm');
   loginForms.forEach(form => {
     form.addEventListener('submit', handleLoginSubmit);
   });
 
-  // Auth Signup Forms
-  const signupForms = document.querySelectorAll('form.signup-form, #signupForm');
+  // Auth Signup Forms 
+const signupForms = document.querySelectorAll('form.signup-form, #signupForm');
   signupForms.forEach(form => {
     setupPasswordStrength(form);
     form.addEventListener('submit', handleSignupSubmit);
   });
 
-  // Pricing / Quote Calculator Forms
-  const quoteForms = document.querySelectorAll('form.quote-form, #quoteForm');
+  // Pricing / Quote Calculator Forms 
+const quoteForms = document.querySelectorAll('form.quote-form, #quoteForm');
   quoteForms.forEach(form => {
     form.addEventListener('submit', handleQuoteSubmit);
   });
@@ -60,7 +60,7 @@ function handleContactSubmit(e) {
   const submitBtn = form.querySelector('button[type="submit"]');
   if (submitBtn) {
     submitBtn.disabled = true;
-    submitBtn.innerHTML = 'Sending Message... ⏳';
+    submitBtn.innerHTML = 'Sending Message...';
   }
 
   setTimeout(() => {
@@ -85,7 +85,7 @@ function handleNewsletterSubmit(e) {
   }
 
   input.value = '';
-  window.showToast('🎉 You are now subscribed to TrendZ creator drops & VIP printing updates!', 'success');
+  window.showToast('You are now subscribed to TrendZ creator drops & VIP printing updates!', 'success');
 }
 
 function handleLoginSubmit(e) {
@@ -107,7 +107,7 @@ function handleLoginSubmit(e) {
   const submitBtn = form.querySelector('button[type="submit"]');
   if (submitBtn) {
     submitBtn.disabled = true;
-    submitBtn.innerHTML = 'Authenticating... 🔒';
+    submitBtn.innerHTML = 'Authenticating...';
   }
 
   setTimeout(() => {
@@ -149,7 +149,7 @@ function setupPasswordStrength(form) {
       if (text) text.textContent = 'Good';
     } else {
       meter.style.backgroundColor = '#10B981';
-      if (text) text.textContent = 'Strong & Secure 🔒';
+      if (text) text.textContent = 'Strong & Secure';
     }
   });
 }
@@ -185,7 +185,7 @@ function handleSignupSubmit(e) {
   const submitBtn = form.querySelector('button[type="submit"]');
   if (submitBtn) {
     submitBtn.disabled = true;
-    submitBtn.innerHTML = 'Creating Creator Account... 🚀';
+    submitBtn.innerHTML = 'Creating Creator Account...';
   }
 
   setTimeout(() => {
@@ -193,7 +193,7 @@ function handleSignupSubmit(e) {
       submitBtn.disabled = false;
       submitBtn.innerHTML = 'Complete Registration ➔';
     }
-    window.showToast(`🎉 Account created for ${name}! Welcome to TrendZ Studio.`, 'success');
+    window.showToast(`Account created for ${name}! Welcome to TrendZ Studio.`, 'success');
     setTimeout(() => {
       window.location.href = '../auth/user/user-dashboard.html';
     }, 1200);

@@ -16,15 +16,15 @@ export function initBlogDetails() {
 }
 
 function renderBlogDetails(post) {
-  // Update Title
-  document.title = `${post.title} | TrendZ Insights`;
+  // Update Title 
+document.title = `${post.title} | TrendZ Insights`;
 
-  // Breadcrumbs
-  const breadcrumbCurrent = document.getElementById('blogBreadcrumbCurrent');
+  // Breadcrumbs 
+const breadcrumbCurrent = document.getElementById('blogBreadcrumbCurrent');
   if (breadcrumbCurrent) breadcrumbCurrent.textContent = post.title;
 
-  // Header Elements
-  const categoryBadge = document.getElementById('blogCategoryBadge');
+  // Header Elements 
+const categoryBadge = document.getElementById('blogCategoryBadge');
   if (categoryBadge) categoryBadge.textContent = post.category;
 
   const titleEl = document.getElementById('blogPostTitle');
@@ -36,8 +36,8 @@ function renderBlogDetails(post) {
   const readTimeEl = document.getElementById('blogPostReadTime');
   if (readTimeEl) readTimeEl.textContent = post.readTime;
 
-  // Author Elements
-  const authorAvatar = document.getElementById('blogAuthorAvatar');
+  // Author Elements 
+const authorAvatar = document.getElementById('blogAuthorAvatar');
   if (authorAvatar) {
     authorAvatar.src = post.author.avatar;
     authorAvatar.alt = post.author.name;
@@ -49,19 +49,19 @@ function renderBlogDetails(post) {
   const authorRole = document.getElementById('blogAuthorRole');
   if (authorRole) authorRole.textContent = post.author.role;
 
-  // Banner Image
-  const bannerImg = document.getElementById('blogBannerImage');
+  // Banner Image 
+const bannerImg = document.getElementById('blogBannerImage');
   if (bannerImg) {
     bannerImg.src = post.banner;
     bannerImg.alt = post.title;
   }
 
-  // Article Body
-  const bodyEl = document.getElementById('blogArticleBody');
+  // Article Body 
+const bodyEl = document.getElementById('blogArticleBody');
   if (bodyEl) bodyEl.innerHTML = post.content;
 
-  // Tags List
-  const tagsContainer = document.getElementById('blogPostTags');
+  // Tags List 
+const tagsContainer = document.getElementById('blogPostTags');
   if (tagsContainer) {
     tagsContainer.innerHTML = post.tags.map(tag => `
       <span class="badge-pill" style="background: var(--bg-surface-alt); color: var(--color-text-main); font-size: 0.8rem; border: 1px solid var(--border-light);">
@@ -70,8 +70,8 @@ function renderBlogDetails(post) {
     `).join('');
   }
 
-  // Author Bio Box
-  const authorBioName = document.getElementById('authorBioName');
+  // Author Bio Box 
+const authorBioName = document.getElementById('authorBioName');
   if (authorBioName) authorBioName.textContent = post.author.name;
 
   const authorBioRole = document.getElementById('authorBioRole');
@@ -83,8 +83,8 @@ function renderBlogDetails(post) {
     authorBioAvatar.alt = post.author.name;
   }
 
-  // Related Articles Grid
-  const relatedGrid = document.getElementById('relatedPostsGrid');
+  // Related Articles Grid 
+const relatedGrid = document.getElementById('relatedPostsGrid');
   if (relatedGrid) {
     const relatedPosts = blogData.filter(p => post.relatedIds?.includes(p.id) || p.id !== post.id).slice(0, 2);
     relatedGrid.innerHTML = relatedPosts.map(rel => `
@@ -108,8 +108,8 @@ function renderBlogDetails(post) {
     `).join('');
   }
 
-  // Sidebar Popular Posts
-  const sidebarPopular = document.getElementById('sidebarPopularPosts');
+  // Sidebar Popular Posts 
+const sidebarPopular = document.getElementById('sidebarPopularPosts');
   if (sidebarPopular) {
     const popular = blogData.filter(p => p.id !== post.id).slice(0, 4);
     sidebarPopular.innerHTML = popular.map(pop => `
@@ -125,12 +125,12 @@ function renderBlogDetails(post) {
     `).join('');
   }
 
-  // Social Share Handler
-  const shareCopyBtn = document.getElementById('shareCopyLinkBtn');
+  // Social Share Handler 
+const shareCopyBtn = document.getElementById('shareCopyLinkBtn');
   if (shareCopyBtn) {
     shareCopyBtn.addEventListener('click', () => {
       navigator.clipboard?.writeText(window.location.href);
-      window.showToast('📋 Article link copied to clipboard!', 'success');
+      window.showToast(' Article link copied to clipboard!', 'success');
     });
   }
 }
@@ -174,7 +174,7 @@ function initCommentSystem() {
 
     commentsList.prepend(newComment);
     commentForm.reset();
-    window.showToast('💬 Your comment has been posted successfully!', 'success');
+    window.showToast(' Your comment has been posted successfully!', 'success');
   });
 }
 

@@ -12,8 +12,7 @@
     <!-- Google Fonts Preconnect & Stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=JetBrains+Mono:wght@500;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=JetBrains+Mono:wght@500;700&display=swap"
         rel="stylesheet">
 
     <!-- Tailwind CSS CDN -->
@@ -52,93 +51,7 @@
     <div class="ambient-glow ambient-glow-4"></div>
 
     <!-- Header / Navigation -->
-    <header class="header">
-        <div class="container nav-container">
-            <!-- Brand Logo -->
-            <a href="index.html" class="brand-logo" id="mainBrandLogo">
-                <img src="assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon">
-                <div class="brand-logo-text">
-                    <div class="brand-logo-main">
-                        Trend<span class="highlight">Z</span>
-                    </div>
-                    <div class="brand-logo-sub">CUSTOM MERCHANDISE</div>
-                </div>
-            </a>
-
-            <!-- Navigation Links -->
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="public/pages/home-2.html" class="nav-link">Niche Drop</a></li>
-                    <li><a href="public/pages/about.html" class="nav-link">About</a></li>
-                    <li><a href="public/pages/services.html" class="nav-link">Services</a></li>
-                    <li><a href="public/pages/pricing.html" class="nav-link">Pricing</a></li>
-                    <li><a href="public/pages/blog.html" class="nav-link">Blog</a></li>
-                    <li><a href="public/pages/contact.html" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-
-            <!-- Nav Actions -->
-            <div class="nav-actions">
-                <a href="public/pages/services.html" class="btn btn-outline btn-sm hidden sm:inline-flex" title="All Services">
-                    ⚡ Services Hub
-                </a>
-
-                <button class="btn-icon" data-action="open-cart" title="Shopping Cart" id="cartOpenBtn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="9" cy="21" r="1"></circle>
-                        <circle cx="20" cy="21" r="1"></circle>
-                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                    </svg>
-                    <span class="cart-badge-count">1</span>
-                </button>
-
-                <!-- Profile Dropdown -->
-                <div class="profile-dropdown-wrapper">
-                    <button class="profile-trigger-btn" title="Account & Settings" aria-label="Account Menu">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                    </button>
-                    <div class="profile-dropdown-menu">
-                        <div class="dropdown-header">
-                            <div class="dropdown-user-name">TrendZ Portal</div>
-                            <div class="dropdown-user-role">Guest / Creator Access</div>
-                        </div>
-                        <a href="public/auth/login.html" class="dropdown-item">
-                            <span class="icon">🔑</span>
-                            <span>Sign In</span>
-                        </a>
-                        <a href="public/auth/signup.html" class="dropdown-item">
-                            <span class="icon">📝</span>
-                            <span>Create Account</span>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a href="public/auth/admin/admin-dashboard.html" class="dropdown-item">
-                            <span class="icon">👑</span>
-                            <span>Admin Dashboard</span>
-                        </a>
-                        <a href="public/auth/user/user-dashboard.html" class="dropdown-item">
-                            <span class="icon">🎨</span>
-                            <span>User Dashboard</span>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <button class="theme-toggle-btn" type="button">
-                            <span>🌙 Dark Mode</span>
-                        </button>
-                        <button class="rtl-toggle-btn" type="button" style="margin-top: 4px;">
-                            <span>🌐 RTL Mode</span>
-                        </button>
-                    </div>
-                </div>
-
-                <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
-                    ☰
-                </button>
-            </div>
-        </div>
-    </header>
+    <header class="header" id="navbar-container"></header>
 
     <main>
         <!-- HERO SECTION (Signature Reference Design) -->
@@ -156,8 +69,7 @@
                             <span class="highlight-yellow">Merchandise</span>
                         </h1>
                         <p class="hero-subtitle">
-                            Premium Custom Merchandise & High-Definition Digital Printing. Turn your ideas and brand
-                            artwork into high-definition physical apparel and merchandise.
+                            Premium Custom Merchandise & High-Definition Digital Printing. Turn your ideas and brand artwork into high-definition physical apparel and merchandise.
                         </p>
                         <div class="hero-cta-group">
                             <a href="#customizerSection" class="btn btn-yellow btn-lg" id="heroOrderBtn">
@@ -226,15 +138,13 @@
                         <div class="process-step-item">
                             <div class="process-step-number">1</div>
                             <h4 class="process-step-title">Consultation</h4>
-                            <p class="process-step-desc">Select your blank canvas and discuss your custom product
-                                concept with our team.</p>
+                            <p class="process-step-desc">Select your blank canvas and discuss your custom product concept with our team.</p>
                         </div>
                         <!-- Step 2 -->
                         <div class="process-step-item">
                             <div class="process-step-number">2</div>
                             <h4 class="process-step-title">Design & Approval</h4>
-                            <p class="process-step-desc">Generate instant high-resolution 3D digital proofs tailored to
-                                your brand identity.</p>
+                            <p class="process-step-desc">Generate instant high-resolution 3D digital proofs tailored to your brand identity.</p>
                         </div>
                         <!-- Step 3 -->
                         <div class="process-step-item">
@@ -247,8 +157,7 @@
                         <div class="process-step-item">
                             <div class="process-step-number">4</div>
                             <h4 class="process-step-title">Quality & Delivery</h4>
-                            <p class="process-step-desc">Rigorous quality inspection followed by fast nationwide and
-                                worldwide express delivery.</p>
+                            <p class="process-step-desc">Rigorous quality inspection followed by fast nationwide and worldwide express delivery.</p>
                         </div>
                     </div>
                 </div>
@@ -300,7 +209,7 @@
                             </div>
                         </div>
                         <span style="font-size: 0.78rem; font-weight: 700; color: #9CA3AF; margin-top: 14px;">
-                            🔍 Live 300 DPI High-Definition Print Placement Preview
+                             Live 300 DPI High-Definition Print Placement Preview
                         </span>
                     </div>
 
@@ -340,11 +249,9 @@
                         </div>
 
                         <!-- 5. Size Selection & Add to Cart -->
-                        <div
-                            style="display: flex; gap: 14px; align-items: center; justify-content: space-between; padding-top: 10px; border-top: 1px solid var(--border-light);">
+                        <div style="display: flex; gap: 14px; align-items: center; justify-content: space-between; padding-top: 10px; border-top: 1px solid var(--border-light);">
                             <div>
-                                <span style="font-size: 0.75rem; color: #9CA3AF; text-transform: uppercase;">Total Unit
-                                    Price</span>
+                                <span style="font-size: 0.75rem; color: #9CA3AF; text-transform: uppercase;">Total Unit Price</span>
                                 <div style="font-size: 1.8rem; font-weight: 800; font-family: var(--font-heading); color: var(--color-dark);"
                                     id="customizerPriceTag">$45.00</div>
                             </div>
@@ -402,8 +309,7 @@
                     <span class="section-tagline">Client Stories</span>
                     <h2 class="section-title">Trusted by <span class="highlight-yellow">1,200+ Brands & Creators</span>
                     </h2>
-                    <p class="section-desc" style="margin: 0 auto;">See why companies, esports teams, and content
-                        creators rely on TrendZ for their official merchandise.</p>
+                    <p class="section-desc" style="margin: 0 auto;">See why companies, esports teams, and content creators rely on TrendZ for their official merchandise.</p>
                 </div>
 
                 <div class="testimonials-grid">
@@ -411,8 +317,7 @@
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
                         <p style="font-size: 0.95rem; line-height: 1.6; color: #374151;">
-                            "The print sharpness on our 500 hoodie company drop was unmatched. Colors were exact to our
-                            Pantone brand guidelines, and fulfillment arrived 2 days ahead of schedule."
+                            "The print sharpness on our 500 hoodie company drop was unmatched. Colors were exact to our Pantone brand guidelines, and fulfillment arrived 2 days ahead of schedule."
                         </p>
                         <div class="testimonial-author">
                             <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
@@ -428,8 +333,7 @@
                     <div class="testimonial-card">
                         <div class="stars">★★★★★</div>
                         <p style="font-size: 0.95rem; line-height: 1.6; color: #374151;">
-                            "As a creator with 200k followers, having zero inventory risk while earning $15+ per item is
-                            game changing. TrendZ handles all my dropshipping seamlessly."
+                            "As a creator with 200k followers, having zero inventory risk while earning $15+ per item is game changing. TrendZ handles all my dropshipping seamlessly."
                         </p>
                         <div class="testimonial-author">
                             <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80"
@@ -476,9 +380,7 @@
                             <span class="faq-toggle-icon">+</span>
                         </div>
                         <div class="faq-answer">
-                            There is strictly <strong>0 Minimum Order Quantity</strong> for custom print-on-demand
-                            items. You can order just 1 single customized t-shirt, mug, or phone case, or scale up to
-                            10,000+ pieces with bulk wholesale discounts.
+                            There is strictly <strong>0 Minimum Order Quantity</strong> for custom print-on-demand items. You can order just 1 single customized t-shirt, mug, or phone case, or scale up to 10,000+ pieces with bulk wholesale discounts.
                         </div>
                     </div>
 
@@ -488,8 +390,7 @@
                             <span class="faq-toggle-icon">+</span>
                         </div>
                         <div class="faq-answer">
-                            We offer Direct-to-Garment (DTG), Direct-to-Film (DTF), Dye-Sublimation (for 360° all-over
-                            mugs and tumblers), High-Density Screen Printing, Laser Engraving, and 3D Embroidery.
+                            We offer Direct-to-Garment (DTG), Direct-to-Film (DTF), Dye-Sublimation (for 360° all-over mugs and tumblers), High-Density Screen Printing, Laser Engraving, and 3D Embroidery.
                         </div>
                     </div>
 
@@ -499,8 +400,7 @@
                             <span class="faq-toggle-icon">+</span>
                         </div>
                         <div class="faq-answer">
-                            Standard custom orders are printed and dispatched within 24 to 48 business hours. Domestic
-                            courier transit takes 1-3 days, and express worldwide shipping takes 3-6 days.
+                            Standard custom orders are printed and dispatched within 24 to 48 business hours. Domestic courier transit takes 1-3 days, and express worldwide shipping takes 3-6 days.
                         </div>
                     </div>
 
@@ -511,8 +411,7 @@
                         </div>
                         <div class="faq-answer">
                             Creators can request instant payouts directly to bank accounts, PayPal, or Stripe Express.
-                            Payouts are processed on a flexible rolling 7-day schedule with full real-time sales
-                            visibility.
+                            Payouts are processed on a flexible rolling 7-day schedule with full real-time sales visibility.
                         </div>
                     </div>
                 </div>
@@ -543,81 +442,14 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="brand-logo" style="margin-bottom: 14px;">
-                        <img src="assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon" style="height: 48px;">
-                        <div class="brand-logo-text">
-                            <div class="brand-logo-main">
-                                Trend<span class="highlight">Z</span>
-                            </div>
-                            <div class="brand-logo-sub">CUSTOM MERCHANDISE</div>
-                        </div>
-                    </a>
-                    <p>
-                        Modern digital printing solutions, corporate merchandise packages, and premier print-on-demand
-                        platform for creators and businesses.
-                    </p>
-                    <div style="display: flex; gap: 12px;">
-                        <span class="badge-pill badge-yellow">📍 Worldwide Express Shipping</span>
-                    </div>
-                </div>
-
-                <div>
-                    <h4 class="footer-title">Services & Print</h4>
-                    <ul class="footer-links">
-                        <li><a href="public/pages/services.html">All Services Listing</a></li>
-                        <li><a href="public/pages/service-details.html?id=dtg-printing">DTG HD Printing</a></li>
-                        <li><a href="public/pages/service-details.html?id=sublimation">All-Over Sublimation</a></li>
-                        <li><a href="public/pages/service-details.html?id=embroidery">3D Puff Embroidery</a></li>
-                        <li><a href="public/pages/service-details.html?id=creator-drops">Creator POD Drops</a></li>
-                        <li><a href="public/pages/pricing.html">Pricing & Volume Tiers</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="footer-title">Company & Hub</h4>
-                    <ul class="footer-links">
-                        <li><a href="public/pages/about.html">About TrendZ</a></li>
-                        <li><a href="public/pages/home-2.html">Gaming Niche Studio</a></li>
-                        <li><a href="public/pages/blog.html">Printing Blog & Guides</a></li>
-                        <li><a href="public/pages/FAQ.html">FAQ & Help Center</a></li>
-                        <li><a href="public/pages/contact.html">Contact Support</a></li>
-                        <li><a href="public/pages/coming-soon.html">Upcoming Tech Drops 🚀</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="footer-title">Creator Updates</h4>
-                    <p style="font-size: 0.88rem; color: #9CA3AF; margin-bottom: 12px;">
-                        Subscribe to receive new mockup drops, printing technology updates, and creator guides.
-                    </p>
-                    <form class="newsletter-form footer-newsletter-box">
-                        <input type="email" required placeholder="name@creator.com" class="footer-input">
-                        <button type="submit" class="footer-btn">➔</button>
-                    </form>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <div>© 2026 TrendZ Studio. All Rights Reserved. Modern High-Definition Printing Platform.</div>
-                <div style="display: flex; gap: 20px;">
-                    <a href="public/pages/Privacy-policy.html">Privacy Policy</a>
-                    <a href="public/pages/Terms-of-service.html">Terms of Service</a>
-                    <a href="public/pages/FAQ.html">Shipping & Returns</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <footer class="footer" id="footer-container"></footer>
 
     <!-- SLIDE-OUT CART DRAWER -->
     <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
     <div class="cart-drawer" id="cartDrawer">
         <div class="cart-header">
             <h3>
-                <span>🛒 Your Order</span>
+                <span> Your Order</span>
                 <span class="badge-pill badge-yellow cart-badge-count"
                     style="width: auto; height: auto; border-radius: 12px; font-size: 0.75rem;">1</span>
             </h3>
@@ -652,7 +484,7 @@
                 <span id="cartTotal" style="color: var(--color-dark); font-family: var(--font-heading);">$42.00</span>
             </div>
             <button class="btn btn-yellow" id="cartCheckoutBtn" style="width: 100%; padding: 16px;">
-                Proceed to Secure Checkout 🔒
+                Proceed to Secure Checkout 
             </button>
         </div>
     </div>
@@ -671,13 +503,11 @@
             <button class="modal-close-btn" id="closeCreatorModalBtn" style="background: #222; color: #FFF;">✕</button>
 
             <!-- Creator Dashboard Top Header -->
-            <div
-                style="padding: 24px 32px; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; background: #181A20;">
+            <div style="padding: 24px 32px; border-bottom: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; background: #181A20;">
                 <div>
                     <div style="font-size: 0.8rem; color: #9CA3AF; text-transform: uppercase; font-weight: 700;">Creator
                         & Merchant Portal</div>
-                    <h3 style="font-size: 1.5rem; font-weight: 900; color: #FFF;">TrendZ <span
-                            class="highlight-yellow">Creator Suite</span></h3>
+                    <h3 style="font-size: 1.5rem; font-weight: 900; color: #FFF;">TrendZ <span class="highlight-yellow">Creator Suite</span></h3>
                 </div>
                 <div style="display: flex; gap: 12px; align-items: center;">
                     <span style="font-size: 0.85rem; color: #9CA3AF;">Logged in as <strong>Studio Brand
@@ -689,35 +519,29 @@
             <!-- Dashboard Stats -->
             <div style="padding: 32px; display: flex; flex-direction: column; gap: 24px;">
                 <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;">
-                    <div
-                        style="background: rgba(255,255,255,0.04); padding: 18px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                    <div style="background: rgba(255,255,255,0.04); padding: 18px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
                         <div style="font-size: 0.75rem; color: #9CA3AF; text-transform: uppercase;">Total Gross Sales
                         </div>
                         <div style="font-size: 1.6rem; font-weight: 800; color: #FFF; margin-top: 4px;">$28,490.00</div>
                     </div>
-                    <div
-                        style="background: rgba(255,255,255,0.04); padding: 18px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                    <div style="background: rgba(255,255,255,0.04); padding: 18px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
                         <div style="font-size: 0.75rem; color: #9CA3AF; text-transform: uppercase;">Net Creator Earnings
                         </div>
-                        <div
-                            style="font-size: 1.6rem; font-weight: 800; color: var(--primary-yellow); margin-top: 4px;">
+                        <div style="font-size: 1.6rem; font-weight: 800; color: var(--primary-yellow); margin-top: 4px;">
                             $11,240.50</div>
                     </div>
-                    <div
-                        style="background: rgba(255,255,255,0.04); padding: 18px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                    <div style="background: rgba(255,255,255,0.04); padding: 18px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
                         <div style="font-size: 0.75rem; color: #9CA3AF; text-transform: uppercase;">Items Shipped</div>
                         <div style="font-size: 1.6rem; font-weight: 800; color: #FFF; margin-top: 4px;">684 pcs</div>
                     </div>
-                    <div
-                        style="background: rgba(255,255,255,0.04); padding: 18px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
+                    <div style="background: rgba(255,255,255,0.04); padding: 18px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);">
                         <div style="font-size: 0.75rem; color: #9CA3AF; text-transform: uppercase;">Active Designs</div>
                         <div style="font-size: 1.6rem; font-weight: 800; color: #FFF; margin-top: 4px;">14 Live</div>
                     </div>
                 </div>
 
                 <!-- Live Orders Table -->
-                <div
-                    style="background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.08); padding: 20px;">
+                <div style="background: rgba(255,255,255,0.02); border-radius: 8px; border: 1px solid rgba(255,255,255,0.08); padding: 20px;">
                     <h4 style="color: #FFF; font-size: 1.05rem; margin-bottom: 14px;">Recent Print-on-Demand Orders &
                         Payout Stream</h4>
                     <table style="width: 100%; border-collapse: collapse; font-size: 0.88rem; text-align: left;">
@@ -732,8 +556,7 @@
                         </thead>
                         <tbody>
                             <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
-                                <td
-                                    style="padding: 12px 8px; font-family: var(--font-mono); color: var(--primary-yellow);">
+                                <td style="padding: 12px 8px; font-family: var(--font-mono); color: var(--primary-yellow);">
                                     #ORD-9482</td>
                                 <td style="padding: 12px 8px;">Oversized Streetwear Fleece Hoodie (Retro Wave)</td>
                                 <td style="padding: 12px 8px;">2 pcs</td>
@@ -743,8 +566,7 @@
                                     +$34.00</td>
                             </tr>
                             <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
-                                <td
-                                    style="padding: 12px 8px; font-family: var(--font-mono); color: var(--primary-yellow);">
+                                <td style="padding: 12px 8px; font-family: var(--font-mono); color: var(--primary-yellow);">
                                     #ORD-9481</td>
                                 <td style="padding: 12px 8px;">Heavy Duty Canvas Tote Bag (Monogram 3A)</td>
                                 <td style="padding: 12px 8px;">1 pc</td>
@@ -754,8 +576,7 @@
                                     +$9.50</td>
                             </tr>
                             <tr style="border-bottom: 1px solid rgba(255,255,255,0.04);">
-                                <td
-                                    style="padding: 12px 8px; font-family: var(--font-mono); color: var(--primary-yellow);">
+                                <td style="padding: 12px 8px; font-family: var(--font-mono); color: var(--primary-yellow);">
                                     #ORD-9480</td>
                                 <td style="padding: 12px 8px;">Impact Armor MagSafe Phone Case</td>
                                 <td style="padding: 12px 8px;">1 pc</td>
@@ -776,6 +597,7 @@
 
     <!-- JavaScript Modules -->
     <script type="module" src="src/js/main.js"></script>
+    <script type="module" src="src/js/navbar.js"></script>
 </body>
 
 </html>

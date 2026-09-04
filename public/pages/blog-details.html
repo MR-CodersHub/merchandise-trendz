@@ -48,79 +48,7 @@
     <div class="ambient-glow ambient-glow-3"></div>
 
     <!-- Header / Navigation -->
-    <header class="header">
-        <div class="container nav-container">
-            <a href="../../index.html" class="brand-logo">
-                <img src="../../assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon">
-                <div class="brand-logo-text">
-                    <div class="brand-logo-main">Trend<span class="highlight">Z</span></div>
-                    <div class="brand-logo-sub">PRINT & MERCH INSIGHTS</div>
-                </div>
-            </a>
-
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="../../index.html" class="nav-link">Home</a></li>
-                    <li><a href="home-2.html" class="nav-link">Niche Drop</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="pricing.html" class="nav-link">Pricing</a></li>
-                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div class="nav-actions">
-                <a href="blog.html" class="btn btn-outline btn-sm hidden sm:inline-flex">
-                    ← All Articles
-                </a>
-
-                <!-- Profile Dropdown -->
-                <div class="profile-dropdown-wrapper">
-                    <button class="profile-trigger-btn" title="Account & Settings" aria-label="Account Menu">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                    </button>
-                    <div class="profile-dropdown-menu">
-                        <div class="dropdown-header">
-                            <div class="dropdown-user-name">TrendZ Portal</div>
-                            <div class="dropdown-user-role">Guest / Creator Access</div>
-                        </div>
-                        <a href="../auth/login.html" class="dropdown-item">
-                            <span class="icon">🔑</span>
-                            <span>Sign In</span>
-                        </a>
-                        <a href="../auth/signup.html" class="dropdown-item">
-                            <span class="icon">📝</span>
-                            <span>Create Account</span>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a href="../auth/admin/admin-dashboard.html" class="dropdown-item">
-                            <span class="icon">👑</span>
-                            <span>Admin Dashboard</span>
-                        </a>
-                        <a href="../auth/user/user-dashboard.html" class="dropdown-item">
-                            <span class="icon">🎨</span>
-                            <span>User Dashboard</span>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <button class="theme-toggle-btn" type="button">
-                            <span>🌙 Dark Mode</span>
-                        </button>
-                        <button class="rtl-toggle-btn" type="button" style="margin-top: 4px;">
-                            <span>🌐 RTL Mode</span>
-                        </button>
-                    </div>
-                </div>
-
-                <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
-                    ☰
-                </button>
-            </div>
-        </div>
-    </header>
+    <header class="header" id="navbar-container"></header>
 
     <main>
         <!-- BREADCRUMBS -->
@@ -176,7 +104,7 @@
                         <div class="flex items-center gap-3">
                             <span class="text-xs font-bold uppercase text-gray-400">Share:</span>
                             <button class="btn btn-outline btn-sm" id="shareCopyLinkBtn" title="Copy Link">
-                                🔗 Copy Link
+                                 Copy Link
                             </button>
                             <a href="https://twitter.com" target="_blank" rel="noopener" class="btn-icon" style="width:36px; height:36px;" title="Share on X">
                                 𝕏
@@ -255,7 +183,7 @@
 
                     <!-- Quick Quote CTA Card -->
                     <div class="glass-panel p-6 bg-gradient-to-br from-yellow-500/10 to-transparent border-yellow-500/30">
-                        <div class="text-2xl mb-2">⚡</div>
+                        <div class="text-2xl mb-2"></div>
                         <h4 class="text-base font-bold text-gray-900 dark:text-white mb-2">Ready to Print Your Custom Merch?</h4>
                         <p class="text-xs text-gray-500 dark:text-gray-400 mb-4 leading-relaxed">
                             Upload your artwork to our interactive 3D studio and see live photorealistic mockups with zero obligation.
@@ -284,69 +212,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="../../index.html" class="brand-logo" style="margin-bottom: 14px;">
-                        <img src="../../assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon" style="height: 48px;">
-                        <div class="brand-logo-text">
-                            <div class="brand-logo-main">Trend<span class="highlight">Z</span></div>
-                            <div class="brand-logo-sub">CUSTOM MERCHANDISE</div>
-                        </div>
-                    </a>
-                    <p>Modern digital printing solutions, corporate merchandise packages, and premier print-on-demand platform for creators and businesses.</p>
-                    <div style="display: flex; gap: 12px;">
-                        <span class="badge-pill badge-yellow">📍 Worldwide Express Shipping</span>
-                    </div>
-                </div>
-
-                <div>
-                    <h4 class="footer-title">Services & Print</h4>
-                    <ul class="footer-links">
-                        <li><a href="services.html">All Services Listing</a></li>
-                        <li><a href="service-details.html?id=dtg-printing">DTG HD Printing</a></li>
-                        <li><a href="service-details.html?id=sublimation">All-Over Sublimation</a></li>
-                        <li><a href="service-details.html?id=embroidery">3D Puff Embroidery</a></li>
-                        <li><a href="service-details.html?id=creator-drops">Creator POD Drops</a></li>
-                        <li><a href="pricing.html">Pricing & Volume Tiers</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="footer-title">Company & Hub</h4>
-                    <ul class="footer-links">
-                        <li><a href="about.html">About TrendZ</a></li>
-                        <li><a href="home-2.html">Gaming Niche Studio</a></li>
-                        <li><a href="blog.html">Printing Blog & Guides</a></li>
-                        <li><a href="FAQ.html">FAQ & Help Center</a></li>
-                        <li><a href="contact.html">Contact Support</a></li>
-                        <li><a href="coming-soon.html">Upcoming Tech Drops 🚀</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 class="footer-title">Creator Updates</h4>
-                    <p style="font-size: 0.88rem; color: #9CA3AF; margin-bottom: 12px;">
-                        Subscribe to receive new mockup drops, printing technology updates, and creator guides.
-                    </p>
-                    <form class="newsletter-form footer-newsletter-box">
-                        <input type="email" required placeholder="name@creator.com" class="footer-input">
-                        <button type="submit" class="footer-btn">➔</button>
-                    </form>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <div>© 2026 TrendZ Studio. All Rights Reserved. Modern High-Definition Printing Platform.</div>
-                <div style="display: flex; gap: 20px;">
-                    <a href="Privacy-policy.html">Privacy Policy</a>
-                    <a href="Terms-of-service.html">Terms of Service</a>
-                    <a href="FAQ.html">Shipping & Returns</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <footer class="footer" id="footer-container"></footer>
 
     <!-- Toast Notifications -->
     <div class="toast-container" id="toastContainer"></div>

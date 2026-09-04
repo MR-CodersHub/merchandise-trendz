@@ -47,77 +47,7 @@
     <div class="ambient-glow ambient-glow-2"></div>
 
     <!-- Header / Navigation -->
-    <header class="header">
-        <div class="container nav-container">
-            <a href="../../index.html" class="brand-logo">
-                <img src="../../assets/logo.png" alt="TrendZ Logo" class="brand-logo-icon">
-                <div class="brand-logo-text">
-                    <div class="brand-logo-main">Trend<span class="highlight">Z</span></div>
-                    <div class="brand-logo-sub">CREATOR REGISTRATION</div>
-                </div>
-            </a>
-
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="../../index.html" class="nav-link">Home</a></li>
-                    <li><a href="../pages/about.html" class="nav-link">About</a></li>
-                    <li><a href="../pages/services.html" class="nav-link">Services</a></li>
-                    <li><a href="../pages/pricing.html" class="nav-link">Pricing</a></li>
-                    <li><a href="../pages/contact.html" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div class="nav-actions">
-                <a href="login.html" class="btn btn-outline btn-sm">
-                    Sign In ➔
-                </a>
-
-                <!-- Profile Dropdown -->
-                <div class="profile-dropdown-wrapper">
-                    <button class="profile-trigger-btn" title="Account & Settings" aria-label="Account Menu">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                    </button>
-                    <div class="profile-dropdown-menu">
-                        <div class="dropdown-header">
-                            <div class="dropdown-user-name">Portal Access</div>
-                            <div class="dropdown-user-role">Guest / Sign In Required</div>
-                        </div>
-                        <a href="login.html" class="dropdown-item">
-                            <span class="icon">🔑</span>
-                            <span>Sign In</span>
-                        </a>
-                        <a href="signup.html" class="dropdown-item">
-                            <span class="icon">📝</span>
-                            <span>Create Account</span>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <a href="admin/admin-dashboard.html" class="dropdown-item">
-                            <span class="icon">👑</span>
-                            <span>Admin Dashboard</span>
-                        </a>
-                        <a href="user/user-dashboard.html" class="dropdown-item">
-                            <span class="icon">🎨</span>
-                            <span>User Dashboard</span>
-                        </a>
-                        <div class="dropdown-divider"></div>
-                        <button class="theme-toggle-btn" type="button">
-                            <span>🌙 Dark Mode</span>
-                        </button>
-                        <button class="rtl-toggle-btn" type="button" style="margin-top: 4px;">
-                            <span>🌐 RTL Mode</span>
-                        </button>
-                    </div>
-                </div>
-
-                <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
-                    ☰
-                </button>
-            </div>
-        </div>
-    </header>
+    <header class="header" id="navbar-container"></header>
 
     <main>
         <section class="section min-h-[85vh] flex items-center justify-center py-16">
@@ -137,15 +67,15 @@
                             <div class="grid grid-cols-3 gap-2">
                                 <label class="p-2.5 rounded-lg border border-yellow-500 bg-yellow-500/10 text-center cursor-pointer text-xs font-bold">
                                     <input type="radio" name="role" value="creator" checked class="sr-only">
-                                    🎨 Creator / Streamer
+                                     Creator / Streamer
                                 </label>
                                 <label class="p-2.5 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-yellow-500 text-center cursor-pointer text-xs font-bold">
                                     <input type="radio" name="role" value="brand" class="sr-only">
-                                    🏢 Apparel Brand
+                                     Apparel Brand
                                 </label>
                                 <label class="p-2.5 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-yellow-500 text-center cursor-pointer text-xs font-bold">
                                     <input type="radio" name="role" value="b2b" class="sr-only">
-                                    💼 Enterprise Swag
+                                     Enterprise Swag
                                 </label>
                             </div>
                         </div>
@@ -195,11 +125,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container text-center text-xs text-gray-500 py-6 border-t border-gray-100 dark:border-gray-800">
-            © 2026 TrendZ Studio Inc. Guaranteed Zero-Risk Print On Demand.
-        </div>
-    </footer>
+    <footer class="footer" id="footer-container"></footer>
 
     <!-- Toast Notifications -->
     <div class="toast-container" id="toastContainer"></div>

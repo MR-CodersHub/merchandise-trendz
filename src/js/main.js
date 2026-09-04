@@ -42,7 +42,10 @@ window.showToast = function(message, type = 'info') {
 };
 
 // Main Initialization
-document.addEventListener('DOMContentLoaded', () => {
+function initApp() {
+  // Initialize Shared Layout & Navbar
+  initNavbar();
+
   // Initialize Core Managers
   window.cartManager = new CartManager();
   window.customizer = new MockupCustomizer();
@@ -83,7 +86,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Newsletter Form
   initNewsletter();
-});
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initApp);
+} else {
+  initApp();
+}
 
 // Render Products Grid
 function renderProductGrid(category = 'all') {
@@ -119,7 +128,7 @@ function renderProductGrid(category = 'all') {
           <div class="product-price-box">
             <span class="product-price-label">From</span>
             <span class="product-price">$${product.basePrice.toFixed(2)}</span>
-            <span class="product-price-bulk">Bulk: $${product.bulkPrice.toFixed(2)}</span>
+            <span class="product-price bulk">Bulk: $${product.bulkPrice.toFixed(2)}</span>
           </div>
           <button class="btn btn-yellow btn-sm" onclick="openQuickView('${product.id}')">
             Customize ↗
@@ -207,7 +216,7 @@ window.openQuickView = function(productId) {
             Add to Order ↗
           </button>
           <button class="btn btn-dark" onclick="window.customizeFromQuickView('${prod.id}')">
-            Open in Studio 🎨
+            Open in Studio
           </button>
         </div>
       </div>
@@ -297,7 +306,7 @@ function initNewsletter() {
   forms.forEach(form => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
-      window.showToast?.('🎉 Thank you for subscribing! Your 20% discount code is YELLOW20', 'success');
+      window.showToast?.('Thank you for subscribing! Your 20% discount code is YELLOW20', 'success');
       form.reset();
     });
   });

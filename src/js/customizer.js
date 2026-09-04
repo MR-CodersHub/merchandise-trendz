@@ -101,8 +101,8 @@ export class MockupCustomizer {
   }
 
   bindEvents() {
-    // Product type toggle
-    this.productBtns.forEach(btn => {
+    // Product type toggle 
+this.productBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         const key = btn.getAttribute('data-product-key');
         if (!key || !this.productsMap[key]) return;
@@ -116,8 +116,8 @@ export class MockupCustomizer {
       });
     });
 
-    // Color Swatch delegation
-    this.colorSwatchesContainer?.addEventListener('click', (e) => {
+    // Color Swatch delegation 
+this.colorSwatchesContainer?.addEventListener('click', (e) => {
       const swatch = e.target.closest('.color-swatch');
       if (!swatch) return;
 
@@ -126,8 +126,8 @@ export class MockupCustomizer {
       this.updatePreview();
     });
 
-    // Artwork preset delegation
-    this.artPickerContainer?.addEventListener('click', (e) => {
+    // Artwork preset delegation 
+this.artPickerContainer?.addEventListener('click', (e) => {
       const btn = e.target.closest('.art-thumb-btn');
       if (!btn) return;
 
@@ -137,20 +137,20 @@ export class MockupCustomizer {
       this.updatePreview();
     });
 
-    // Custom Text input
-    this.textInput?.addEventListener('input', (e) => {
+    // Custom Text input 
+this.textInput?.addEventListener('input', (e) => {
       this.state.customText = e.target.value.toUpperCase();
       this.state.mode = 'text';
       this.updatePreview();
     });
 
-    // Size Select
-    this.sizeSelect?.addEventListener('change', (e) => {
+    // Size Select 
+this.sizeSelect?.addEventListener('change', (e) => {
       this.state.size = e.target.value;
     });
 
-    // Add Customized Item to Cart
-    this.addToCartBtn?.addEventListener('click', () => {
+    // Add Customized Item to Cart 
+this.addToCartBtn?.addEventListener('click', () => {
       const product = this.productsMap[this.state.productKey];
       const selectedArt = sampleArtworks.find(a => a.id === this.state.artId);
 
@@ -176,22 +176,22 @@ export class MockupCustomizer {
 
     this.renderColorSwatches();
 
-    // Update base image
-    if (this.baseImage) {
+    // Update base image 
+if (this.baseImage) {
       this.baseImage.src = product.image;
       this.baseImage.alt = product.name;
     }
 
-    // Update Print area positioning
-    if (this.printArea) {
+    // Update Print area positioning 
+if (this.printArea) {
       this.printArea.style.top = product.printBox.top;
       this.printArea.style.left = product.printBox.left;
       this.printArea.style.width = product.printBox.width;
       this.printArea.style.height = product.printBox.height;
     }
 
-    // Render Artwork or Text inside print area
-    const selectedArt = sampleArtworks.find(a => a.id === this.state.artId);
+    // Render Artwork or Text inside print area 
+const selectedArt = sampleArtworks.find(a => a.id === this.state.artId);
     if (this.state.mode === 'artwork' && selectedArt) {
       if (this.printArt) {
         this.printArt.style.display = 'block';
@@ -209,8 +209,8 @@ export class MockupCustomizer {
       }
     }
 
-    // Update Price display
-    if (this.priceTag) {
+    // Update Price display 
+if (this.priceTag) {
       this.priceTag.textContent = `$${product.price.toFixed(2)}`;
     }
   }

@@ -155,7 +155,7 @@
   top: -4px;
   right: -4px;
   background: var(--primary-yellow);
-  color: var(--color-dark);
+  color: #111215;
   font-weight: 800;
   font-size: 0.72rem;
   width: 20px;
@@ -164,7 +164,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid #FFFFFF;
+  border: 2px solid var(--bg-surface);
+}
+
+[dir="rtl"] .cart-badge-count {
+  right: auto;
+  left: -4px;
 }
 
 /* Mobile Menu Toggle */
