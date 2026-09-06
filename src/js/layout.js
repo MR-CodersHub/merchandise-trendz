@@ -112,8 +112,19 @@ export function renderNavbar(paths) {
           <li><a href="${paths.pages}home-2.html" class="nav-link" data-nav="niche">Home 2</a></li>
           <li><a href="${paths.pages}about.html" class="nav-link" data-nav="about">About</a></li>
           <li><a href="${paths.pages}products.html" class="nav-link" data-nav="products">Products</a></li>
+          <li><a href="${paths.pages}creator-hub.html" class="nav-link">Creator Hub</a></li>
           <li><a href="${paths.pages}blog.html" class="nav-link" data-nav="blog">Blog</a></li>
           <li><a href="${paths.pages}contact.html" class="nav-link" data-nav="contact">Contact</a></li>
+          <li class="mobile-only-link">
+            <button class="nav-link theme-toggle-btn" style="background:none; border:none; width: 100%; text-align: inherit; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: inherit;">
+              Toggle Dark Mode
+            </button>
+          </li>
+          <li class="mobile-only-link">
+            <button class="nav-link rtl-toggle-btn" style="background:none; border:none; width: 100%; text-align: inherit; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: inherit;">
+              Toggle RTL Mode
+            </button>
+          </li>
         </ul>
       </nav>
 

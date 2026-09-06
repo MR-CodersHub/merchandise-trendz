@@ -184,8 +184,8 @@ window.openQuickView = function(productId) {
   let selectedColor = prod.colors[0];
 
   body.innerHTML = `
-    <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 32px; padding: 36px;">
-      <div style="background: #F9F9F6; border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 24px;">
+    <div class="qv-modal-grid">
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; padding: 24px;">
         <img src="${prod.image}" alt="${prod.name}" style="max-height: 320px; object-fit: contain;">
       </div>
       <div style="display: flex; flex-direction: column; gap: 16px;">
