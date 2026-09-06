@@ -42,90 +42,102 @@
 
 <body>
 
-    <!-- Ambient Glow Background Blobs -->
-    <div class="ambient-glow ambient-glow-1"></div>
-    <div class="ambient-glow ambient-glow-2"></div>
+    <main class="min-h-screen flex flex-col md:flex-row">
+        <!-- Left Side: Visual / Brand -->
+        <div class="hidden md:flex md:w-1/2 bg-gray-900 relative overflow-hidden flex-col justify-between p-12 text-white">
+            <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=1200&q=80" alt="Signup Background" class="absolute inset-0 w-full h-full object-cover opacity-40">
+            <div class="relative z-10">
+                <a href="../../index.html" class="flex items-center gap-2 text-2xl font-black text-white hover:text-yellow-500 transition-colors">
+                    <img src="../../assets/logo.png" alt="Logo" class="w-8 h-8">
+                    Trend<span class="text-yellow-500">Z</span>
+                </a>
+            </div>
+            <div class="relative z-10 max-w-md">
+                <h2 class="text-3xl font-black mb-4">Launch your premium drops today.</h2>
+                <p class="text-gray-300">Get access to 3D mockups, wholesale pricing, and automated fulfillment across 120+ countries.</p>
+            </div>
+        </div>
 
-    <!-- Header / Navigation -->
-    <header class="header" id="navbar-container"></header>
+        <!-- Right Side: Form -->
+        <div class="w-full md:w-1/2 flex flex-col items-center justify-center p-8 sm:p-12 relative bg-white dark:bg-[#111215]">
+            <!-- Mobile Brand Header -->
+            <div class="md:hidden absolute top-8 left-8">
+                <a href="../../index.html" class="flex items-center gap-2 text-xl font-black text-gray-900 dark:text-white hover:text-yellow-500">
+                    <img src="../../assets/logo.png" alt="Logo" class="w-6 h-6">
+                    Trend<span class="text-yellow-500">Z</span>
+                </a>
+            </div>
 
-    <main>
-        <section class="section min-h-[85vh] flex items-center justify-center py-16">
-            <div class="container max-w-lg mx-auto">
-                <div class="glass-panel p-8 sm:p-10 shadow-2xl">
-                    <div class="text-center mb-8">
-                        <span class="badge-pill badge-yellow text-xs mb-3">Join 42,000+ Creators</span>
-                        <h1 class="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white mb-2">Create Your Account</h1>
-                        <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Launch merchandise drops with zero inventory overhead.</p>
-                    </div>
+            <div class="w-full max-w-md mt-12 md:mt-0">
+                <div class="mb-8">
+                    <span class="badge-pill badge-yellow text-xs mb-3">Join 42,000+ Creators</span>
+                    <h1 class="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white mb-2">Create Your Account</h1>
+                    <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Launch merchandise drops with zero inventory overhead.</p>
+                </div>
 
-                    <!-- Sign Up Form -->
-                    <form id="signupForm" class="signup-form space-y-5">
-                        <!-- Role Selector -->
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-gray-700 dark:text-gray-300 mb-2">I am registering as a:</label>
-                            <div class="grid grid-cols-3 gap-2">
-                                <label class="p-2.5 rounded-lg border border-yellow-500 bg-yellow-500/10 text-center cursor-pointer text-xs font-bold">
-                                    <input type="radio" name="role" value="creator" checked class="sr-only">
-                                     Creator / Streamer
-                                </label>
-                                <label class="p-2.5 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-yellow-500 text-center cursor-pointer text-xs font-bold">
-                                    <input type="radio" name="role" value="brand" class="sr-only">
-                                     Apparel Brand
-                                </label>
-                                <label class="p-2.5 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-yellow-500 text-center cursor-pointer text-xs font-bold">
-                                    <input type="radio" name="role" value="b2b" class="sr-only">
-                                     Enterprise Swag
-                                </label>
-                            </div>
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-gray-700 dark:text-gray-300 mb-2">Creator / Studio Name *</label>
-                            <input type="text" name="name" required placeholder="RetroWave Apparel" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white">
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-gray-700 dark:text-gray-300 mb-2">Business Email *</label>
-                            <input type="email" name="email" required placeholder="contact@retrowave.com" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white">
-                        </div>
-
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-gray-700 dark:text-gray-300 mb-2">Password *</label>
-                            <input type="password" name="password" required placeholder="At least 8 characters..." class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white mb-2">
-                            
-                            <!-- Password Strength Indicator -->
-                            <div class="w-full bg-gray-200 dark:bg-gray-700 h-1.5 rounded-full overflow-hidden">
-                                <div class="password-strength-bar bg-red-500 h-full transition-all duration-300" style="width: 0%;"></div>
-                            </div>
-                            <div class="flex justify-between items-center text-[10px] text-gray-400 font-mono mt-1">
-                                <span>Strength: <strong class="password-strength-text text-gray-500">Too Short</strong></span>
-                                <span>Min 8 chars, 1 number</span>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-2 pt-2">
-                            <input type="checkbox" name="terms" id="termsCheck" required class="mt-1 rounded accent-yellow-500">
-                            <label for="termsCheck" class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed cursor-pointer">
-                                I agree to the <a href="../pages/Terms-of-service.html" target="_blank" class="text-yellow-600 dark:text-yellow-400 font-bold hover:underline">Terms of Service</a> & <a href="../pages/Privacy-policy.html" target="_blank" class="text-yellow-600 dark:text-yellow-400 font-bold hover:underline">Privacy Policy</a>.
+                <!-- Sign Up Form -->
+                <form id="signupForm" class="signup-form space-y-5">
+                    <!-- Role Selector -->
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-700 dark:text-gray-300 mb-2">I am registering as a:</label>
+                        <div class="grid grid-cols-3 gap-2">
+                            <label class="p-2.5 rounded-lg border border-yellow-500 bg-yellow-500/10 text-center cursor-pointer text-xs font-bold">
+                                <input type="radio" name="role" value="creator" checked class="sr-only">
+                                 Creator / Streamer
+                            </label>
+                            <label class="p-2.5 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-yellow-500 text-center cursor-pointer text-xs font-bold">
+                                <input type="radio" name="role" value="brand" class="sr-only">
+                                 Apparel Brand
+                            </label>
+                            <label class="p-2.5 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-yellow-500 text-center cursor-pointer text-xs font-bold">
+                                <input type="radio" name="role" value="b2b" class="sr-only">
+                                 Enterprise Swag
                             </label>
                         </div>
-
-                        <button type="submit" class="btn btn-yellow btn-lg w-full">
-                            Complete Registration ➔
-                        </button>
-                    </form>
-
-                    <div class="mt-6 pt-6 border-t border-gray-100 dark:border-gray-800 text-center text-xs text-gray-500">
-                        Already have an account? <a href="login.html" class="text-yellow-600 dark:text-yellow-400 font-bold hover:underline">Sign In</a>
                     </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-700 dark:text-gray-300 mb-2">Creator / Studio Name *</label>
+                        <input type="text" name="name" required placeholder="RetroWave Apparel" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-700 dark:text-gray-300 mb-2">Business Email *</label>
+                        <input type="email" name="email" required placeholder="contact@retrowave.com" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-700 dark:text-gray-300 mb-2">Password *</label>
+                        <input type="password" name="password" required placeholder="At least 8 characters..." class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white mb-2">
+                        
+                        <!-- Password Strength Indicator -->
+                        <div class="w-full bg-gray-200 dark:bg-gray-700 h-1.5 rounded-full overflow-hidden">
+                            <div class="password-strength-bar bg-red-500 h-full transition-all duration-300" style="width: 0%;"></div>
+                        </div>
+                        <div class="flex justify-between items-center text-[10px] text-gray-400 font-mono mt-1">
+                            <span>Strength: <strong class="password-strength-text text-gray-500">Too Short</strong></span>
+                            <span>Min 8 chars, 1 number</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-2 pt-2">
+                        <input type="checkbox" name="terms" id="termsCheck" required class="mt-1 rounded accent-yellow-500">
+                        <label for="termsCheck" class="text-xs text-gray-600 dark:text-gray-400 leading-relaxed cursor-pointer">
+                            I agree to the <a href="../pages/Terms-of-service.html" target="_blank" class="text-yellow-600 dark:text-yellow-400 font-bold hover:underline">Terms of Service</a> & <a href="../pages/Privacy-policy.html" target="_blank" class="text-yellow-600 dark:text-yellow-400 font-bold hover:underline">Privacy Policy</a>.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-yellow btn-lg w-full">
+                        Complete Registration ➔
+                    </button>
+                </form>
+
+                <div class="mt-6 pt-6 border-t border-gray-100 dark:border-gray-800 text-center text-xs text-gray-500">
+                    Already have an account? <a href="login.html" class="text-yellow-600 dark:text-yellow-400 font-bold hover:underline">Sign In</a>
                 </div>
             </div>
-        </section>
+        </div>
     </main>
-
-    <!-- FOOTER -->
-    <footer class="footer" id="footer-container"></footer>
 
     <!-- Toast Notifications -->
     <div class="toast-container" id="toastContainer"></div>

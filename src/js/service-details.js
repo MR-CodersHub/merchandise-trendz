@@ -152,7 +152,6 @@ const relatedGrid = document.getElementById('relatedServicesGrid');
       <div class="glass-panel" style="padding: 24px; display: flex; flex-direction: column; justify-content: space-between;">
         <div>
           <div style="font-size: 2.2rem; margin-bottom: 14px;">${other.icon}</div>
-          <span class="badge-pill badge-yellow" style="font-size: 0.72rem; margin-bottom: 10px;">${other.category}</span>
           <h3 style="font-size: 1.2rem; font-weight: 800; margin-bottom: 8px; color: var(--color-dark);">${other.title}</h3>
           <p style="font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 16px;">${other.subtitle}</p>
         </div>

@@ -203,7 +203,7 @@ window.openQuickView = function(productId) {
           <div style="display: flex; gap: 8px; flex-wrap: wrap;">
             ${prod.sizes.map((s, idx) => `
               <button class="btn btn-outline btn-sm qv-size-btn ${idx === 0 ? 'active' : ''}" 
-                      style="padding: 6px 14px; font-weight: 700; ${idx === 0 ? 'background: #111; color: #fff; border-color: #111;' : ''}" 
+                      style="padding: 6px 14px; font-weight: 700; ${idx === 0 ? 'background: var(--primary-yellow); color: var(--color-dark); border-color: var(--primary-yellow);' : ''}" 
                       onclick="window.selectModalSize(this, '${s}')">
                 ${s}
               </button>
@@ -214,9 +214,6 @@ window.openQuickView = function(productId) {
         <div style="margin-top: 10px; display: flex; gap: 12px;">
           <button class="btn btn-yellow" style="flex-grow: 1;" onclick="window.addFromQuickView('${prod.id}')">
             Add to Order ↗
-          </button>
-          <button class="btn btn-dark" onclick="window.customizeFromQuickView('${prod.id}')">
-            Open in Studio
           </button>
         </div>
       </div>
@@ -233,12 +230,12 @@ window.openQuickView = function(productId) {
 window.selectModalSize = function(btn, size) {
   document.querySelectorAll('.qv-size-btn').forEach(b => {
     b.style.background = 'transparent';
-    b.style.color = '#111';
-    b.style.borderColor = '#D1D5DB';
+    b.style.color = '';
+    b.style.borderColor = '';
   });
-  btn.style.background = '#111';
-  btn.style.color = '#FFF';
-  btn.style.borderColor = '#111';
+  btn.style.background = 'var(--primary-yellow)';
+  btn.style.color = 'var(--color-dark)';
+  btn.style.borderColor = 'var(--primary-yellow)';
   window.currentQuickViewSize = size;
 };
 
@@ -293,7 +290,7 @@ function initMobileMenu() {
       navLinks.style.top = '100%';
       navLinks.style.left = '0';
       navLinks.style.width = '100%';
-      navLinks.style.background = '#FFFFFF';
+      navLinks.style.background = 'var(--bg-surface)';
       navLinks.style.padding = '24px';
       navLinks.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
     }

@@ -179,7 +179,7 @@ img {
 
 .badge-dark {
   background-color: var(--color-dark);
-  color: #FFFFFF;
+  color: var(--bg-surface);
 }
 
 /* Section Spacing */

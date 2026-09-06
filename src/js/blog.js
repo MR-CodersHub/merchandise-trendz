@@ -93,9 +93,6 @@ function renderBlogGrid() {
     <article class="glass-panel" style="overflow: hidden; display: flex; flex-direction: column; transition: all 0.3s ease;">
       <div style="position: relative; overflow: hidden; height: 220px;">
         <img src="${post.thumbnail}" alt="${post.title}" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" class="blog-card-img">
-        <span class="badge-pill badge-yellow" style="position: absolute; top: 14px; left: 14px; font-size: 0.75rem;">
-          ${post.category}
-        </span>
       </div>
       <div style="padding: 24px; display: flex; flex-direction: column; flex: 1; justify-content: space-between;">
         <div>

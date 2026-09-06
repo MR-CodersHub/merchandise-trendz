@@ -42,71 +42,83 @@
 
 <body>
 
-    <!-- Ambient Glow Background Blobs -->
-    <div class="ambient-glow ambient-glow-1"></div>
-    <div class="ambient-glow ambient-glow-2"></div>
+    <main class="min-h-screen flex flex-col md:flex-row">
+        <!-- Left Side: Visual / Brand -->
+        <div class="hidden md:flex md:w-1/2 bg-gray-900 relative overflow-hidden flex-col justify-between p-12 text-white">
+            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" alt="Login Background" class="absolute inset-0 w-full h-full object-cover opacity-40">
+            <div class="relative z-10">
+                <a href="../../index.html" class="flex items-center gap-2 text-2xl font-black text-white hover:text-yellow-500 transition-colors">
+                    <img src="../../assets/logo.png" alt="Logo" class="w-8 h-8">
+                    Trend<span class="text-yellow-500">Z</span>
+                </a>
+            </div>
+            <div class="relative z-10 max-w-md">
+                <h2 class="text-3xl font-black mb-4">Empowering the Creator Economy.</h2>
+                <p class="text-gray-300">Join thousands of creators who use TrendZ to power their premium merchandise drops with zero inventory.</p>
+            </div>
+        </div>
 
-    <!-- Header / Navigation -->
-    <header class="header" id="navbar-container"></header>
+        <!-- Right Side: Form -->
+        <div class="w-full md:w-1/2 flex flex-col items-center justify-center p-8 sm:p-12 relative bg-white dark:bg-[#111215]">
+            <!-- Mobile Brand Header -->
+            <div class="md:hidden absolute top-8 left-8">
+                <a href="../../index.html" class="flex items-center gap-2 text-xl font-black text-gray-900 dark:text-white hover:text-yellow-500">
+                    <img src="../../assets/logo.png" alt="Logo" class="w-6 h-6">
+                    Trend<span class="text-yellow-500">Z</span>
+                </a>
+            </div>
 
-    <main>
-        <section class="section min-h-[85vh] flex items-center justify-center py-16">
-            <div class="container max-w-md mx-auto">
-                <div class="glass-panel p-8 sm:p-10 shadow-2xl">
-                    <div class="text-center mb-8">
-                        <span class="badge-pill badge-yellow text-xs mb-3">Secure Authentication</span>
-                        <h1 class="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white mb-2">Welcome Back</h1>
-                        <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Sign in to manage your mockups and drop sales.</p>
-                    </div>
+            <div class="w-full max-w-md mt-12 md:mt-0">
+                <div class="mb-8">
+                    <span class="badge-pill badge-yellow text-xs mb-3">Secure Authentication</span>
+                    <h1 class="text-2xl sm:text-3xl font-black text-gray-900 dark:text-white mb-2">Welcome Back</h1>
+                    <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">Sign in to manage your mockups and drop sales.</p>
+                </div>
 
-                    <!-- Quick Demo Fill Buttons -->
-                    <div class="p-3 mb-6 rounded-lg bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700 text-xs">
-                        <div class="text-[11px] font-mono text-gray-400 font-bold uppercase mb-2"> 1-Click Demo Login:</div>
-                        <div class="grid grid-cols-2 gap-2">
-                            <button type="button" id="fillAdminDemoBtn" class="p-2 rounded bg-yellow-500/10 hover:bg-yellow-500/20 text-yellow-600 dark:text-yellow-400 font-bold text-center border border-yellow-500/30">
-                                 Admin Portal
-                            </button>
-                            <button type="button" id="fillUserDemoBtn" class="p-2 rounded bg-blue-500/10 hover:bg-blue-500/20 text-blue-600 dark:text-blue-400 font-bold text-center border border-blue-500/30">
-                                 Creator Portal
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Login Form -->
-                    <form id="loginForm" class="login-form space-y-5">
-                        <div>
-                            <label class="block text-xs font-bold uppercase text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
-                            <input type="email" name="email" id="loginEmail" required placeholder="creator@studio.com" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white">
-                        </div>
-
-                        <div>
-                            <div class="flex justify-between items-center mb-2">
-                                <label class="text-xs font-bold uppercase text-gray-700 dark:text-gray-300">Password</label>
-                                <a href="#" class="text-xs text-yellow-600 dark:text-yellow-400 font-bold hover:underline" onclick="window.showToast('Password reset link dispatched to your email!', 'info'); return false;">Forgot?</a>
-                            </div>
-                            <input type="password" name="password" id="loginPassword" required placeholder="••••••••" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white">
-                        </div>
-
-                        <div class="flex items-center gap-2">
-                            <input type="checkbox" id="rememberMe" class="rounded accent-yellow-500">
-                            <label for="rememberMe" class="text-xs text-gray-600 dark:text-gray-400 font-semibold cursor-pointer">Remember my workstation session</label>
-                        </div>
-
-                        <button type="submit" class="btn btn-yellow btn-lg w-full">
-                            Sign In to Dashboard ➔
+                <!-- Quick Demo Fill Buttons -->
+                <div class="p-3 mb-6 rounded-lg bg-gray-50 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700 text-xs">
+                    <div class="text-[11px] font-mono text-gray-400 font-bold uppercase mb-2"> 1-Click Demo Login:</div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <button type="button" id="fillAdminDemoBtn" class="p-2 rounded bg-yellow-500/10 hover:bg-yellow-500/20 text-yellow-600 dark:text-yellow-400 font-bold text-center border border-yellow-500/30">
+                             Admin Portal
                         </button>
-                    </form>
-
-                    <div class="mt-6 pt-6 border-t border-gray-100 dark:border-gray-800 text-center text-xs text-gray-500">
-                        Don’t have a creator account? <a href="signup.html" class="text-yellow-600 dark:text-yellow-400 font-bold hover:underline">Register Free</a>
+                        <button type="button" id="fillUserDemoBtn" class="p-2 rounded bg-blue-500/10 hover:bg-blue-500/20 text-blue-600 dark:text-blue-400 font-bold text-center border border-blue-500/30">
+                             Creator Portal
+                        </button>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
 
-    <!-- FOOTER -->
-    <footer class="footer" id="footer-container"></footer>
+                <!-- Login Form -->
+                <form id="loginForm" class="login-form space-y-5">
+                    <div>
+                        <label class="block text-xs font-bold uppercase text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+                        <input type="email" name="email" id="loginEmail" required placeholder="creator@studio.com" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white">
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="text-xs font-bold uppercase text-gray-700 dark:text-gray-300">Password</label>
+                            <a href="#" class="text-xs text-yellow-600 dark:text-yellow-400 font-bold hover:underline" onclick="window.showToast('Password reset link dispatched to your email!', 'info'); return false;">Forgot?</a>
+                        </div>
+                        <input type="password" name="password" id="loginPassword" required placeholder="••••••••" class="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-sm font-semibold text-gray-900 dark:text-white">
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <input type="checkbox" id="rememberMe" class="rounded accent-yellow-500">
+                        <label for="rememberMe" class="text-xs text-gray-600 dark:text-gray-400 font-semibold cursor-pointer">Remember my workstation session</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-yellow btn-lg w-full">
+                        Sign In to Dashboard ➔
+                    </button>
+                </form>
+
+                <div class="mt-6 pt-6 border-t border-gray-100 dark:border-gray-800 text-center text-xs text-gray-500">
+                    Don’t have a creator account? <a href="signup.html" class="text-yellow-600 dark:text-yellow-400 font-bold hover:underline">Register Free</a>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <!-- Toast Notifications -->
     <div class="toast-container" id="toastContainer"></div>

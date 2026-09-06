@@ -111,7 +111,7 @@ export function renderNavbar(paths) {
           <li><a href="${paths.home}" class="nav-link" data-nav="home">Home</a></li>
           <li><a href="${paths.pages}home-2.html" class="nav-link" data-nav="niche">Home 2</a></li>
           <li><a href="${paths.pages}about.html" class="nav-link" data-nav="about">About</a></li>
-          <li><a href="${paths.pages}services.html" class="nav-link" data-nav="services">Services</a></li>
+          <li><a href="${paths.pages}products.html" class="nav-link" data-nav="products">Products</a></li>
           <li><a href="${paths.pages}blog.html" class="nav-link" data-nav="blog">Blog</a></li>
           <li><a href="${paths.pages}contact.html" class="nav-link" data-nav="contact">Contact</a></li>
         </ul>
@@ -139,11 +139,7 @@ export function renderNavbar(paths) {
 
         <!-- Quick RTL Mode Toggle Button -->
         <button class="btn-icon rtl-quick-toggle-btn" id="rtlQuickToggleBtn" title="Toggle RTL / LTR Mode (Alt + R)" aria-label="Toggle RTL Layout">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"></circle>
-            <line x1="2" y1="12" x2="22" y2="12"></line>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-          </svg>
+         rtl
         </button>
 
         <!-- Cart Button -->
@@ -226,26 +222,24 @@ export function renderFooter(paths) {
         </div>
 
         <div>
-          <h4 class="footer-title">Services & Print</h4>
+          <h4 class="footer-title">Products & Catalog</h4>
           <ul class="footer-links">
-            <li><a href="${paths.pages}services.html">All Services Listing</a></li>
+            <li><a href="${paths.pages}products.html">All Products Listing</a></li>
             <li><a href="${paths.pages}service-details.html?id=dtg-printing">DTG HD Printing</a></li>
             <li><a href="${paths.pages}service-details.html?id=sublimation">All-Over Sublimation</a></li>
             <li><a href="${paths.pages}service-details.html?id=embroidery">3D Puff Embroidery</a></li>
             <li><a href="${paths.pages}service-details.html?id=creator-drops">Creator POD Drops</a></li>
-            <li><a href="${paths.pages}pricing.html">Pricing & Volume Tiers</a></li>
           </ul>
         </div>
 
         <div>
           <h4 class="footer-title">Company & Hub</h4>
           <ul class="footer-links">
+            <li><a href="${paths.home}index.html">Home</a></li>
+            <li><a href="${paths.pages}home-2.html">Home 2</a></li>
             <li><a href="${paths.pages}about.html">About TrendZ</a></li>
-            <li><a href="${paths.pages}home-2.html">Gaming Niche Studio</a></li>
-            <li><a href="${paths.pages}blog.html">Printing Blog & Guides</a></li>
-            <li><a href="${paths.pages}FAQ.html">FAQ & Help Center</a></li>
+            <li><a href="${paths.pages}blog.html"> Blog & Guides</a></li>
             <li><a href="${paths.pages}contact.html">Contact Support</a></li>
-            <li><a href="${paths.pages}coming-soon.html">Upcoming Tech Drops</a></li>
           </ul>
         </div>
 
@@ -266,7 +260,7 @@ export function renderFooter(paths) {
         <div style="display: flex; gap: 20px;">
           <a href="${paths.pages}Privacy-policy.html">Privacy Policy</a>
           <a href="${paths.pages}Terms-of-service.html">Terms of Service</a>
-          <a href="${paths.pages}FAQ.html">Shipping & Returns</a>
+          <a href="${paths.pages}FAQ.html">FAQ & Help Center</a>
         </div>
       </div>
     </div>
@@ -325,7 +319,6 @@ export function applyTheme(theme, isManual = true) {
   if (isManual) {
     localStorage.setItem('trendz_theme', theme);
     localStorage.setItem('trendz_theme_manual', 'true');
-    window.showToast?.(isDark ? 'Dark Mode Activated' : 'Light Mode Activated', 'info');
   }
 
   // Update quick toggle icons
@@ -386,7 +379,6 @@ export function applyRtl(isRtl, isManual = true) {
 
   if (isManual) {
     localStorage.setItem('trendz_rtl', isRtl ? 'true' : 'false');
-    window.showToast?.(isRtl ? 'RTL Layout Activated (Right-to-Left)' : 'LTR Layout Activated (Left-to-Right)', 'info');
   }
 
   // Update quick RTL toggle button state

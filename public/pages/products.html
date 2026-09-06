@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Catalog | TrendZ Custom Merchandise</title>
+    <meta name="description" content="Explore TrendZ comprehensive product catalog.">
+    <link rel="icon" href="../../assets/logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: ['class', '[data-theme="dark"]'],
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            yellow: '#FFB800',
+                            hover: '#E5A600',
+                            dark: '#111215',
+                            surface: '#14161A'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="../../src/css/variables.css">
+    <link rel="stylesheet" href="../../src/css/base.css">
+    <link rel="stylesheet" href="../../src/css/components.css">
+    <link rel="stylesheet" href="../../src/css/style.css">
+</head>
+
+<body>
+
+    <!-- Ambient Glow Background Blobs -->
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-glow ambient-glow-3"></div>
+
+    <!-- Header / Navigation -->
+    <header class="header" id="navbar-container"></header>
+
+    <main>
+        <!-- SECTION 1: PRODUCTS HERO -->
+        <section class="section" style="padding-top: 60px; padding-bottom: 50px;">
+            <div class="container text-center max-w-3xl mx-auto">
+                <span class="badge-pill badge-yellow mb-4">Premium Merchandise</span>
+                <h1 class="text-4xl sm:text-5xl font-black text-gray-900 dark:text-white mb-6 leading-tight">
+                    Explore Our <br>
+                    <span class="highlight-yellow">Product Catalog</span>
+                </h1>
+                <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+                    Discover our high-quality blanks, from heavy cotton tees to custom packaging, ready for your designs.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 2: CATEGORY TABS -->
+        <section class="section py-4">
+            <div class="container">
+                <div class="flex flex-wrap gap-2 justify-center mb-10" id="productsCategoryTabs">
+                    <button class="btn btn-yellow btn-sm filter-btn active" data-category="all">All Products</button>
+                    <button class="btn btn-outline btn-sm filter-btn" data-category="apparel">Apparel</button>
+                    <button class="btn btn-outline btn-sm filter-btn" data-category="drinkware">Drinkware</button>
+                    <button class="btn btn-outline btn-sm filter-btn" data-category="accessories">Accessories</button>
+                    <button class="btn btn-outline btn-sm filter-btn" data-category="office">Office & Desk</button>
+                </div>
+
+                <!-- SECTION 3: PRODUCTS GRID -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" id="productGrid">
+                    <!-- Products will be injected here by main.js -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer-container"></footer>
+
+    <!-- SLIDE-OUT CART DRAWER -->
+    <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>
+                <span> Your Order</span>
+                <span class="badge-pill badge-yellow cart-badge-count"
+                    style="width: auto; height: auto; border-radius: 12px; font-size: 0.75rem;">0</span>
+            </h3>
+            <button class="btn-icon" data-action="close-cart" title="Close Cart">✕</button>
+        </div>
+
+        <!-- Items List -->
+        <div class="cart-items-list" id="cartItemsList"></div>
+
+        <!-- Footer / Checkout -->
+        <div class="cart-footer">
+            <div style="display: flex; gap: 8px; margin-bottom: 14px;">
+                <input type="text" id="cartCouponInput" placeholder="Coupon Code (e.g. YELLOW20)"
+                    style="background: var(--bg-surface); border: 1.5px solid var(--border-light); padding: 8px 12px; border-radius: var(--radius-xs); flex-grow: 1; font-weight: 700; text-transform: uppercase; font-size: 0.85rem;">
+                <button class="btn btn-dark btn-sm" id="cartCouponBtn">Apply</button>
+            </div>
+
+            <div class="cart-summary-row">
+                <span style="color: #6B7280;">Subtotal</span>
+                <span style="font-weight: 700;" id="cartSubtotal">$0.00</span>
+            </div>
+            <div class="cart-summary-row" id="cartDiscountRow" style="display: none; color: #059669; font-weight: 700;">
+                <span>Promo Discount</span>
+                <span id="cartDiscountVal">-$0.00</span>
+            </div>
+            <div class="cart-summary-row">
+                <span style="color: #6B7280;">Estimated Fulfillment</span>
+                <span style="color: #059669; font-weight: 700;">FREE Express</span>
+            </div>
+            <div class="cart-total-row">
+                <span>Total Due</span>
+                <span id="cartTotal" style="color: var(--color-dark); font-family: var(--font-heading);">$0.00</span>
+            </div>
+            <button class="btn btn-yellow" id="cartCheckoutBtn" style="width: 100%; padding: 16px;">
+                Proceed to Secure Checkout 
+            </button>
+        </div>
+    </div>
+
+    <!-- QUICK VIEW MODAL -->
+    <div class="modal-overlay" id="quickViewModal">
+        <div class="modal-content" style="max-width: 820px;">
+            <button class="modal-close-btn" id="closeQuickViewBtn">✕</button>
+            <div id="quickViewBody"></div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <!-- Scripts -->
+    <script type="module" src="../../src/js/navbar.js"></script>
+    <script type="module" src="../../src/js/form-validation.js"></script>
+    <script type="module" src="../../src/js/main.js"></script>
+</body>
+
+</html>

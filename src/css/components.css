@@ -40,7 +40,7 @@
 
 .btn-dark {
   background-color: var(--color-dark);
-  color: #FFFFFF;
+  color: var(--bg-surface);
   box-shadow: var(--shadow-sm);
 }
 
@@ -138,7 +138,7 @@
   overflow: hidden;
   border: 2px solid rgba(255, 255, 255, 0.6);
   box-shadow: var(--shadow-sm);
-  background: #FFFFFF;
+  background: var(--bg-surface);
 }
 
 .hero-floating-badge-thumb img {
@@ -160,7 +160,7 @@
   height: 22px;
   border-radius: 50%;
   background: #111111;
-  color: #FFFFFF;
+  color: var(--bg-surface);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -208,7 +208,7 @@
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   border: 1px solid var(--border-light);
-  background: #FFFFFF;
+  background: var(--bg-surface);
   position: relative;
   aspect-ratio: 4/3.8;
 }
@@ -265,7 +265,7 @@
 }
 
 .product-card {
-  background: #FFFFFF;
+  background: var(--bg-surface);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -290,13 +290,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
 }
 
 .product-card-img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   transition: transform 0.4s ease;
 }
 
@@ -341,7 +340,7 @@
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: #FFFFFF;
+  background: var(--bg-surface);
   box-shadow: var(--shadow-md);
   display: flex;
   align-items: center;
@@ -437,7 +436,7 @@
 .filter-tab-btn {
   padding: 10px 22px;
   border-radius: var(--radius-xs);
-  background: #FFFFFF;
+  background: var(--bg-surface);
   border: 1px solid var(--border-light);
   font-size: 0.9rem;
   font-weight: 700;
@@ -452,13 +451,13 @@
 
 .filter-tab-btn.active {
   background: var(--color-dark);
-  color: #FFFFFF;
+  color: var(--bg-surface);
   border-color: var(--color-dark);
 }
 
 /* Live Customizer Studio Widget */
 .customizer-box {
-  background: #FFFFFF;
+  background: var(--bg-surface);
   border: 1px solid var(--border-light);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-xl);
@@ -555,7 +554,7 @@
   padding: 8px 14px;
   border-radius: var(--radius-xs);
   border: 1.5px solid var(--border-light);
-  background: #FFFFFF;
+  background: var(--bg-surface);
   font-size: 0.85rem;
   font-weight: 700;
   color: var(--color-dark);
@@ -564,7 +563,6 @@
 
 .customizer-product-btn.active, .customizer-product-btn:hover {
   border-color: var(--primary-yellow);
-  background: var(--primary-yellow-light);
 }
 
 .color-swatches {
@@ -576,7 +574,7 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  border: 2px solid #FFFFFF;
+  border: 2px solid var(--bg-surface);
   box-shadow: 0 0 0 1px #D1D5DB;
   cursor: pointer;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast);
@@ -611,7 +609,7 @@
 
 .art-thumb-btn.active, .art-thumb-btn:hover {
   border-color: var(--primary-yellow);
-  background: #FFFFFF;
+  background: var(--bg-surface);
   box-shadow: var(--shadow-sm);
 }
 
@@ -628,13 +626,13 @@
 
 .customizer-text-input:focus {
   border-color: var(--primary-yellow);
-  background: #FFFFFF;
+  background: var(--bg-surface);
 }
 
 /* Creator Dashboard Preview Section */
 .creator-section-box {
   background: var(--color-dark);
-  color: #FFFFFF;
+  color: var(--bg-surface);
   border-radius: var(--radius-lg);
   padding: 60px;
   position: relative;
@@ -737,7 +735,7 @@
   font-size: 1.25rem;
   font-weight: 800;
   font-family: var(--font-heading);
-  color: #FFFFFF;
+  color: var(--bg-surface);
   margin-top: 4px;
 }
 
@@ -782,7 +780,7 @@
   width: 100%;
   max-width: 440px;
   height: 100%;
-  background: #FFFFFF;
+  background: var(--bg-surface);
   z-index: 1001;
   box-shadow: -10px 0 40px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -942,7 +940,7 @@
 }
 
 .modal-content {
-  background: #FFFFFF;
+  background: var(--bg-surface);
   border-radius: var(--radius-md);
   max-width: 800px;
   width: 100%;
@@ -966,6 +964,7 @@
   height: 36px;
   border-radius: 50%;
   background: #F3F4F6;
+  color: var(--color-dark);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -998,7 +997,7 @@
 
 .toast {
   background: var(--color-dark);
-  color: #FFFFFF;
+  color: var(--bg-surface);
   padding: 14px 20px;
   border-radius: var(--radius-xs);
   box-shadow: var(--shadow-xl);
@@ -1170,7 +1169,7 @@
 .dashboard-sidebar {
   width: 280px;
   background: var(--bg-surface-dark);
-  color: #FFFFFF;
+  color: var(--bg-surface);
   padding: 28px 20px;
   display: flex;
   flex-direction: column;

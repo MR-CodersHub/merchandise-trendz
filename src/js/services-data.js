@@ -267,6 +267,13 @@ export const servicesData = [
     ],
     pricingTiers: [
       {
+        tier: 'Eco-Friendly Kraft Mailer',
+        pricePerUnit: '$0.65/unit',
+        qtyRange: '200 units',
+        features: ['100% Recycled & Compostable', 'Black ink only printing', 'Natural rustic aesthetic'],
+        isPopular: false
+      },
+      {
         tier: 'Custom Polymailer Pack',
         pricePerUnit: '$0.85/unit',
         qtyRange: '100 units',
@@ -279,7 +286,7 @@ export const servicesData = [
         qtyRange: '50 units',
         features: ['Full color outside + inside printing', 'Matte velvet lamination', 'Custom die-cut foam insert available'],
         isPopular: false
-      }
+      },
     ],
     faqs: [
       {
