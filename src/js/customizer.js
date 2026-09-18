@@ -3,6 +3,9 @@
  */
 
 import { sampleArtworks } from './products.js';
+import { getPathPrefixes } from './layout.js';
+
+const img = (name) => `${getPathPrefixes().assets}images/${name}`;
 
 export class MockupCustomizer {
   constructor() {
@@ -10,7 +13,7 @@ export class MockupCustomizer {
       tshirt: {
         name: 'Custom Heavyweight T-Shirt',
         price: 24.00,
-        image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80',
+        image: img('tee-white.jpg'),
         colors: ['#FFFFFF', '#18181B', '#FFB800', '#3B82F6', '#6B7280'],
         defaultColor: '#FFFFFF',
         printBox: { top: '46%', left: '50%', width: '120px', height: '140px' }
@@ -18,7 +21,7 @@ export class MockupCustomizer {
       hoodie: {
         name: 'Custom Streetwear Fleece Hoodie',
         price: 45.00,
-        image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80',
+        image: img('hoodie-retro.jpg'),
         colors: ['#FFFFFF', '#18181B', '#E5E7EB', '#D97706'],
         defaultColor: '#FFFFFF',
         printBox: { top: '48%', left: '50%', width: '110px', height: '130px' }
@@ -26,7 +29,7 @@ export class MockupCustomizer {
       mug: {
         name: 'Custom Ceramic Coffee Mug',
         price: 15.00,
-        image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80',
+        image: img('mug-ceramic.jpg'),
         colors: ['#FFFFFF', '#18181B', '#FFB800'],
         defaultColor: '#FFFFFF',
         printBox: { top: '52%', left: '46%', width: '100px', height: '100px' }
@@ -34,7 +37,7 @@ export class MockupCustomizer {
       tote: {
         name: 'Custom Organic Canvas Tote',
         price: 18.00,
-        image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
+        image: img('tote-canvas.jpg'),
         colors: ['#F3F4F6', '#18181B', '#FEF3C7'],
         defaultColor: '#F3F4F6',
         printBox: { top: '56%', left: '50%', width: '130px', height: '140px' }
@@ -42,7 +45,7 @@ export class MockupCustomizer {
       phonecase: {
         name: 'Custom Impact MagSafe Phone Case',
         price: 26.00,
-        image: 'https://images.unsplash.com/photo-1586105251261-72a756497a11?auto=format&fit=crop&w=800&q=80',
+        image: img('phone-case.jpg'),
         colors: ['#18181B', '#FFFFFF', '#FFB800'],
         defaultColor: '#18181B',
         printBox: { top: '50%', left: '50%', width: '110px', height: '170px' }

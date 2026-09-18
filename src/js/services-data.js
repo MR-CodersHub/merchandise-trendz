@@ -1,6 +1,10 @@
-/**
+﻿/**
  * TrendZ Services & Solutions Comprehensive Database
  */
+
+import { getPathPrefixes } from './layout.js';
+
+const img = (name) => `${getPathPrefixes().assets}images/${name}`;
 
 export const servicesData = [
   {
@@ -14,7 +18,7 @@ export const servicesData = [
     reviewsCount: 520,
     turnaround: '24 - 48 Hours',
     minOrder: '1 Piece (No Minimums)',
-    heroImage: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80',
+    heroImage: img('tee-white.jpg'),
     overview: 'Our industrial Direct-to-Garment printing utilizes Kornit Avalanche HD6 pigment technology with water-based neo-pigment inks. The inks penetrate directly into the textile fibers, resulting in an exceptionally soft hand-feel, breathable comfort, and ultra-durable wash fastness that retains vibrant color depth through 80+ wash cycles.',
     benefits: [
       { title: 'Unlimited Colors & Gradients', desc: 'No color count limitations or screen setup charges. Full RGB/CMYK spectrum supported with pinpoint 1200 DPI resolution.' },
@@ -73,22 +77,22 @@ export const servicesData = [
     category: 'Sublimation & Hardware',
     subtitle: 'Seamless edge-to-edge full surface printing for jerseys, ceramic mugs, gaming mousepads, and stainless steel bottles.',
     icon: '',
-    badge: '360° Seamless',
+    badge: '360Â° Seamless',
     rating: 4.8,
     reviewsCount: 390,
     turnaround: '2 - 3 Days',
     minOrder: '1 Piece',
-    heroImage: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=1200&q=80',
+    heroImage: img('mug-ceramic.jpg'),
     overview: 'Dye sublimation uses heat and pressure to transform solid dye particles directly into a gas, bonding permanently into polyester polymer molecules and specialized coated surfaces. The result is an indelible, scratch-proof, completely permanent high-gloss or matte visual that never fades.',
     benefits: [
-      { title: 'True 360° Edge-to-Edge Print', desc: 'No borders or margins. Cover every millimeter of mugs, mousepads, tote accessories, and activewear.' },
+      { title: 'True 360Â° Edge-to-Edge Print', desc: 'No borders or margins. Cover every millimeter of mugs, mousepads, tote accessories, and activewear.' },
       { title: 'Fade-Proof & Dishwasher Safe', desc: 'Embedded directly into the coating substrate, resistant to UV light, microwaves, and commercial dishwashers.' },
       { title: 'Vivid Neon & Rich Black Depth', desc: 'Wide color gamut reproducing neon gaming gradients and ultra-deep contrast.' },
       { title: 'Zero Tactile Texture', desc: 'The surface feels completely glass-smooth with no raised ridges.' }
     ],
     technicalSpecs: [
       { key: 'Substrate Coatings', value: 'High-density ORCA coatings, Poly-blend polymers, 304 Stainless' },
-      { key: 'Heating Temperature', value: '400°F (204°C) at 60 PSI calibrated hydraulic pressure' },
+      { key: 'Heating Temperature', value: '400Â°F (204Â°C) at 60 PSI calibrated hydraulic pressure' },
       { key: 'Resolution', value: '1440 DPI MicroPiezo print head' },
       { key: 'Dishwasher Grade', value: 'Certified 3,000 industrial cycles' }
     ],
@@ -104,7 +108,7 @@ export const servicesData = [
         tier: 'Merch Bundle (10+)',
         pricePerUnit: '$8.90',
         qtyRange: '10 - 50 pcs',
-        features: ['Full color 360° Sublimation', 'Custom branded sticker seal', 'Protective bubble sleeves'],
+        features: ['Full color 360Â° Sublimation', 'Custom branded sticker seal', 'Protective bubble sleeves'],
         isPopular: true
       },
       {
@@ -137,7 +141,7 @@ export const servicesData = [
     reviewsCount: 440,
     turnaround: '3 - 5 Days',
     minOrder: '6 Pieces',
-    heroImage: 'https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=1200&q=80',
+    heroImage: img('garment-rack.jpg'),
     overview: 'Give your streetwear and corporate merchandise a structured, premium texture with our precision Tajima embroidery machines. We offer up to 15 thread colors per design, specialized metallic threads, and 3D foam puff embroidery that gives hats and outerwear an authentic luxury look.',
     benefits: [
       { title: '3D Foam Puff Dimension', desc: 'Elevate your letters and logo outlines with high-density EVA foam that pops off the fabric.' },
@@ -196,7 +200,7 @@ export const servicesData = [
     reviewsCount: 680,
     turnaround: 'Automated 48h Dispatch',
     minOrder: 'Zero Inventory',
-    heroImage: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=1200&q=80',
+    heroImage: img('hoodie-retro.jpg'),
     overview: 'Turn your fanbase into a recurring revenue stream without ever packing a box, managing warehouses, or handling customer return emails. TrendZ Creator Suite connects to your store, prints items on demand when fans order, and ships worldwide under your custom branded packaging.',
     benefits: [
       { title: '100% White-Label Branding', desc: 'Your brand name, return address, custom neck tags, and packing slips on every customer package.' },
@@ -254,7 +258,7 @@ export const servicesData = [
     reviewsCount: 280,
     turnaround: '3 - 7 Days',
     minOrder: '25 Units',
-    heroImage: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=1200&q=80',
+    heroImage: img('tote-canvas.jpg'),
     overview: 'In e-commerce, the physical unboxing moment is your most powerful marketing touchpoint. We craft bespoke custom mailers, FSC-certified tissue paper, foil-stamped thank-you inserts, and branded shipping boxes that turn your buyers into viral social media unboxing creators.',
     benefits: [
       { title: 'Foil & Spot UV Embellishments', desc: 'Add gold, silver, or holographic foil stamping and tactile high-gloss UV accents.' },
@@ -306,7 +310,7 @@ export const servicesData = [
     reviewsCount: 310,
     turnaround: '5 - 7 Days',
     minOrder: '50 Bundles',
-    heroImage: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80',
+    heroImage: img('team-studio.jpg'),
     overview: 'Outfit your team with curated swag boxes that people actually love to wear. From premium Patagonia-style jackets and embroidered backpacks to smart stainless drinkware and tech organizers, we handle individual home address drop-shipping across 60+ countries.',
     benefits: [
       { title: 'Kitting & Custom Onboarding Boxes', desc: 'Combine apparel, tech gadgets, notebooks, and snacks into one elegantly packed box.' },

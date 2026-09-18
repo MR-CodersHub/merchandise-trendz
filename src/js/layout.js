@@ -84,13 +84,37 @@ export function getPathPrefixes() {
  */
 export function renderNavbar(paths) {
   // Get cart count from storage if available
-  let cartCount = 1;
+  let cartCount = 0;
   try {
     const cartItems = JSON.parse(localStorage.getItem('pod_cart_items'));
     if (Array.isArray(cartItems)) {
       cartCount = cartItems.reduce((sum, item) => sum + (item.quantity || 1), 0);
     }
   } catch (e) {}
+
+  // Authenticated state detection (mocked front-end session)
+  let authUser = null;
+  try {
+    const raw = localStorage.getItem('trendz_auth_user');
+    if (raw) authUser = JSON.parse(raw);
+  } catch (e) {}
+
+  const isAuthed = !!authUser && typeof authUser === 'object';
+  const authCta = isAuthed
+    ? `
+      <a href="${paths.auth}user/user-dashboard.html" class="btn btn-outline btn-sm header-auth-btn" id="headerDashboardBtn" title="View your dashboard">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="3" y="3" width="7" height="9" rx="1"></rect>
+          <rect x="14" y="3" width="7" height="5" rx="1"></rect>
+          <rect x="14" y="12" width="7" height="9" rx="1"></rect>
+          <rect x="3" y="16" width="7" height="5" rx="1"></rect>
+        </svg>
+        Dashboard
+      </a>
+    `
+    : `
+      <a href="${paths.auth}login.html" class="btn btn-yellow btn-sm header-auth-btn" id="headerLoginBtn">Login</a>
+    `;
 
   return `
     <div class="container nav-container">
@@ -106,31 +130,28 @@ export function renderNavbar(paths) {
       </a>
 
       <!-- Navigation Links -->
-      <nav>
+      <nav class="main-nav" id="mainNav" aria-label="Primary">
         <ul class="nav-links">
           <li><a href="${paths.home}" class="nav-link" data-nav="home">Home</a></li>
-          <li><a href="${paths.pages}home-2.html" class="nav-link" data-nav="niche">Home 2</a></li>
           <li><a href="${paths.pages}about.html" class="nav-link" data-nav="about">About</a></li>
           <li><a href="${paths.pages}products.html" class="nav-link" data-nav="products">Products</a></li>
-          <li><a href="${paths.pages}creator-hub.html" class="nav-link">Creator Hub</a></li>
+          <li><a href="${paths.pages}creator-hub.html" class="nav-link" data-nav="creator">Creator Hub</a></li>
           <li><a href="${paths.pages}blog.html" class="nav-link" data-nav="blog">Blog</a></li>
           <li><a href="${paths.pages}contact.html" class="nav-link" data-nav="contact">Contact</a></li>
           <li class="mobile-only-link">
-            <button class="nav-link theme-toggle-btn" style="background:none; border:none; width: 100%; text-align: inherit; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: inherit;">
-              Toggle Dark Mode
-            </button>
+            ${isAuthed
+              ? `<a href="${paths.auth}user/user-dashboard.html" class="btn btn-yellow btn-sm" style="width: 100%;">Dashboard</a>`
+              : `<a href="${paths.auth}login.html" class="btn btn-yellow btn-sm" style="width: 100%;">Sign In</a>`}
           </li>
           <li class="mobile-only-link">
-            <button class="nav-link rtl-toggle-btn" style="background:none; border:none; width: 100%; text-align: inherit; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: inherit;">
-              Toggle RTL Mode
-            </button>
+            <a href="${paths.auth}signup.html" class="btn btn-outline btn-sm" style="width: 100%;">Create Account</a>
           </li>
         </ul>
       </nav>
 
       <!-- Nav Actions -->
       <div class="nav-actions">
-        <!-- Quick Theme Toggle Button -->
+        <!-- Quick Theme Toggle Button (single control) -->
         <button class="btn-icon theme-quick-toggle-btn" id="themeQuickToggleBtn" title="Toggle Theme (Alt + T)" aria-label="Toggle Theme">
           <svg class="theme-icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="5"></circle>
@@ -148,9 +169,14 @@ export function renderNavbar(paths) {
           </svg>
         </button>
 
-        <!-- Quick RTL Mode Toggle Button -->
+        <!-- Quick RTL Mode Toggle Button (single control) -->
         <button class="btn-icon rtl-quick-toggle-btn" id="rtlQuickToggleBtn" title="Toggle RTL / LTR Mode (Alt + R)" aria-label="Toggle RTL Layout">
-         rtl
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M8 3 4 7l4 4"></path>
+            <path d="M4 7h16"></path>
+            <path d="m16 21 4-4-4-4"></path>
+            <path d="M20 17H4"></path>
+          </svg>
         </button>
 
         <!-- Cart Button -->
@@ -163,44 +189,16 @@ export function renderNavbar(paths) {
           <span class="cart-badge-count">${cartCount}</span>
         </button>
 
-        <!-- Profile / Account Dropdown -->
-        <div class="profile-dropdown-wrapper">
-          <button class="profile-trigger-btn" title="Account & Settings" aria-label="Account Menu">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-          </button>
-          <div class="profile-dropdown-menu">
-            <div class="dropdown-header">
-              <div class="dropdown-user-name">TrendZ Portal</div>
-              <div class="dropdown-user-role">Guest / Creator Access</div>
-            </div>
-            <a href="${paths.auth}login.html" class="dropdown-item">
-              <span>Sign In</span>
-            </a>
-            <a href="${paths.auth}signup.html" class="dropdown-item">
-              <span>Create Account</span>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a href="${paths.auth}admin/admin-dashboard.html" class="dropdown-item">
-              <span>Admin Dashboard</span>
-            </a>
-            <a href="${paths.auth}user/user-dashboard.html" class="dropdown-item">
-              <span>User Dashboard</span>
-            </a>
-            <div class="dropdown-divider"></div>
-            <button class="dropdown-item theme-toggle-btn" type="button" aria-label="Toggle Dark or Light Mode">
-              <span>Dark Mode</span>
-            </button>
-            <button class="dropdown-item rtl-toggle-btn" type="button" aria-label="Toggle RTL or LTR Layout">
-              <span>RTL Mode</span>
-            </button>
-          </div>
-        </div>
+        <!-- Login / Dashboard CTA -->
+        ${authCta}
 
+        <!-- Mobile Menu Toggle -->
         <button class="mobile-toggle-btn" id="mobileMenuToggle" aria-label="Toggle Menu">
-          ☰
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M3 12h18"></path>
+            <path d="M3 6h18"></path>
+            <path d="M3 18h18"></path>
+          </svg>
         </button>
       </div>
     </div>
@@ -247,8 +245,8 @@ export function renderFooter(paths) {
           <h4 class="footer-title">Company & Hub</h4>
           <ul class="footer-links">
             <li><a href="${paths.home}index.html">Home</a></li>
-            <li><a href="${paths.pages}home-2.html">Home 2</a></li>
             <li><a href="${paths.pages}about.html">About TrendZ</a></li>
+            <li><a href="${paths.pages}creator-hub.html">Creator Hub</a></li>
             <li><a href="${paths.pages}blog.html"> Blog & Guides</a></li>
             <li><a href="${paths.pages}contact.html">Contact Support</a></li>
           </ul>
@@ -448,64 +446,30 @@ export function initLayout() {
   initRtlController();
 
   // 5. Setup UI & Event Listeners
-  setupDropdownEvents();
   setupQuickThemeButtons();
   setupKeyboardShortcuts();
   setupScrollEffect();
   setupMobileMenu();
+  setupLogoutHandler();
   highlightActiveLink();
   setupFooterNewsletter();
 }
 
 /**
- * Sets up profile dropdown, theme toggler, and RTL toggler
+ * Handles logout action from navigation or dashboards
  */
-function setupDropdownEvents() {
-  const dropdownWrappers = document.querySelectorAll('.profile-dropdown-wrapper');
-
-  dropdownWrappers.forEach(wrapper => {
-    const trigger = wrapper.querySelector('.profile-trigger-btn');
-    const menu = wrapper.querySelector('.profile-dropdown-menu');
-
-    if (!trigger || !menu) return;
-
-    trigger.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isOpen = menu.classList.contains('show');
-      closeAllDropdowns();
-      if (!isOpen) {
-        menu.classList.add('show');
-        trigger.classList.add('active');
-      }
+function setupLogoutHandler() {
+  const home = getPathPrefixes().home;
+  document.querySelectorAll('[data-action="logout"]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      localStorage.removeItem('trendz_auth_user');
+      window.showToast?.('You have been signed out.', 'info');
+      setTimeout(() => {
+        window.location.href = home;
+      }, 600);
     });
-
-    // Theme Switcher Button inside Dropdown
-    const themeBtn = menu.querySelector('.theme-toggle-btn');
-    if (themeBtn) {
-      themeBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        toggleTheme();
-      });
-    }
-
-    // RTL Switcher Button inside Dropdown
-    const rtlBtn = menu.querySelector('.rtl-toggle-btn');
-    if (rtlBtn) {
-      rtlBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        toggleRtl();
-      });
-    }
   });
-
-  document.addEventListener('click', () => {
-    closeAllDropdowns();
-  });
-}
-
-function closeAllDropdowns() {
-  document.querySelectorAll('.profile-dropdown-menu').forEach(m => m.classList.remove('show'));
-  document.querySelectorAll('.profile-trigger-btn').forEach(t => t.classList.remove('active'));
 }
 
 /**
@@ -520,6 +484,21 @@ function setupQuickThemeButtons() {
   });
 
   document.querySelectorAll('.rtl-quick-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleRtl();
+    });
+  });
+
+  // Bind sidebar toggles used on dashboard pages
+  document.querySelectorAll('.theme-toggle-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      toggleTheme();
+    });
+  });
+
+  document.querySelectorAll('.rtl-toggle-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       toggleRtl();
@@ -576,8 +555,32 @@ function setupMobileMenu() {
   if (toggleBtn && nav) {
     toggleBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      nav.classList.toggle('mobile-active');
-      toggleBtn.innerHTML = nav.classList.contains('mobile-active') ? '✕' : '☰';
+      const isOpen = nav.classList.toggle('mobile-active');
+      toggleBtn.classList.toggle('active', isOpen);
+      toggleBtn.innerHTML = isOpen
+        ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>'
+        : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18"></path><path d="M3 6h18"></path><path d="M3 18h18"></path></svg>';
+      toggleBtn.setAttribute('aria-label', isOpen ? 'Close Menu' : 'Toggle Menu');
+    });
+
+    // Close the drawer when a navigation link is clicked
+    nav.querySelectorAll('.nav-link, .mobile-only-link a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('mobile-active');
+        toggleBtn.classList.remove('active');
+        toggleBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18"></path><path d="M3 6h18"></path><path d="M3 18h18"></path></svg>';
+        toggleBtn.setAttribute('aria-label', 'Toggle Menu');
+      });
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && !toggleBtn.contains(e.target)) {
+        nav.classList.remove('mobile-active');
+        toggleBtn.classList.remove('active');
+        toggleBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18"></path><path d="M3 6h18"></path><path d="M3 18h18"></path></svg>';
+        toggleBtn.setAttribute('aria-label', 'Toggle Menu');
+      }
     });
   }
 }

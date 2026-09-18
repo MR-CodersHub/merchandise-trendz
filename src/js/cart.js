@@ -2,6 +2,10 @@
  * Cart State & Drawer Controller
  */
 
+import { getPathPrefixes } from './layout.js';
+
+const img = (name) => `${getPathPrefixes().assets}images/${name}`;
+
 export class CartManager {
   constructor() {
     this.items = JSON.parse(localStorage.getItem('pod_cart_items')) || [
@@ -15,7 +19,7 @@ export class CartManager {
         artworkName: 'Retro Sunrise Wave',
         price: 42.00,
         quantity: 1,
-        image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80'
+        image: img('hoodie-retro.jpg')
       }
     ];
     this.discountPercent = 0;

@@ -81,9 +81,6 @@ function initApp() {
   // FAQ Accordion
   initFAQ();
 
-  // Mobile Menu Navigation
-  initMobileMenu();
-
   // Newsletter Form
   initNewsletter();
 }
@@ -273,27 +270,6 @@ function initFAQ() {
       cards.forEach(c => c.classList.remove('open'));
       if (!isOpen) card.classList.add('open');
     });
-  });
-}
-
-// Mobile Menu
-function initMobileMenu() {
-  const toggleBtn = document.getElementById('mobileMenuToggle');
-  const navLinks = document.querySelector('.nav-links');
-
-  toggleBtn?.addEventListener('click', () => {
-    if (navLinks) {
-      const isVisible = navLinks.style.display === 'flex';
-      navLinks.style.display = isVisible ? 'none' : 'flex';
-      navLinks.style.flexDirection = 'column';
-      navLinks.style.position = 'absolute';
-      navLinks.style.top = '100%';
-      navLinks.style.left = '0';
-      navLinks.style.width = '100%';
-      navLinks.style.background = 'var(--bg-surface)';
-      navLinks.style.padding = '24px';
-      navLinks.style.boxShadow = '0 10px 30px rgba(0,0,0,0.1)';
-    }
   });
 }
 

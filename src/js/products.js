@@ -2,6 +2,10 @@
  * Print-on-Demand Products Database
  */
 
+import { getPathPrefixes } from './layout.js';
+
+const img = (name) => `${getPathPrefixes().assets}images/${name}`;
+
 export const products = [
   {
     id: 'prod-01',
@@ -15,7 +19,7 @@ export const products = [
     reviewsCount: 428,
     colors: ['#FFFFFF', '#111111', '#FFB800', '#2563EB', '#4B5563'],
     sizes: ['S', 'M', 'L', 'XL', '2XL', '3XL'],
-    image: 'https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80',
+    image: img('tee-white.jpg'),
     description: '100% Ring-spun combed organic cotton (240 GSM). High-definition Direct-to-Garment (DTG) print with ultra-sharp details and zero wash fade.',
     printLocations: ['Front Chest', 'Back Full', 'Left Sleeve']
   },
@@ -31,7 +35,7 @@ export const products = [
     reviewsCount: 312,
     colors: ['#FFFFFF', '#111111', '#E5E7EB', '#D97706'],
     sizes: ['M', 'L', 'XL', '2XL'],
-    image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80',
+    image: img('hoodie-retro.jpg'),
     description: 'Ultra-soft 380 GSM brushed fleece with double-lined hood, kangaroo pouch, and reinforced ribbed cuffs. Perfect for branded drops.',
     printLocations: ['Front Center', 'Back Poster', 'Hood Edge']
   },
@@ -47,7 +51,7 @@ export const products = [
     reviewsCount: 195,
     colors: ['#FFFFFF', '#111111', '#FFB800'],
     sizes: ['11oz', '15oz'],
-    image: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80',
+    image: img('mug-ceramic.jpg'),
     description: 'Premium ceramic with ergonomic C-handle. 360-degree all-around dye-sublimation print, microwave & dishwasher safe.',
     printLocations: ['Full Wrap 360°', 'Front Logo', 'Double Sided']
   },
@@ -63,15 +67,15 @@ export const products = [
     reviewsCount: 260,
     colors: ['#F3F4F6', '#111111', '#FEF3C7'],
     sizes: ['Standard (15x16 in)', 'Large Gusset'],
-    image: 'https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=800&q=80',
+    image: img('tote-canvas.jpg'),
     description: '12oz durable organic canvas with reinforced cross-stitched handles. Crisp vector screen-printing with eco-friendly water-based inks.',
     printLocations: ['Front Center', 'Double Sided']
   },
   {
     id: 'prod-05',
     name: 'Impact Armor MagSafe Phone Case',
-    category: 'tech',
-    categoryLabel: 'Phone Cases & Tech',
+    category: 'accessories',
+    categoryLabel: 'Phone Case & Tech',
     basePrice: 22.00,
     bulkPrice: 13.00,
     tag: 'High Margin',
@@ -79,14 +83,14 @@ export const products = [
     reviewsCount: 540,
     colors: ['#111111', '#FFFFFF', '#FFB800'],
     sizes: ['iPhone 16 Pro', 'iPhone 15', 'Galaxy S24 Ultra', 'Pixel 9 Pro'],
-    image: 'https://images.unsplash.com/photo-1586105251261-72a756497a11?auto=format&fit=crop&w=800&q=80',
+    image: img('phone-case.jpg'),
     description: 'Dual-layer shockproof polycarbonate with raised camera ring. Glossy UV scratch-resistant wrap-around artwork finish.',
     printLocations: ['Back Full Bleed', 'Matte Edge']
   },
   {
     id: 'prod-06',
     name: 'Vintage Washed Cotton Bucket Hat',
-    category: 'accessories',
+    category: 'apparel',
     categoryLabel: 'Headwear',
     basePrice: 24.00,
     bulkPrice: 14.20,
@@ -95,7 +99,7 @@ export const products = [
     reviewsCount: 88,
     colors: ['#D1D5DB', '#111111', '#FEF08A'],
     sizes: ['One Size Fits All'],
-    image: 'https://images.unsplash.com/photo-1575428652377-a2d80e2277fc?auto=format&fit=crop&w=800&q=80',
+    image: img('bucket-hat.jpg'),
     description: '100% enzyme-washed cotton twill with brass eyelets for breathability. 3D high-density embroidered patch or flat print.',
     printLocations: ['Front Center 3D Embroidery']
   },
@@ -111,7 +115,7 @@ export const products = [
     reviewsCount: 168,
     colors: ['#FFFFFF', '#111111', '#E5E7EB'],
     sizes: ['20oz', '30oz'],
-    image: 'https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80',
+    image: img('tumbler-steel.jpg'),
     description: 'Double-wall vacuum insulation keeps drinks ice cold for 24h or piping hot for 12h. Precision laser engraving & UV color prints.',
     printLocations: ['Laser Etch Front', 'Color UV Print']
   },
@@ -127,9 +131,105 @@ export const products = [
     reviewsCount: 710,
     colors: ['#FFB800', '#FFFFFF'],
     sizes: ['50 Pack', '100 Pack', '500 Bulk'],
-    image: 'https://images.unsplash.com/photo-1572375992501-4b0892d50c69?auto=format&fit=crop&w=800&q=80',
+    image: img('sticker-pack.jpg'),
     description: 'Weatherproof vinyl stickers with UV lamination. Thick, durable, scratch-resistant and dishwasher proof.',
     printLocations: ['Custom Cut Shape']
+  },
+  {
+    id: 'prod-09',
+    name: 'Oversize Drop-Shoulder Hoodie',
+    category: 'apparel',
+    categoryLabel: 'Custom Apparel',
+    basePrice: 46.00,
+    bulkPrice: 30.00,
+    tag: 'Bestseller',
+    rating: 4.9,
+    reviewsCount: 204,
+    colors: ['#FFFFFF', '#111111', '#A78BFA', '#F472B6'],
+    sizes: ['S', 'M', 'L', 'XL', '2XL'],
+    image: img('hoodie-oversize.jpg'),
+    description: 'Boxy drop-shoulder cut with oversized sleeves and a heavyweight 400 GSM French terry fleece. Premium streetwear canvas.',
+    printLocations: ['Chest Left', 'Back Print', 'Filled Inner Shell']
+  },
+  {
+    id: 'prod-10',
+    name: '6-Panel Structured Snapback Cap',
+    category: 'apparel',
+    categoryLabel: 'Headwear',
+    basePrice: 26.00,
+    bulkPrice: 15.00,
+    tag: 'Style Icon',
+    rating: 4.8,
+    reviewsCount: 156,
+    colors: ['#111111', '#FFFFFF', '#DC2626', '#2563EB'],
+    sizes: ['Adjustable OSFA'],
+    image: img('cap-snapback.jpg'),
+    description: 'High-profile structured crown with a flat visor and premium raised 3D embroidery. Snap-and-go back closure.',
+    printLocations: ['Front 3D Puff', 'Side Panels', 'Back Logo']
+  },
+  {
+    id: 'prod-11',
+    name: 'Hardcover Custom Notebook & Journal',
+    category: 'accessories',
+    categoryLabel: 'Office & Desk',
+    basePrice: 18.00,
+    bulkPrice: 9.80,
+    tag: 'Corporate Fav',
+    rating: 4.9,
+    reviewsCount: 190,
+    colors: ['#111111', '#FFFFFF', '#FFB800'],
+    sizes: ['A5', 'A4', 'B5'],
+    image: img('notebook.jpg'),
+    description: 'Lay-flat hardcover journal with 180 GSM bleed-proof paper. Full-wrap soft-touch matte print cover.',
+    printLocations: ['Front Cover', 'Full Wrap', 'Spine']
+  },
+  {
+    id: 'prod-12',
+    name: 'Zip-Top Canvas Utility Pouch',
+    category: 'accessories',
+    categoryLabel: 'Bags & Accessories',
+    basePrice: 15.00,
+    bulkPrice: 8.20,
+    tag: 'Everyday Carry',
+    rating: 4.7,
+    reviewsCount: 92,
+    colors: ['#111111', '#F3F4F6', '#059669'],
+    sizes: ['Mini (7x5 in)', 'Standard (9x6 in)'],
+    image: img('pouch.jpg'),
+    description: 'Heavyweight canvas zip pouch for cosmetics, cables, or dice. Durable wrap print with water-repellent finish.',
+    printLocations: ['Front', 'Full Wrap']
+  },
+  {
+    id: 'prod-13',
+    name: 'Linen Print Cushion Cover',
+    category: 'lifestyle',
+    categoryLabel: 'Home & Lifestyle',
+    basePrice: 20.00,
+    bulkPrice: 11.50,
+    tag: 'Home Range',
+    rating: 4.8,
+    reviewsCount: 74,
+    colors: ['#F3F4F6', '#111111', '#FDE68A'],
+    sizes: ['45 x 45 cm', '50 x 50 cm'],
+    image: img('cushion.jpg'),
+    description: 'Soft-touch linen blend cushion with hidden zip. Vibrant dye-sublimation front print, machine washable.',
+    printLocations: ['Front Panel', 'Double Sided']
+  },
+  {
+    id: 'prod-14',
+    name: 'All-Over Print Desk Mat',
+    category: 'lifestyle',
+    categoryLabel: 'Office & Desk',
+    basePrice: 24.00,
+    bulkPrice: 14.00,
+    tag: 'Workspace Pro',
+    rating: 4.9,
+    reviewsCount: 130,
+    colors: ['#111111', '#FFB800', '#FFFFFF'],
+    sizes: ['800 x 300 mm', '900 x 400 mm'],
+    image: img('abstract-3d.jpg'),
+    description: 'Anti-slip neoprene desk mat with stitched edges and a smooth polyester surface for fast mouse tracking.',
+    printLocations: ['Full Surface Print']
   }
 ];
 

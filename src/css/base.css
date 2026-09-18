@@ -205,6 +205,18 @@ img {
 }
 
 .section-title {
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+.home-title {
+  font-size: clamp(2rem, 3.6vw, 2.9rem);
+  font-weight: 900;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
   margin-bottom: 16px;
 }
 

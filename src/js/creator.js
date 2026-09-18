@@ -46,7 +46,8 @@ const payoutBtn = document.getElementById('requestPayoutBtn');
   calculateEarnings() {
     if (!this.slider) return;
     const sales = parseInt(this.slider.value, 10);
-    const avgProfitPerSale = 15.50; // Average creator net profit after POD fulfillment cost const monthlyProfit = sales * avgProfitPerSale;
+    const avgProfitPerSale = 15.50; // Average creator net profit after POD fulfillment cost
+    const monthlyProfit = sales * avgProfitPerSale;
     const annualProfit = monthlyProfit * 12;
 
     if (this.salesCountEl) this.salesCountEl.textContent = `${sales.toLocaleString()} Sales / mo`;

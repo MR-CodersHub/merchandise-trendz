@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -73,7 +73,7 @@
                         </p>
                         <div class="hero-cta-group">
                             <a href="#customizerSection" class="btn btn-yellow btn-lg" id="heroOrderBtn">
-                                Order Custom Now <span class="btn-arrow">↗</span>
+                                Order Custom Now <span class="btn-arrow">â†—</span>
                             </a>
                             <a href="#catalogSection" class="btn btn-outline btn-lg">
                                 View Catalog
@@ -100,7 +100,7 @@
                             creators, and individuals with ultra-sharp print resolution and premium fabric quality.
                         </div>
                         <a href="#contactSection" class="welcome-cta-link">
-                            Contact Us ➔
+                            Contact Us âž”
                         </a>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                 <!-- Header with Yellow Highlight Card -->
                 <div class="create-process-header">
                     <div>
-                        <h2 style="font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 700; line-height: 1.15;">
+<h2 class="home-title">
                             Let’s <span class="highlight-yellow">Create</span><br>
                             Your Custom <span class="highlight-yellow">Product</span>
                         </h2>
@@ -130,7 +130,7 @@
                 <!-- 4-Step Grid with Left Media -->
                 <div class="process-grid">
                     <div class="process-image-box">
-                        <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80"
+                        <img src="assets/images/garment-rack.jpg"
                             alt="Printing Studio & Custom Mugs">
                     </div>
                     <div class="process-steps-list">
@@ -198,7 +198,7 @@
                     <!-- Live Preview Canvas Stage -->
                     <div class="customizer-preview-stage">
                         <div class="customizer-mockup-wrapper">
-                            <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80"
+                            <img src="assets/images/hoodie-retro.jpg"
                                 alt="Mockup Preview" id="customizerBaseImage" class="customizer-base-img">
 
                             <!-- Dynamic Print Area Overlay -->
@@ -265,7 +265,7 @@
                                     <option value="2XL">Size: 2XL</option>
                                 </select>
                                 <button class="btn btn-yellow" id="customizerAddToCartBtn">
-                                    Add Custom Item ↗
+                                    Add Custom Item â†—
                                 </button>
                             </div>
                         </div>
@@ -291,7 +291,7 @@
                         <button class="filter-tab-btn" data-category="apparel">Apparel</button>
                         <button class="filter-tab-btn" data-category="drinkware">Drinkware</button>
                         <button class="filter-tab-btn" data-category="accessories">Accessories</button>
-                        <button class="filter-tab-btn" data-category="tech">Tech Gear</button>
+                        <button class="filter-tab-btn" data-category="lifestyle">Lifestyle</button>
                     </div>
                 </div>
 
@@ -301,6 +301,74 @@
         </section>
 
         <!-- CREATOR & MERCHANT HUB SECTION -->
+        <section class="section" id="creatorHubSection">
+            <div class="container">
+                <div class="section-header" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+                    <div>
+                        <span class="section-tagline">Creator & Merchant Hub</span>
+                        <h2 class="section-title">Turn Your Designs Into <span class="highlight-yellow">Monthly Earnings</span></h2>
+                        <p class="section-desc">Join 5,000+ creators selling print-on-demand merchandise with zero inventory, zero risk, and automated global fulfillment.</p>
+                    </div>
+                    <button class="btn btn-yellow btn-sm" id="openCreatorDashboardBtn" style="padding: 12px 24px; font-size: 0.9rem;">
+                        View Creator Dashboard ↗
+                    </button>
+                </div>
+
+                <div class="glass-panel" style="padding: 34px; border-radius: var(--radius-lg); display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center;">
+                    <!-- Earnings Calculator -->
+                    <div>
+                        <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">Creator Earnings Simulator</h3>
+                        <p style="font-size: 0.95rem; color: var(--color-dark-muted); margin-bottom: 24px;">Slide to estimate your monthly net profit from custom merch sales.</p>
+
+                        <input type="range" id="creatorSalesSlider" min="0" max="1000" step="10" value="180"
+                            style="width: 100%; accent-color: var(--primary-yellow); margin-bottom: 8px;">
+
+                        <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--color-dark-muted); font-weight: 700;"> <span>0 sales</span> <span>1,000 sales / mo</span> </div>
+
+                        <div style="display: flex; gap: 32px; margin-top: 28px; flex-wrap: wrap;">
+                            <div>
+                                <div style="font-size: 0.78rem; color: var(--color-dark-muted); text-transform: uppercase; font-weight: 700;">Projected Monthly Sales</div>
+                                <div style="font-size: 1.5rem; font-weight: 900; color: var(--color-dark);" id="creatorSalesCount">180 Sales / mo</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 0.78rem; color: var(--color-dark-muted); text-transform: uppercase; font-weight: 700;">Monthly Profit</div>
+                                <div style="font-size: 1.5rem; font-weight: 900; color: var(--primary-yellow);" id="creatorMonthlyProfit">$2,790</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 0.78rem; color: var(--color-dark-muted); text-transform: uppercase; font-weight: 700;">Annual Profit</div>
+                                <div style="font-size: 1.5rem; font-weight: 900; color: var(--color-dark);" id="creatorAnnualProfit">$33,480 / yr</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Partner Benefits -->
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <div style="display: flex; gap: 12px; align-items: flex-start;">
+                            <div style="background: var(--primary-yellow); color: var(--color-dark); width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 0.9rem; flex-shrink: 0;">1</div>
+                            <div>
+                                <div style="font-weight: 800; font-size: 0.98rem;">Zero Inventory, Zero Risk</div>
+                                <div style="font-size: 0.85rem; color: var(--color-dark-muted);">Products print & ship on-demand only after customers order.</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 12px; align-items: flex-start;">
+                            <div style="background: var(--primary-yellow); color: var(--color-dark); width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 0.9rem; flex-shrink: 0;">2</div>
+                            <div>
+                                <div style="font-weight: 800; font-size: 0.98rem;">Up To $15.50 Net Profit / Item</div>
+                                <div style="font-size: 0.85rem; color: var(--color-dark-muted);">Set your own retail price; TrendZ handles production & fulfillment.</div>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 12px; align-items: flex-start;">
+                            <div style="background: var(--primary-yellow); color: var(--color-dark); width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 900; font-size: 0.9rem; flex-shrink: 0;">3</div>
+                            <div>
+                                <div style="font-weight: 800; font-size: 0.98rem;">Rolling 7-Day Payouts</div>
+                                <div style="font-size: 0.85rem; color: var(--color-dark-muted);">Request instant payouts via Stripe Express, PayPal, or bank transfer.</div>
+                            </div>
+                        </div>
+                        <a href="public/pages/creator-hub.html" class="btn btn-outline" style="margin-top: 8px; align-self: flex-start;">Explore Creator Hub ↗</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- TESTIMONIALS SECTION -->
         <section class="section" style="background: var(--bg-surface);">
@@ -315,12 +383,12 @@
                 <div class="testimonials-grid">
                     <!-- Testimonial 1 -->
                     <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
+                        <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
                         <p style="font-size: 0.95rem; line-height: 1.6; color: #374151;">
                             "The print sharpness on our 500 hoodie company drop was unmatched. Colors were exact to our Pantone brand guidelines, and fulfillment arrived 2 days ahead of schedule."
                         </p>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80"
+                            <img src="assets/images/avatar-sarah.jpg"
                                 alt="Sarah Lin" class="author-avatar">
                             <div>
                                 <div class="author-name">Sarah Lin</div>
@@ -331,12 +399,12 @@
 
                     <!-- Testimonial 2 -->
                     <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
+                        <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
                         <p style="font-size: 0.95rem; line-height: 1.6; color: #374151;">
                             "As a creator with 200k followers, having zero inventory risk while earning $15+ per item is game changing. TrendZ handles all my dropshipping seamlessly."
                         </p>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80"
+                            <img src="assets/images/avatar-marcus.jpg"
                                 alt="Marcus Vance" class="author-avatar">
                             <div>
                                 <div class="author-name">Marcus Vance</div>
@@ -347,13 +415,13 @@
 
                     <!-- Testimonial 3 -->
                     <div class="testimonial-card">
-                        <div class="stars">★★★★★</div>
+                        <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
                         <p style="font-size: 0.95rem; line-height: 1.6; color: #374151;">
                             "Unbeatable value and true top-tier quality. The heavyweight t-shirt fabric feels luxurious,
                             and the DTF prints stay vibrant even after dozens of washes. Highly recommended partner!"
                         </p>
                         <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80"
+                            <img src="assets/images/avatar-alex.jpg"
                                 alt="Alex Foster" class="author-avatar">
                             <div>
                                 <div class="author-name">Alex Foster</div>
@@ -390,7 +458,7 @@
                             <span class="faq-toggle-icon">+</span>
                         </div>
                         <div class="faq-answer">
-                            We offer Direct-to-Garment (DTG), Direct-to-Film (DTF), Dye-Sublimation (for 360° all-over mugs and tumblers), High-Density Screen Printing, Laser Engraving, and 3D Embroidery.
+                            We offer Direct-to-Garment (DTG), Direct-to-Film (DTF), Dye-Sublimation (for 360Â° all-over mugs and tumblers), High-Density Screen Printing, Laser Engraving, and 3D Embroidery.
                         </div>
                     </div>
 
@@ -423,7 +491,7 @@
             <div class="container"
                 style="display: block;justify-content: center; text-align: center;">
                 <div>
-                    <h2 style="font-size: 2.2rem; font-weight: 900; color: var(--color-dark); margin-bottom: 6px;">
+                    <h2 class="home-title" style="font-size: clamp(1.9rem, 3.2vw, 2.6rem); color: var(--color-dark); margin-bottom: 6px;">
                         Claim Your 20% Discount Voucher
                     </h2>
                     <p style="color: rgba(17, 17, 17, 0.85); font-weight: 600; font-size: 1.05rem;">
@@ -434,7 +502,7 @@
                     <input type="email" required placeholder="Enter your business email"
                         style="background: var(--bg-surface); padding: 14px 20px; border-radius: var(--radius-xs); border: 1px solid var(--border-light); flex-grow: 1; font-weight: 600; color: var(--color-dark);">
                     <button type="submit" class="btn btn-dark" style="padding: 14px 24px;">
-                        Get Code ➔
+                        Get Code âž”
                     </button>
                 </form>
             </div>
@@ -560,7 +628,7 @@
                                     #ORD-9482</td>
                                 <td style="padding: 12px 8px;">Oversized Streetwear Fleece Hoodie (Retro Wave)</td>
                                 <td style="padding: 12px 8px;">2 pcs</td>
-                                <td style="padding: 12px 8px;"><span style="color: #10B981; font-weight: 700;">●
+                                <td style="padding: 12px 8px;"><span style="color: #10B981; font-weight: 700;">â—
                                         Printing</span></td>
                                 <td style="padding: 12px 8px; text-align: right; font-weight: 800; color: #10B981;">
                                     +$34.00</td>
@@ -570,7 +638,7 @@
                                     #ORD-9481</td>
                                 <td style="padding: 12px 8px;">Heavy Duty Canvas Tote Bag (Monogram 3A)</td>
                                 <td style="padding: 12px 8px;">1 pc</td>
-                                <td style="padding: 12px 8px;"><span style="color: #3B82F6; font-weight: 700;">●
+                                <td style="padding: 12px 8px;"><span style="color: #3B82F6; font-weight: 700;">â—
                                         Shipped</span></td>
                                 <td style="padding: 12px 8px; text-align: right; font-weight: 800; color: #10B981;">
                                     +$9.50</td>
@@ -580,7 +648,7 @@
                                     #ORD-9480</td>
                                 <td style="padding: 12px 8px;">Impact Armor MagSafe Phone Case</td>
                                 <td style="padding: 12px 8px;">1 pc</td>
-                                <td style="padding: 12px 8px;"><span style="color: #10B981; font-weight: 700;">●
+                                <td style="padding: 12px 8px;"><span style="color: #10B981; font-weight: 700;">â—
                                         Delivered</span></td>
                                 <td style="padding: 12px 8px; text-align: right; font-weight: 800; color: #10B981;">
                                     +$13.00</td>

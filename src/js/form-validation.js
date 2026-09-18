@@ -115,9 +115,15 @@ function handleLoginSubmit(e) {
       submitBtn.disabled = false;
       submitBtn.innerHTML = 'Sign In to Dashboard ➔';
     }
+    const isAdmin = email.includes('admin');
+    localStorage.setItem('trendz_auth_user', JSON.stringify({
+      name: email.split('@')[0],
+      email,
+      role: isAdmin ? 'admin' : 'user'
+    }));
     window.showToast(`Welcome back, ${email.split('@')[0]}! Redirecting to dashboard...`, 'success');
     setTimeout(() => {
-      window.location.href = email.includes('admin') ? '../auth/admin/admin-dashboard.html' : '../auth/user/user-dashboard.html';
+      window.location.href = isAdmin ? '../auth/admin/admin-dashboard.html' : '../auth/user/user-dashboard.html';
     }, 1200);
   }, 800);
 }
@@ -193,6 +199,11 @@ function handleSignupSubmit(e) {
       submitBtn.disabled = false;
       submitBtn.innerHTML = 'Complete Registration ➔';
     }
+    localStorage.setItem('trendz_auth_user', JSON.stringify({
+      name,
+      email,
+      role: 'user'
+    }));
     window.showToast(`Account created for ${name}! Welcome to TrendZ Studio.`, 'success');
     setTimeout(() => {
       window.location.href = '../auth/user/user-dashboard.html';
