@@ -230,6 +230,38 @@ export const products = [
     image: img('abstract-3d.jpg'),
     description: 'Anti-slip neoprene desk mat with stitched edges and a smooth polyester surface for fast mouse tracking.',
     printLocations: ['Full Surface Print']
+  },
+  {
+    id: 'prod-15',
+    name: 'Bulk Corporate T-Shirt Pack (10-Pack)',
+    category: 'apparel',
+    categoryLabel: 'Custom Apparel',
+    basePrice: 149.99,
+    bulkPrice: 99.00,
+    tag: 'Wholesale',
+    rating: 4.8,
+    reviewsCount: 61,
+    colors: ['#FFFFFF', '#111111', '#2563EB', '#FFB800'],
+    sizes: ['S-XL Mix', 'S-2XL Mix', 'M-XL Mix'],
+    image: img('tee-rack.jpg'),
+    description: 'Ten heavyweight 240 GSM tees shipped in one sticker-friendly pack. Ideal for corporate kits, events, and creator launch bundles.',
+    printLocations: ['Front Logo', 'Back Logo', 'Sleeve Mark']
+  },
+  {
+    id: 'prod-16',
+    name: 'Premium Phone Mockup Render Pack',
+    category: 'lifestyle',
+    categoryLabel: 'Digital & Print Assets',
+    basePrice: 12.99,
+    bulkPrice: 5.99,
+    tag: 'Digital',
+    rating: 5.0,
+    reviewsCount: 215,
+    colors: ['#FFB800', '#FFFFFF'],
+    sizes: ['Single Mockup', 'Bundle of 5', 'Bundle of 12'],
+    image: img('phone-mockup.jpg'),
+    description: 'High-resolution 300 DPI phone mockup renders in light and dark scenes. Perfect for showcasing your custom prints on social media.',
+    printLocations: ['Digital Download']
   }
 ];
 

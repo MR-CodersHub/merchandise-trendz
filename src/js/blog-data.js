@@ -16,10 +16,10 @@ export const blogData = [
     author: {
       name: 'Marcus Vance',
       role: 'Master Print Technician & Colorist',
-      avatar: 'img('avatar-sarah.jpg')'
+      avatar: img('avatar-marcus.jpg')
     },
-    thumbnail: 'img('tee-white.jpg')',
-    banner: 'img('tee-white.jpg')',
+    thumbnail: img('blog-hero.jpg'),
+    banner: img('blog-hero.jpg'),
     summary: 'An in-depth breakdown comparing Direct-to-Garment digital printing against traditional screen printing across run quantities, color complexity, tactile hand-feel, and economics.',
     tags: ['DTG Printing', 'Screen Printing', 'Apparel Tech', 'Production Guides'],
     relatedIds: ['creator-merch-guide', 'sustainable-printing-guide'],
@@ -97,10 +97,10 @@ export const blogData = [
     author: {
       name: 'Elena Rostova',
       role: 'Head of Creator Partnerships',
-      avatar: 'img('avatar-woman1.jpg')'
+      avatar: img('avatar-woman1.jpg')
     },
-    thumbnail: 'img('hoodie-retro.jpg')',
-    banner: 'img('hoodie-retro.jpg')',
+    thumbnail: img('hoodie-retro.jpg'),
+    banner: img('hoodie-retro.jpg'),
     summary: 'Step-by-step strategy for streamers, YouTubers, and podcasters to create viral apparel collections, build hype, and maximize profit margins with automated print-on-demand.',
     tags: ['Creator Economy', 'Merch Drops', 'E-commerce', 'Branding Strategy'],
     relatedIds: ['dtg-vs-screen-printing', 'streetwear-trends-2026'],
@@ -145,10 +145,10 @@ export const blogData = [
     author: {
       name: 'Dr. Liam Thorne',
       role: 'Sustainability & Textile Engineer',
-      avatar: 'img('avatar-marcus.jpg')'
+      avatar: img('avatar-alex.jpg')
     },
-    thumbnail: 'img('tote-canvas.jpg')',
-    banner: 'img('tote-canvas.jpg')',
+    thumbnail: img('tote-canvas.jpg'),
+    banner: img('tote-canvas.jpg'),
     summary: 'How modern digital print technology is replacing toxic plastisol inks and microplastics with biodegradable, zero-waste, OEKO-TEX certified processes.',
     tags: ['Sustainability', 'Eco Cotton', 'OEKO-TEX', 'Green Merch'],
     relatedIds: ['dtg-vs-screen-printing', 'magsafe-print-technology'],
@@ -177,10 +177,10 @@ export const blogData = [
     author: {
       name: 'Kavita Patel',
       role: 'Hardware Product Designer',
-      avatar: 'img('avatar-woman2.jpg')'
+      avatar: img('avatar-woman2.jpg')
     },
-    thumbnail: 'img('phone-mockup.jpg')',
-    banner: 'img('phone-mockup.jpg')',
+    thumbnail: img('phone-mockup.jpg'),
+    banner: img('phone-mockup.jpg'),
     summary: 'Explore the engineering behind our high-gloss polycarbonate phone cases, N52 neodymium magnetic arrays, and scratch-proof UV curable ink layers.',
     tags: ['Phone Cases', 'MagSafe', 'UV Print', 'Gadget Merch'],
     relatedIds: ['sustainable-printing-guide', 'streetwear-trends-2026'],
@@ -209,10 +209,10 @@ export const blogData = [
     author: {
       name: 'Jordan Cruz',
       role: 'Fashion Director & Trend Analyst',
-      avatar: 'img('avatar-alex.jpg')'
+      avatar: img('avatar-alex.jpg')
     },
-    thumbnail: 'img('tee-rack.jpg')',
-    banner: 'img('tee-rack.jpg')',
+    thumbnail: img('tee-rack.jpg'),
+    banner: img('tee-rack.jpg'),
     summary: 'From drop-shoulder boxy tees and heavy French Terry fleece to cropped vintage acid washes—discover what top streetwear brands are printing right now.',
     tags: ['Streetwear', 'Fashion Trends', 'Apparel Fits', 'Lookbook'],
     relatedIds: ['creator-merch-guide', 'dtg-vs-screen-printing'],
@@ -241,10 +241,10 @@ export const blogData = [
     author: {
       name: 'Marcus Vance',
       role: 'Master Print Technician & Colorist',
-      avatar: 'img('avatar-sarah.jpg')'
+      avatar: img('avatar-marcus.jpg')
     },
-    thumbnail: 'img('team-studio.jpg')',
-    banner: 'img('team-studio.jpg')',
+    thumbnail: img('team-studio.jpg'),
+    banner: img('team-studio.jpg'),
     summary: 'A deep dive into smart automated geolocation routing that prints customer orders at the facility closest to their home address.',
     tags: ['Logistics', 'Global Shipping', 'POD Automation', 'Scale'],
     relatedIds: ['creator-merch-guide', 'sustainable-printing-guide'],

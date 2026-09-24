@@ -83,9 +83,12 @@ document.querySelectorAll('[data-order-action]').forEach(btn => {
   });
 
   // Sign out any mismatched guest on dashboard pages
-  setupDashboardProfile();
+setupDashboardProfile();
   setupProfileForm();
 }
+
+// Render authenticated user details into the sidebar / topbar / profile tabs
+function setupDashboardProfile() {
 
 // Save profile edits into the local session
 function setupProfileForm() {

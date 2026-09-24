@@ -133,10 +133,10 @@ export function renderNavbar(paths) {
       <nav class="main-nav" id="mainNav" aria-label="Primary">
         <ul class="nav-links">
           <li><a href="${paths.home}" class="nav-link" data-nav="home">Home</a></li>
+          <li><a href="${paths.pages}home-2.html" class="nav-link" data-nav="home2">Home 2</a></li>
           <li><a href="${paths.pages}about.html" class="nav-link" data-nav="about">About</a></li>
           <li><a href="${paths.pages}products.html" class="nav-link" data-nav="products">Products</a></li>
-          <li><a href="${paths.pages}creator-hub.html" class="nav-link" data-nav="creator">Creator Hub</a></li>
-          <li><a href="${paths.pages}blog.html" class="nav-link" data-nav="blog">Blog</a></li>
+         <li><a href="${paths.pages}blog.html" class="nav-link" data-nav="blog">Blog</a></li>
           <li><a href="${paths.pages}contact.html" class="nav-link" data-nav="contact">Contact</a></li>
           <li class="mobile-only-link">
             ${isAuthed
@@ -245,8 +245,8 @@ export function renderFooter(paths) {
           <h4 class="footer-title">Company & Hub</h4>
           <ul class="footer-links">
             <li><a href="${paths.home}index.html">Home</a></li>
+            <li><a href="${paths.pages}home-2.html">Home 2</a></li>
             <li><a href="${paths.pages}about.html">About TrendZ</a></li>
-            <li><a href="${paths.pages}creator-hub.html">Creator Hub</a></li>
             <li><a href="${paths.pages}blog.html"> Blog & Guides</a></li>
             <li><a href="${paths.pages}contact.html">Contact Support</a></li>
           </ul>

@@ -73,7 +73,7 @@
                         </p>
                         <div class="hero-cta-group">
                             <a href="#customizerSection" class="btn btn-yellow btn-lg" id="heroOrderBtn">
-                                Order Custom Now <span class="btn-arrow">â†—</span>
+                                Order Custom Now <span class="btn-arrow">↗</span>
                             </a>
                             <a href="#catalogSection" class="btn btn-outline btn-lg">
                                 View Catalog
@@ -100,7 +100,7 @@
                             creators, and individuals with ultra-sharp print resolution and premium fabric quality.
                         </div>
                         <a href="#contactSection" class="welcome-cta-link">
-                            Contact Us âž”
+                            Contact Us ➔
                         </a>
                     </div>
                 </div>
@@ -249,13 +249,13 @@
                         </div>
 
                         <!-- 5. Size Selection & Add to Cart -->
-                        <div style="display: flex; gap: 14px; align-items: center; justify-content: space-between; padding-top: 10px; border-top: 1px solid var(--border-light);">
+                        <div class="customizer-summary-row">
                             <div>
                                 <span style="font-size: 0.75rem; color: #9CA3AF; text-transform: uppercase;">Total Unit Price</span>
                                 <div style="font-size: 1.8rem; font-weight: 800; font-family: var(--font-heading); color: var(--color-dark);"
                                     id="customizerPriceTag">$45.00</div>
                             </div>
-                            <div style="display: flex; gap: 10px;">
+                            <div class="customizer-summary-right">
                                 <select id="customizerSizeSelect"
                                     style="padding: 12px; border: 1.5px solid var(--border-light); border-radius: var(--radius-xs); font-weight: 700; background: var(--bg-surface);">
                                     <option value="S">Size: S</option>
@@ -265,38 +265,12 @@
                                     <option value="2XL">Size: 2XL</option>
                                 </select>
                                 <button class="btn btn-yellow" id="customizerAddToCartBtn">
-                                    Add Custom Item â†—
+                                    Add Custom Item ↗
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- PRODUCT CATALOG SECTION -->
-        <section class="section" id="catalogSection" style="background: var(--bg-surface);">
-            <div class="container">
-                <div class="section-header"
-                    style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
-                    <div>
-                        <span class="section-tagline">Curated Catalog</span>
-                        <h2 class="section-title">Trending <span class="highlight-yellow">Custom Drops</span></h2>
-                        <p class="section-desc">Browse our top-selling blanks ready for custom screen print, DTG,
-                            sublimation, and high-density embroidery.</p>
-                    </div>
-                    <!-- Filter Tabs -->
-                    <div class="filter-tabs" style="margin-bottom: 0;">
-                        <button class="filter-tab-btn active" data-category="all">All Products</button>
-                        <button class="filter-tab-btn" data-category="apparel">Apparel</button>
-                        <button class="filter-tab-btn" data-category="drinkware">Drinkware</button>
-                        <button class="filter-tab-btn" data-category="accessories">Accessories</button>
-                        <button class="filter-tab-btn" data-category="lifestyle">Lifestyle</button>
-                    </div>
-                </div>
-
-                <!-- Product Cards Grid -->
-                <div class="product-grid" id="productGrid"></div>
             </div>
         </section>
 
@@ -314,7 +288,7 @@
                     </button>
                 </div>
 
-                <div class="glass-panel" style="padding: 34px; border-radius: var(--radius-lg); display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center;">
+                <div class="glass-panel creator-earnings-panel">
                     <!-- Earnings Calculator -->
                     <div>
                         <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">Creator Earnings Simulator</h3>
@@ -383,8 +357,8 @@
                 <div class="testimonials-grid">
                     <!-- Testimonial 1 -->
                     <div class="testimonial-card">
-                        <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
-                        <p style="font-size: 0.95rem; line-height: 1.6; color: #374151;">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-text-main);">
                             "The print sharpness on our 500 hoodie company drop was unmatched. Colors were exact to our Pantone brand guidelines, and fulfillment arrived 2 days ahead of schedule."
                         </p>
                         <div class="testimonial-author">
@@ -399,8 +373,8 @@
 
                     <!-- Testimonial 2 -->
                     <div class="testimonial-card">
-                        <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
-                        <p style="font-size: 0.95rem; line-height: 1.6; color: #374151;">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-text-main);">
                             "As a creator with 200k followers, having zero inventory risk while earning $15+ per item is game changing. TrendZ handles all my dropshipping seamlessly."
                         </p>
                         <div class="testimonial-author">
@@ -415,8 +389,8 @@
 
                     <!-- Testimonial 3 -->
                     <div class="testimonial-card">
-                        <div class="stars">â˜…â˜…â˜…â˜…â˜…</div>
-                        <p style="font-size: 0.95rem; line-height: 1.6; color: #374151;">
+                        <div class="stars">★★★★★</div>
+                        <p style="font-size: 0.95rem; line-height: 1.6; color: var(--color-text-main);">
                             "Unbeatable value and true top-tier quality. The heavyweight t-shirt fabric feels luxurious,
                             and the DTF prints stay vibrant even after dozens of washes. Highly recommended partner!"
                         </p>
@@ -458,7 +432,7 @@
                             <span class="faq-toggle-icon">+</span>
                         </div>
                         <div class="faq-answer">
-                            We offer Direct-to-Garment (DTG), Direct-to-Film (DTF), Dye-Sublimation (for 360Â° all-over mugs and tumblers), High-Density Screen Printing, Laser Engraving, and 3D Embroidery.
+                            We offer Direct-to-Garment (DTG), Direct-to-Film (DTF), Dye-Sublimation (for 360° all-over mugs and tumblers), High-Density Screen Printing, Laser Engraving, and 3D Embroidery.
                         </div>
                     </div>
 
@@ -498,11 +472,11 @@
                         Join 35,000+ creators and brands receiving exclusive product drops & design assets.
                     </p>
                 </div>
-                <form class="newsletter-form" style="display: flex; gap: 8px; max-width: 460px; justify-content: center; margin: 20px auto;">
+                <form class="newsletter-form newsletter-cta-form">
                     <input type="email" required placeholder="Enter your business email"
                         style="background: var(--bg-surface); padding: 14px 20px; border-radius: var(--radius-xs); border: 1px solid var(--border-light); flex-grow: 1; font-weight: 600; color: var(--color-dark);">
                     <button type="submit" class="btn btn-dark" style="padding: 14px 24px;">
-                        Get Code âž”
+                        Get Code ➔
                     </button>
                 </form>
             </div>
@@ -628,7 +602,7 @@
                                     #ORD-9482</td>
                                 <td style="padding: 12px 8px;">Oversized Streetwear Fleece Hoodie (Retro Wave)</td>
                                 <td style="padding: 12px 8px;">2 pcs</td>
-                                <td style="padding: 12px 8px;"><span style="color: #10B981; font-weight: 700;">â—
+                                <td style="padding: 12px 8px;"><span style="color: #10B981; font-weight: 700;">●
                                         Printing</span></td>
                                 <td style="padding: 12px 8px; text-align: right; font-weight: 800; color: #10B981;">
                                     +$34.00</td>
@@ -638,7 +612,7 @@
                                     #ORD-9481</td>
                                 <td style="padding: 12px 8px;">Heavy Duty Canvas Tote Bag (Monogram 3A)</td>
                                 <td style="padding: 12px 8px;">1 pc</td>
-                                <td style="padding: 12px 8px;"><span style="color: #3B82F6; font-weight: 700;">â—
+                                <td style="padding: 12px 8px;"><span style="color: #3B82F6; font-weight: 700;">●
                                         Shipped</span></td>
                                 <td style="padding: 12px 8px; text-align: right; font-weight: 800; color: #10B981;">
                                     +$9.50</td>
@@ -648,7 +622,7 @@
                                     #ORD-9480</td>
                                 <td style="padding: 12px 8px;">Impact Armor MagSafe Phone Case</td>
                                 <td style="padding: 12px 8px;">1 pc</td>
-                                <td style="padding: 12px 8px;"><span style="color: #10B981; font-weight: 700;">â—
+                                <td style="padding: 12px 8px;"><span style="color: #10B981; font-weight: 700;">●
                                         Delivered</span></td>
                                 <td style="padding: 12px 8px; text-align: right; font-weight: 800; color: #10B981;">
                                     +$13.00</td>
