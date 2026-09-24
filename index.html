@@ -184,6 +184,162 @@
             </div>
         </section>
 
+        <!-- CURATED CATALOG SECTION (Home 1) -->
+        <section class="section" id="catalogSection">
+            <div class="container">
+                <div class="section-header"
+                    style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px;">
+                    <div>
+                        <span class="section-tagline">Curated Catalog</span>
+                        <h2 class="section-title">Top Picks From The <span class="highlight-yellow">Catalog</span></h2>
+                        <p class="section-desc">Start with the best-selling blanks and print-ready staples our creators
+                            and brands order the most.</p>
+                    </div>
+                    <a href="public/pages/products.html" class="btn btn-outline">View Full Catalog ↗</a>
+                </div>
+
+                <div class="product-grid">
+                    <!-- Curated Product 1 -->
+                    <div class="product-card" data-product-id="prod-01">
+                        <div class="product-card-img-wrap">
+                            <span class="product-tag">Best Seller</span>
+                            <img src="assets/images/tee-white.jpg" alt="Heavyweight Premium Cotton T-Shirt"
+                                class="product-card-img" loading="lazy">
+                            <div class="product-actions">
+                                <button class="product-action-btn" onclick="openQuickView('prod-01')"
+                                    title="Quick View">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                </button>
+                                <button class="product-action-btn" onclick="quickAddToCart('prod-01')"
+                                    title="Quick Add">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="9" cy="21" r="1" />
+                                        <circle cx="20" cy="21" r="1" />
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card-body">
+                            <span class="product-card-category">Custom Apparel</span>
+                            <h4 class="product-card-title">Heavyweight Premium Cotton T-Shirt</h4>
+                            <div class="product-rating">
+                                <div class="stars">★★★★★</div>
+                                <span>4.9 (428)</span>
+                            </div>
+                            <div class="product-card-footer">
+                                <div class="product-price-box">
+                                    <span class="product-price-label">From</span>
+                                    <span class="product-price">$19.99</span>
+                                    <span class="product-price bulk">Bulk: $12.50</span>
+                                </div>
+                                <button class="btn btn-yellow btn-sm" onclick="openQuickView('prod-01')">
+                                    Customize ↗
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Curated Product 2 -->
+                    <div class="product-card" data-product-id="prod-02">
+                        <div class="product-card-img-wrap">
+                            <span class="product-tag">Trending</span>
+                            <img src="assets/images/hoodie-retro.jpg" alt="Oversized Streetwear Fleece Hoodie"
+                                class="product-card-img" loading="lazy">
+                            <div class="product-actions">
+                                <button class="product-action-btn" onclick="openQuickView('prod-02')"
+                                    title="Quick View">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                </button>
+                                <button class="product-action-btn" onclick="quickAddToCart('prod-02')"
+                                    title="Quick Add">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="9" cy="21" r="1" />
+                                        <circle cx="20" cy="21" r="1" />
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card-body">
+                            <span class="product-card-category">Custom Apparel</span>
+                            <h4 class="product-card-title">Oversized Streetwear Fleece Hoodie</h4>
+                            <div class="product-rating">
+                                <div class="stars">★★★★★</div>
+                                <span>5.0 (312)</span>
+                            </div>
+                            <div class="product-card-footer">
+                                <div class="product-price-box">
+                                    <span class="product-price-label">From</span>
+                                    <span class="product-price">$42.00</span>
+                                    <span class="product-price bulk">Bulk: $28.00</span>
+                                </div>
+                                <button class="btn btn-yellow btn-sm" onclick="openQuickView('prod-02')">
+                                    Customize ↗
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Curated Product 3 -->
+                    <div class="product-card" data-product-id="prod-03">
+                        <div class="product-card-img-wrap">
+                            <span class="product-tag">Top Gift</span>
+                            <img src="assets/images/mug-ceramic.jpg" alt="Matte Ceramic Coffee Mug"
+                                class="product-card-img" loading="lazy">
+                            <div class="product-actions">
+                                <button class="product-action-btn" onclick="openQuickView('prod-03')"
+                                    title="Quick View">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                        <circle cx="12" cy="12" r="3" />
+                                    </svg>
+                                </button>
+                                <button class="product-action-btn" onclick="quickAddToCart('prod-03')"
+                                    title="Quick Add">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2">
+                                        <circle cx="9" cy="21" r="1" />
+                                        <circle cx="20" cy="21" r="1" />
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-card-body">
+                            <span class="product-card-category">Drinkware &amp; Mugs</span>
+                            <h4 class="product-card-title">Matte Ceramic Coffee Mug (15oz)</h4>
+                            <div class="product-rating">
+                                <div class="stars">★★★★★</div>
+                                <span>4.8 (195)</span>
+                            </div>
+                            <div class="product-card-footer">
+                                <div class="product-price-box">
+                                    <span class="product-price-label">From</span>
+                                    <span class="product-price">$14.50</span>
+                                    <span class="product-price bulk">Bulk: $7.90</span>
+                                </div>
+                                <button class="btn btn-yellow btn-sm" onclick="openQuickView('prod-03')">
+                                    Customize ↗
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- LIVE MOCKUP STUDIO (Customizer) -->
         <section class="section" id="customizerSection">
             <div class="container">

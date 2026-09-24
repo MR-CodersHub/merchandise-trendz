@@ -1544,6 +1544,27 @@
   }
 }
 
+@media (max-width: 768px) {
+  .stat-card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+  }
+  .stat-card {
+    padding: 20px;
+    min-width: 0;
+  }
+  .stat-card-value {
+    font-size: 1.7rem;
+    overflow-wrap: break-word;
+  }
+  .dashboard-main .glass-panel,
+  .dashboard-main .card,
+  .dashboard-table {
+    min-width: 0;
+    overflow-x: auto;
+  }
+}
+
 @media (max-width: 480px) {
   .dashboard-main {
     padding: 20px 16px;

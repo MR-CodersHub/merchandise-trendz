@@ -92,29 +92,69 @@ export function renderNavbar(paths) {
     }
   } catch (e) {}
 
-  // Authenticated state detection (mocked front-end session)
-  let authUser = null;
-  try {
-    const raw = localStorage.getItem('trendz_auth_user');
-    if (raw) authUser = JSON.parse(raw);
-  } catch (e) {}
+  // Simple profile dropdown — always visible, no auth, just dashboard links
+  const authCta = ''; // Login CTA removed; profile dropdown is always present
 
-  const isAuthed = !!authUser && typeof authUser === 'object';
-  const authCta = isAuthed
-    ? `
-      <a href="${paths.auth}user/user-dashboard.html" class="btn btn-outline btn-sm header-auth-btn" id="headerDashboardBtn" title="View your dashboard">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-          <rect x="3" y="3" width="7" height="9" rx="1"></rect>
-          <rect x="14" y="3" width="7" height="5" rx="1"></rect>
-          <rect x="14" y="12" width="7" height="9" rx="1"></rect>
-          <rect x="3" y="16" width="7" height="5" rx="1"></rect>
+  const profileDropdown = `
+    <div class="nav-profile-wrapper" id="navProfileWrapper">
+      <button class="nav-profile-btn btn-icon" id="navProfileBtn"
+              aria-haspopup="true" aria-expanded="false"
+              title="Dashboards">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
         </svg>
-        Dashboard
-      </a>
-    `
-    : `
-      <a href="${paths.auth}login.html" class="btn btn-yellow btn-sm header-auth-btn" id="headerLoginBtn">Login</a>
-    `;
+      </button>
+
+      <div class="nav-profile-dropdown" id="navProfileDropdown" role="menu" aria-hidden="true">
+        <!-- Dashboard links -->
+        <a href="${paths.auth}user/user-dashboard.html"
+           class="nav-profile-item" role="menuitem" id="profileUserDashLink">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          User Dashboard
+        </a>
+
+        <a href="${paths.auth}admin/admin-dashboard.html"
+           class="nav-profile-item" role="menuitem" id="profileAdminDashLink">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="9" rx="1"/>
+            <rect x="14" y="3" width="7" height="5" rx="1"/>
+            <rect x="14" y="12" width="7" height="9" rx="1"/>
+            <rect x="3" y="16" width="7" height="5" rx="1"/>
+          </svg>
+          Admin Dashboard
+        </a>
+
+        <!-- Divider -->
+        <div class="nav-profile-divider"></div>
+
+        <!-- Auth links -->
+        <a href="${paths.auth}login.html"
+           class="nav-profile-item" role="menuitem" id="profileLoginLink">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/>
+            <polyline points="10 17 15 12 10 7"/>
+            <line x1="15" y1="12" x2="3" y2="12"/>
+          </svg>
+          Login
+        </a>
+
+        <a href="${paths.auth}signup.html"
+           class="nav-profile-item" role="menuitem" id="profileSignupLink">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <line x1="19" y1="8" x2="19" y2="14"/>
+            <line x1="22" y1="11" x2="16" y2="11"/>
+          </svg>
+          Create Account
+        </a>
+      </div>
+    </div>
+  `;
 
   return `
     <div class="container nav-container">
@@ -136,15 +176,13 @@ export function renderNavbar(paths) {
           <li><a href="${paths.pages}home-2.html" class="nav-link" data-nav="home2">Home 2</a></li>
           <li><a href="${paths.pages}about.html" class="nav-link" data-nav="about">About</a></li>
           <li><a href="${paths.pages}products.html" class="nav-link" data-nav="products">Products</a></li>
-         <li><a href="${paths.pages}blog.html" class="nav-link" data-nav="blog">Blog</a></li>
+          <li><a href="${paths.pages}blog.html" class="nav-link" data-nav="blog">Blog</a></li>
           <li><a href="${paths.pages}contact.html" class="nav-link" data-nav="contact">Contact</a></li>
-          <li class="mobile-only-link">
-            ${isAuthed
-              ? `<a href="${paths.auth}user/user-dashboard.html" class="btn btn-yellow btn-sm" style="width: 100%;">Dashboard</a>`
-              : `<a href="${paths.auth}login.html" class="btn btn-yellow btn-sm" style="width: 100%;">Sign In</a>`}
-          </li>
-          <li class="mobile-only-link">
-            <a href="${paths.auth}signup.html" class="btn btn-outline btn-sm" style="width: 100%;">Create Account</a>
+
+          <!-- Mobile Auth CTA Buttons -->
+          <li class="mobile-only-link mobile-nav-auth">
+            <a href="${paths.auth}login.html" class="btn btn-yellow btn-sm mobile-auth-btn" id="mobileSignInBtn">Sign In</a>
+            <a href="${paths.auth}signup.html" class="btn btn-outline btn-sm mobile-auth-btn" id="mobileSignUpBtn">Create Account</a>
           </li>
         </ul>
       </nav>
@@ -171,25 +209,24 @@ export function renderNavbar(paths) {
 
         <!-- Quick RTL Mode Toggle Button (single control) -->
         <button class="btn-icon rtl-quick-toggle-btn" id="rtlQuickToggleBtn" title="Toggle RTL / LTR Mode (Alt + R)" aria-label="Toggle RTL Layout">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M8 3 4 7l4 4"></path>
-            <path d="M4 7h16"></path>
-            <path d="m16 21 4-4-4-4"></path>
-            <path d="M20 17H4"></path>
-          </svg>
+          RTL
         </button>
 
-        <!-- Cart Button -->
-        <button class="btn-icon" data-action="open-cart" title="Shopping Cart" id="cartOpenBtn" aria-label="Open Cart">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <!-- Profile Icon with Dropdown -->
+        ${profileDropdown}
+
+        <!-- Cart CTA Button -->
+        <button class="btn btn-yellow btn-sm nav-cart-cta" data-action="open-cart" title="Shopping Cart" id="cartOpenBtn" aria-label="Open Cart">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
             <circle cx="9" cy="21" r="1"></circle>
             <circle cx="20" cy="21" r="1"></circle>
             <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
           </svg>
-          <span class="cart-badge-count">${cartCount}</span>
+          Cart
+          ${cartCount > 0 ? `<span class="nav-cart-badge">${cartCount}</span>` : ''}
         </button>
 
-        <!-- Login / Dashboard CTA -->
+        <!-- Login / Dashboard CTA (shown only when NOT authed) -->
         ${authCta}
 
         <!-- Mobile Menu Toggle -->
@@ -450,9 +487,52 @@ export function initLayout() {
   setupKeyboardShortcuts();
   setupScrollEffect();
   setupMobileMenu();
+  setupProfileDropdown();
   setupLogoutHandler();
   highlightActiveLink();
   setupFooterNewsletter();
+}
+
+/**
+ * Profile dropdown toggle — opens/closes on button click, closes on outside click
+ */
+function setupProfileDropdown() {
+  const wrapper  = document.getElementById('navProfileWrapper');
+  const btn      = document.getElementById('navProfileBtn');
+  const dropdown = document.getElementById('navProfileDropdown');
+  if (!wrapper || !btn || !dropdown) return;
+
+  const open = () => {
+    dropdown.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    dropdown.setAttribute('aria-hidden', 'false');
+  };
+
+  const close = () => {
+    dropdown.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    dropdown.setAttribute('aria-hidden', 'true');
+  };
+
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    dropdown.classList.contains('open') ? close() : open();
+  });
+
+  // Close when an item inside the dropdown is activated
+  dropdown.querySelectorAll('.nav-profile-item').forEach(item => {
+    item.addEventListener('click', close);
+  });
+
+  // Close when clicking anywhere outside the dropdown
+  document.addEventListener('click', (e) => {
+    if (!wrapper.contains(e.target)) close();
+  });
+
+  // Keyboard: Escape closes the dropdown
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') close();
+  });
 }
 
 /**
@@ -551,35 +631,48 @@ function setupScrollEffect() {
 function setupMobileMenu() {
   const toggleBtn = document.getElementById('mobileMenuToggle');
   const nav = document.querySelector('.header nav');
+  const header = document.querySelector('.header');
 
   if (toggleBtn && nav) {
+    const closeDrawer = () => {
+      nav.classList.remove('mobile-active');
+      toggleBtn.classList.remove('active');
+      header?.classList.remove('mobile-menu-open');
+      document.body?.classList.remove('mobile-menu-locked');
+      toggleBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18"></path><path d="M3 6h18"></path><path d="M3 18h18"></path></svg>';
+      toggleBtn.setAttribute('aria-label', 'Toggle Menu');
+    };
+
+    const openDrawer = () => {
+      nav.classList.add('mobile-active');
+      toggleBtn.classList.add('active');
+      header?.classList.add('mobile-menu-open');
+      document.body?.classList.add('mobile-menu-locked');
+      toggleBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>';
+      toggleBtn.setAttribute('aria-label', 'Close Menu');
+    };
+
     toggleBtn.addEventListener('click', (e) => {
       e.stopPropagation();
-      const isOpen = nav.classList.toggle('mobile-active');
-      toggleBtn.classList.toggle('active', isOpen);
-      toggleBtn.innerHTML = isOpen
-        ? '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>'
-        : '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18"></path><path d="M3 6h18"></path><path d="M3 18h18"></path></svg>';
-      toggleBtn.setAttribute('aria-label', isOpen ? 'Close Menu' : 'Toggle Menu');
+      nav.classList.contains('mobile-active') ? closeDrawer() : openDrawer();
     });
 
-    // Close the drawer when a navigation link is clicked
-    nav.querySelectorAll('.nav-link, .mobile-only-link a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('mobile-active');
-        toggleBtn.classList.remove('active');
-        toggleBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18"></path><path d="M3 6h18"></path><path d="M3 18h18"></path></svg>';
-        toggleBtn.setAttribute('aria-label', 'Toggle Menu');
-      });
+    // Close the drawer when a navigation or auth link is clicked
+    nav.querySelectorAll('.nav-link, .mobile-auth-btn, .mobile-only-link a').forEach(link => {
+      link.addEventListener('click', closeDrawer);
     });
 
     // Close when clicking outside
     document.addEventListener('click', (e) => {
-      if (!nav.contains(e.target) && !toggleBtn.contains(e.target)) {
-        nav.classList.remove('mobile-active');
-        toggleBtn.classList.remove('active');
-        toggleBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12h18"></path><path d="M3 6h18"></path><path d="M3 18h18"></path></svg>';
-        toggleBtn.setAttribute('aria-label', 'Toggle Menu');
+      if (nav.classList.contains('mobile-active') && !nav.contains(e.target) && !toggleBtn.contains(e.target)) {
+        closeDrawer();
+      }
+    });
+
+    // Keyboard: Escape key closes the drawer
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && nav.classList.contains('mobile-active')) {
+        closeDrawer();
       }
     });
   }

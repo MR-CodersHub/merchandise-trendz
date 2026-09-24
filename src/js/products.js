@@ -262,6 +262,38 @@ export const products = [
     image: img('phone-mockup.jpg'),
     description: 'High-resolution 300 DPI phone mockup renders in light and dark scenes. Perfect for showcasing your custom prints on social media.',
     printLocations: ['Digital Download']
+  },
+  {
+    id: 'prod-17',
+    name: 'Bulk Wholesale Apparel Restock Bundle (20-Pack)',
+    category: 'apparel',
+    categoryLabel: 'Bulk & Bundles',
+    basePrice: 479.00,
+    bulkPrice: 239.00,
+    tag: 'Wholesale',
+    rating: 4.9,
+    reviewsCount: 43,
+    colors: ['#FFFFFF', '#111111', '#FFB800', '#2563EB'],
+    sizes: ['S-XL Mix', 'S-2XL Mix', 'M-2XL Mix', 'All 3XL'],
+    image: img('garment-rack.jpg'),
+    description: 'Twenty heavyweight 240 GSM garments on a warehouse rack, shipped shrink-wrapped for easy rebranding. Bulk pricing drops $12 a piece.',
+    printLocations: ['Front Logo', 'Back Logo', 'Sleeve Mark']
+  },
+  {
+    id: 'prod-18',
+    name: 'Full-Crew Print Studio Package',
+    category: 'lifestyle',
+    categoryLabel: 'Digital & Print Assets',
+    basePrice: 199.00,
+    bulkPrice: 129.00,
+    tag: 'Agency Pick',
+    rating: 5.0,
+    reviewsCount: 35,
+    colors: ['#FFB800', '#111111', '#FFFFFF'],
+    sizes: ['Starter (10 pcs)', 'Pro (25 pcs)', 'Elite (50 pcs)'],
+    image: img('team-studio.jpg'),
+    description: 'End-to-end studio run for creator teams and agencies: art direction, full bleed mockups, and print-ready files for your entire crew.',
+    printLocations: ['Art Direction', 'Mockups', 'Print-Ready Files']
   }
 ];
 
